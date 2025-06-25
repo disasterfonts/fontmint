@@ -1,0 +1,21 @@
+editor structure
+
+app
+	editorpanel
+		glyph, editable
+			name
+			glyphgrid, editable
+				cell, editable
+	fontindexpanel
+		glyphgrid, display
+			name
+			cell, display
+
+
+data
+	glyphs
+		width
+		height
+		glyph
+			name
+			cells

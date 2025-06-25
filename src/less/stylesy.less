@@ -1,0 +1,98 @@
+@editorcell: 48px;
+@indexcell: 5px;
+@previewcell: 2px;
+@gutter: 15px;
+
+h2 {
+	margin-top: 0;
+}
+
+.glyph-grid {
+	display: flex;
+	flex-wrap: wrap;
+	width: @editorcell * 5;
+	border: 2px solid #000;
+	.glyph-cell {
+		width: @editorcell;
+		height: @editorcell;
+		background-color: #fff;
+		&.status-on {
+			background-color: red;
+		}
+	}
+}
+.editor-panel {
+	padding: @gutter;
+	background-color: #eee;
+	.glyph-cell {
+		&:hover {
+			background-image: url('../../dist/assets/shade2x2.png');
+		}
+	}
+}
+.glyph-tile {
+	background-color: #fdd;
+	padding: @editorcell;
+}
+.font-index {
+	padding: @gutter;
+	background-color: #ddd;
+	.glyph-tiles {
+		display: flex;
+		flex-wrap: wrap;
+	}
+	.glyph-tile {
+		padding: @indexcell;
+		text-align: center;
+		h3 {
+			margin: 0;
+		}
+		&:hover {
+			background-image: url('../../dist/assets/shade2x2.png');
+		}
+	}
+	.glyph-grid {
+		margin: @indexcell;
+		width: @indexcell * 5;
+		border: 0;
+		.glyph-cell {
+			width: @indexcell;
+			height: @indexcell;
+			background-color: #fff;
+			&.status-on {
+				background-color: red;
+			}
+		}
+	}
+}
+
+.preview-panel {
+	padding: @gutter;
+	background-color: #ccc;
+	.glyph-tiles {
+		display: flex;
+		flex-wrap: wrap;
+		padding: @previewcell;
+	}
+	.glyph-tile {
+		padding: 1px;
+		text-align: center;
+		background-color: #fff;
+		h3 {
+			margin: 0;
+		}
+	}
+	.glyph-grid {
+		width: @previewcell * 5;
+		margin: 0;
+		border: 0;
+		.glyph-cell {
+			width: @previewcell;
+			height: @previewcell;
+			background-color: #fff;
+			&.status-on {
+				background-color: #000;
+			}
+		}
+	}
+}
