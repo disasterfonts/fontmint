@@ -1,4 +1,5 @@
 export default function defaultGlyphs(glyphWidth = 5, glyphHeight = 5) {
+	let spaceCells = createArray(glyphWidth * glyphHeight).map( (cell, i) => 0);
 	let glyphs = [
 		defaultGlyphData("A", 0, glyphWidth, glyphHeight),
 		defaultGlyphData("B", 1, glyphWidth, glyphHeight),
@@ -36,6 +37,7 @@ export default function defaultGlyphs(glyphWidth = 5, glyphHeight = 5) {
 		defaultGlyphData("7", 33, glyphWidth, glyphHeight),
 		defaultGlyphData("8", 34, glyphWidth, glyphHeight),
 		defaultGlyphData("9", 35, glyphWidth, glyphHeight),
+		{'glyphIndex': 36, 'glyphName': 'space', 'cells': spaceCells}
 	]
 	return glyphs;
 }

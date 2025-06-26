@@ -36,8 +36,16 @@ var ___CSS_LOADER_URL_IMPORT_0___ = new URL(/* asset import */ __webpack_require
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 var ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_0___);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, `h2 {
+___CSS_LOADER_EXPORT___.push([module.id, `#react-container {
+  width: 1000px;
+  margin: 0 auto;
+}
+h2 {
   margin-top: 0;
+}
+.font-settings-panel {
+  padding: 15px;
+  background-color: #eee;
 }
 .glyph-grid {
   display: flex;
@@ -53,9 +61,35 @@ ___CSS_LOADER_EXPORT___.push([module.id, `h2 {
 .glyph-grid .glyph-cell.status-on {
   background-color: red;
 }
+.glyph-grid .glyph-cell img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.glyph-grid.cells-width-4 {
+  width: 192px;
+}
+.glyph-grid.cells-width-5 {
+  width: 240px;
+}
+.glyph-grid.cells-width-6 {
+  width: 288px;
+}
+.glyph-grid.cells-width-7 {
+  width: 336px;
+}
+.glyph-grid.cells-width-8 {
+  width: 384px;
+}
+.glyph-grid.cells-width-9 {
+  width: 432px;
+}
+.glyph-grid.cells-width-10 {
+  width: 480px;
+}
 .editor-panel {
   padding: 15px;
-  background-color: #eee;
+  background-color: #ddd;
 }
 .editor-panel .glyph-cell {
   cursor: pointer;
@@ -69,7 +103,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `h2 {
 }
 .font-index {
   padding: 15px;
-  background-color: #ddd;
+  background-color: #ccc;
 }
 .font-index .glyph-tiles {
   display: flex;
@@ -78,12 +112,16 @@ ___CSS_LOADER_EXPORT___.push([module.id, `h2 {
 .font-index .glyph-tile {
   padding: 5px;
   text-align: center;
+  cursor: pointer;
 }
 .font-index .glyph-tile h3 {
   margin: 0;
 }
 .font-index .glyph-tile:hover {
   background-image: url(${___CSS_LOADER_URL_REPLACEMENT_0___});
+}
+.font-index .glyph-tile.highlighted {
+  background-color: #faa;
 }
 .font-index .glyph-grid {
   margin: 5px;
@@ -98,29 +136,53 @@ ___CSS_LOADER_EXPORT___.push([module.id, `h2 {
 .font-index .glyph-grid .glyph-cell.status-on {
   background-color: red;
 }
+.font-index .glyph-grid.cells-width-4 {
+  width: 20px;
+}
+.font-index .glyph-grid.cells-width-5 {
+  width: 25px;
+}
+.font-index .glyph-grid.cells-width-6 {
+  width: 30px;
+}
+.font-index .glyph-grid.cells-width-7 {
+  width: 35px;
+}
+.font-index .glyph-grid.cells-width-8 {
+  width: 40px;
+}
+.font-index .glyph-grid.cells-width-9 {
+  width: 45px;
+}
+.font-index .glyph-grid.cells-width-10 {
+  width: 50px;
+}
 .preview-panel {
   padding: 15px;
-  background-color: #ccc;
+  background-color: #bbb;
 }
-.preview-panel .glyph-tiles {
+.preview-panel form {
+  margin-top: 1em;
+}
+.preview-panel form input {
+  width: 30em;
+}
+.preview-panel .preview-glyphs {
   display: flex;
   flex-wrap: wrap;
   padding: 2px;
-}
-.preview-panel .glyph-tile {
-  padding: 1px;
-  text-align: center;
+  gap: 2px;
   background-color: #fff;
 }
-.preview-panel .glyph-tile h3 {
-  margin: 0;
-}
 .preview-panel .glyph-grid {
+  display: flex;
+  flex-wrap: wrap;
   width: 10px;
   margin: 0;
   border: 0;
 }
 .preview-panel .glyph-grid .glyph-cell {
+  display: block;
   width: 2px;
   height: 2px;
   background-color: #fff;
@@ -128,7 +190,90 @@ ___CSS_LOADER_EXPORT___.push([module.id, `h2 {
 .preview-panel .glyph-grid .glyph-cell.status-on {
   background-color: #000;
 }
-`, "",{"version":3,"sources":["webpack://./src/less/stylesy.less"],"names":[],"mappings":"AAKA;EACC,aAAA;AAJD;AAOA;EACC,aAAA;EACA,eAAA;EACA,YAAA;EACA,sBAAA;AALD;AACA;EAME,WAAA;EACA,YAAA;EACA,sBAAA;AAJF;AAKE;EACC,qBAAA;AAHH;AAOA;EACC,aAAA;EACA,sBAAA;AALD;AAGA;EAIE,eAAA;AAJF;AAKE;EACC,yDAAA;AAHH;AAOA;EACC,sBAAA;EACA,aAAA;AALD;AAOA;EACC,aAAA;EACA,sBAAA;AALD;AAGA;EAIE,aAAA;EACA,eAAA;AAJF;AADA;EAQE,YAAA;EACA,kBAAA;AAJF;AALA;EAWG,SAAA;AAHH;AAKE;EACC,yDAAA;AAHH;AAXA;EAkBE,WAAA;EACA,WAAA;EACA,SAAA;AAJF;AAhBA;EAsBG,UAAA;EACA,WAAA;EACA,sBAAA;AAHH;AAIG;EACC,qBAAA;AAFJ;AAQA;EACC,aAAA;EACA,sBAAA;AAND;AAIA;EAIE,aAAA;EACA,eAAA;EACA,YAAA;AALF;AADA;EASE,YAAA;EACA,kBAAA;EACA,sBAAA;AALF;AANA;EAaG,SAAA;AAJH;AATA;EAiBE,WAAA;EACA,SAAA;EACA,SAAA;AALF;AAdA;EAqBG,UAAA;EACA,WAAA;EACA,sBAAA;AAJH;AAKG;EACC,sBAAA;AAHJ","sourcesContent":["@editorcell: 48px;\n@indexcell: 5px;\n@previewcell: 2px;\n@gutter: 15px;\n\nh2 {\n\tmargin-top: 0;\n}\n\n.glyph-grid {\n\tdisplay: flex;\n\tflex-wrap: wrap;\n\twidth: @editorcell * 5;\n\tborder: 2px solid #000;\n\t.glyph-cell {\n\t\twidth: @editorcell;\n\t\theight: @editorcell;\n\t\tbackground-color: #fff;\n\t\t&.status-on {\n\t\t\tbackground-color: red;\n\t\t}\n\t}\n}\n.editor-panel {\n\tpadding: @gutter;\n\tbackground-color: #eee;\n\t.glyph-cell {\n\t\tcursor: pointer;\n\t\t&:hover {\n\t\t\tbackground-image: url('../../dist/assets/shade2x2.png');\n\t\t}\n\t}\n}\n.glyph-tile {\n\tbackground-color: #fdd;\n\tpadding: @editorcell;\n}\n.font-index {\n\tpadding: @gutter;\n\tbackground-color: #ddd;\n\t.glyph-tiles {\n\t\tdisplay: flex;\n\t\tflex-wrap: wrap;\n\t}\n\t.glyph-tile {\n\t\tpadding: @indexcell;\n\t\ttext-align: center;\n\t\th3 {\n\t\t\tmargin: 0;\n\t\t}\n\t\t&:hover {\n\t\t\tbackground-image: url('../../dist/assets/shade2x2.png');\n\t\t}\n\t}\n\t.glyph-grid {\n\t\tmargin: @indexcell;\n\t\twidth: @indexcell * 5;\n\t\tborder: 0;\n\t\t.glyph-cell {\n\t\t\twidth: @indexcell;\n\t\t\theight: @indexcell;\n\t\t\tbackground-color: #fff;\n\t\t\t&.status-on {\n\t\t\t\tbackground-color: red;\n\t\t\t}\n\t\t}\n\t}\n}\n\n.preview-panel {\n\tpadding: @gutter;\n\tbackground-color: #ccc;\n\t.glyph-tiles {\n\t\tdisplay: flex;\n\t\tflex-wrap: wrap;\n\t\tpadding: @previewcell;\n\t}\n\t.glyph-tile {\n\t\tpadding: 1px;\n\t\ttext-align: center;\n\t\tbackground-color: #fff;\n\t\th3 {\n\t\t\tmargin: 0;\n\t\t}\n\t}\n\t.glyph-grid {\n\t\twidth: @previewcell * 5;\n\t\tmargin: 0;\n\t\tborder: 0;\n\t\t.glyph-cell {\n\t\t\twidth: @previewcell;\n\t\t\theight: @previewcell;\n\t\t\tbackground-color: #fff;\n\t\t\t&.status-on {\n\t\t\t\tbackground-color: #000;\n\t\t\t}\n\t\t}\n\t}\n}"],"sourceRoot":""}]);
+.preview-panel .glyph-grid.cells-width-4 {
+  width: 8px;
+}
+.preview-panel .glyph-grid.cells-width-5 {
+  width: 10px;
+}
+.preview-panel .glyph-grid.cells-width-6 {
+  width: 12px;
+}
+.preview-panel .glyph-grid.cells-width-7 {
+  width: 14px;
+}
+.preview-panel .glyph-grid.cells-width-8 {
+  width: 16px;
+}
+.preview-panel .glyph-grid.cells-width-9 {
+  width: 18px;
+}
+.preview-panel .glyph-grid.cells-width-10 {
+  width: 20px;
+}
+.preview-panel .preview-2x {
+  gap: 4px;
+}
+.preview-panel .preview-2x .glyph-grid {
+  width: 20px;
+}
+.preview-panel .preview-2x .glyph-grid .glyph-cell {
+  width: 4px;
+  height: 4px;
+}
+.preview-panel .preview-2x .glyph-grid.cells-width-4 {
+  width: 16px;
+}
+.preview-panel .preview-2x .glyph-grid.cells-width-5 {
+  width: 20px;
+}
+.preview-panel .preview-2x .glyph-grid.cells-width-6 {
+  width: 24px;
+}
+.preview-panel .preview-2x .glyph-grid.cells-width-7 {
+  width: 28px;
+}
+.preview-panel .preview-2x .glyph-grid.cells-width-8 {
+  width: 32px;
+}
+.preview-panel .preview-2x .glyph-grid.cells-width-9 {
+  width: 36px;
+}
+.preview-panel .preview-2x .glyph-grid.cells-width-10 {
+  width: 40px;
+}
+.preview-panel .preview-4x {
+  gap: 8px;
+}
+.preview-panel .preview-4x .glyph-grid {
+  width: 40px;
+}
+.preview-panel .preview-4x .glyph-grid .glyph-cell {
+  width: 8px;
+  height: 8px;
+}
+.preview-panel .preview-4x .glyph-grid.cells-width-4 {
+  width: 32px;
+}
+.preview-panel .preview-4x .glyph-grid.cells-width-5 {
+  width: 40px;
+}
+.preview-panel .preview-4x .glyph-grid.cells-width-6 {
+  width: 48px;
+}
+.preview-panel .preview-4x .glyph-grid.cells-width-7 {
+  width: 56px;
+}
+.preview-panel .preview-4x .glyph-grid.cells-width-8 {
+  width: 64px;
+}
+.preview-panel .preview-4x .glyph-grid.cells-width-9 {
+  width: 72px;
+}
+.preview-panel .preview-4x .glyph-grid.cells-width-10 {
+  width: 80px;
+}
+`, "",{"version":3,"sources":["webpack://./src/less/stylesy.less"],"names":[],"mappings":"AAKA;EACC,aAAA;EACA,cAAA;AAJD;AAQA;EACC,aAAA;AAND;AASA;EACC,aAAA;EACA,sBAAA;AAPD;AAUA;EACC,aAAA;EACA,eAAA;EACA,YAAA;EACA,sBAAA;AARD;AAIA;EAME,WAAA;EACA,YAAA;EACA,sBAAA;AAPF;AAQE;EACC,qBAAA;AANH;AAJA;EAaG,cAAA;EACA,WAAA;EACA,YAAA;AANH;AASC;EAAkB,YAAA;AANnB;AAOC;EAAkB,YAAA;AAJnB;AAKC;EAAkB,YAAA;AAFnB;AAGC;EAAkB,YAAA;AAAnB;AACC;EAAkB,YAAA;AAEnB;AADC;EAAkB,YAAA;AAInB;AAHC;EAAmB,YAAA;AAMpB;AAJA;EACC,aAAA;EACA,sBAAA;AAMD;AARA;EAIE,eAAA;AAOF;AANE;EACC,yDAAA;AAQH;AAJA;EACC,sBAAA;EACA,aAAA;AAMD;AAOA;EACC,aAAA;EACA,sBAAA;AALD;AAGA;EAIE,aAAA;EACA,eAAA;AAJF;AADA;EAQE,YAAA;EACA,kBAAA;EAUA,eAAA;AAbF;AANA;EAWG,SAAA;AAFH;AAIE;EACC,yDAAA;AAFH;AAIE;EACC,sBAAA;AAFH;AAfA;EAsBE,WAAA;EACA,WAAA;EACA,SAAA;AAJF;AApBA;EA0BG,UAAA;EACA,WAAA;EACA,sBAAA;AAHH;AAIG;EACC,qBAAA;AAFJ;AAKE;EAAkB,WAAA;AAFpB;AAGE;EAAkB,WAAA;AAApB;AACE;EAAkB,WAAA;AAEpB;AADE;EAAkB,WAAA;AAIpB;AAHE;EAAkB,WAAA;AAMpB;AALE;EAAkB,WAAA;AAQpB;AAPE;EAAmB,WAAA;AAUrB;AAqBA;EACC,aAAA;EACA,sBAAA;AAnBD;AAiBA;EAIE,eAAA;AAlBF;AAcA;EAMG,WAAA;AAjBH;AAWA;EAUE,aAAA;EACA,eAAA;EACA,YAAA;EACA,QAAA;EACA,sBAAA;AAlBF;AAIA;EAiBE,aAAA;EACA,eAAA;EACA,WAAA;EACA,SAAA;EACA,SAAA;AAlBF;AAHA;EAuBG,cAAA;EACA,UAAA;EACA,WAAA;EACA,sBAAA;AAjBH;AAkBG;EACC,sBAAA;AAhBJ;AAmBE;EAAkB,UAAA;AAhBpB;AAiBE;EAAkB,WAAA;AAdpB;AAeE;EAAkB,WAAA;AAZpB;AAaE;EAAkB,WAAA;AAVpB;AAWE;EAAkB,WAAA;AARpB;AASE;EAAkB,WAAA;AANpB;AAOE;EAAmB,WAAA;AAJrB;AAjCA;EAwCE,QAAA;AAJF;AApCA;EA0CG,WAAA;AAHH;AAvCA;EA4CI,UAAA;EACA,WAAA;AAFJ;AAIG;EAAmB,WAAA;AADtB;AAEG;EAAmB,WAAA;AACtB;AAAG;EAAmB,WAAA;AAGtB;AAFG;EAAmB,WAAA;AAKtB;AAJG;EAAmB,WAAA;AAOtB;AANG;EAAmB,WAAA;AAStB;AARG;EAAmB,WAAA;AAWtB;AAhEA;EAyDE,QAAA;AAUF;AAnEA;EA2DG,WAAA;AAWH;AAtEA;EA6DI,UAAA;EACA,WAAA;AAYJ;AAVG;EAAmB,WAAA;AAatB;AAZG;EAAmB,WAAA;AAetB;AAdG;EAAmB,WAAA;AAiBtB;AAhBG;EAAmB,WAAA;AAmBtB;AAlBG;EAAmB,WAAA;AAqBtB;AApBG;EAAmB,WAAA;AAuBtB;AAtBG;EAAmB,WAAA;AAyBtB","sourcesContent":["@editorcell: 48px;\n@indexcell: 5px;\n@previewcell: 2px;\n@gutter: 15px;\n\n#react-container {\n\twidth: 1000px;\n\tmargin: 0 auto;\n}\n\n\nh2 {\n\tmargin-top: 0;\n}\n\n.font-settings-panel {\n\tpadding: @gutter;\n\tbackground-color: #eee;\n}\n\n.glyph-grid {\n\tdisplay: flex;\n\tflex-wrap: wrap;\n\twidth: @editorcell * 5;\n\tborder: 2px solid #000;\n\t.glyph-cell {\n\t\twidth: @editorcell;\n\t\theight: @editorcell;\n\t\tbackground-color: #fff;\n\t\t&.status-on {\n\t\t\tbackground-color: red;\n\t\t}\n\t\timg {\n\t\t\tdisplay: block;\n\t\t\twidth: 100%;\n\t\t\theight: 100%;\n\t\t}\n\t}\n\t&.cells-width-4 { width: @editorcell * 4 }\n\t&.cells-width-5 { width: @editorcell * 5 }\n\t&.cells-width-6 { width: @editorcell * 6 }\n\t&.cells-width-7 { width: @editorcell * 7 }\n\t&.cells-width-8 { width: @editorcell * 8 }\n\t&.cells-width-9 { width: @editorcell * 9 }\n\t&.cells-width-10 { width: @editorcell * 10 }\n}\n.editor-panel {\n\tpadding: @gutter;\n\tbackground-color: #ddd;\n\t.glyph-cell {\n\t\tcursor: pointer;\n\t\t&:hover {\n\t\t\tbackground-image: url('../../dist/assets/shade2x2.png');\n\t\t}\n\t}\n}\n.glyph-tile {\n\tbackground-color: #fdd;\n\tpadding: @editorcell;\n}\n\n\n\n\n\n\n\n\n\n\n\n.font-index {\n\tpadding: @gutter;\n\tbackground-color: #ccc;\n\t.glyph-tiles {\n\t\tdisplay: flex;\n\t\tflex-wrap: wrap;\n\t}\n\t.glyph-tile {\n\t\tpadding: @indexcell;\n\t\ttext-align: center;\n\t\th3 {\n\t\t\tmargin: 0;\n\t\t}\n\t\t&:hover {\n\t\t\tbackground-image: url('../../dist/assets/shade2x2.png');\n\t\t}\n\t\t&.highlighted {\n\t\t\tbackground-color: #faa;\n\t\t}\n\t\tcursor: pointer;\n\t}\n\t.glyph-grid {\n\t\tmargin: @indexcell;\n\t\twidth: @indexcell * 5;\n\t\tborder: 0;\n\t\t.glyph-cell {\n\t\t\twidth: @indexcell;\n\t\t\theight: @indexcell;\n\t\t\tbackground-color: #fff;\n\t\t\t&.status-on {\n\t\t\t\tbackground-color: red;\n\t\t\t}\n\t\t}\n\t\t&.cells-width-4 { width: @indexcell * 4 }\n\t\t&.cells-width-5 { width: @indexcell * 5 }\n\t\t&.cells-width-6 { width: @indexcell * 6 }\n\t\t&.cells-width-7 { width: @indexcell * 7 }\n\t\t&.cells-width-8 { width: @indexcell * 8 }\n\t\t&.cells-width-9 { width: @indexcell * 9 }\n\t\t&.cells-width-10 { width: @indexcell * 10 }\n\t}\n}\n\n\n\n\n\n\n\n\n\n.preview-glyph(@cellmultiplier) {\n\t.glyph-grid {\n\t\twidth: @previewcell * @cellmultiplier * 5;\n\t\theight: @previewcell * @cellmultiplier * 5;\n\t\t.glyph-cell {\n\t\t\twidth: @previewcell * @cellmultiplier;\n\t\t\theight: @previewcell * @cellmultiplier;\n\t\t}\n\t\t&.cells-width-4 { width: @previewcell * 4 }\n\t\t&.cells-width-5 { width: @previewcell * 5 }\n\t\t&.cells-width-6 { width: @previewcell * 6 }\n\t\t&.cells-width-7 { width: @previewcell * 7 }\n\t\t&.cells-width-8 { width: @previewcell * 8 }\n\t\t&.cells-width-9 { width: @previewcell * 9 }\n\t\t&.cells-width-10 { width: @previewcell * 10 }\n\t}\n}\n\n\n.preview-panel {\n\tpadding: @gutter;\n\tbackground-color: #bbb;\n\tform {\n\t\tmargin-top: 1em;\n\t\tinput {\n\t\t\twidth: 30em;\n\t\t}\n\t}\n\t.preview-glyphs {\n\t\tdisplay: flex;\n\t\tflex-wrap: wrap;\n\t\tpadding: @previewcell;\n\t\tgap: @previewcell;\n\t\tbackground-color: #fff;\n\t}\n\t.glyph-grid {\n\t\tdisplay: flex;\n\t\tflex-wrap: wrap;\n\t\twidth: @previewcell * 5;\n\t\tmargin: 0;\n\t\tborder: 0;\n\t\t.glyph-cell {\n\t\t\tdisplay: block;\n\t\t\twidth: @previewcell;\n\t\t\theight: @previewcell;\n\t\t\tbackground-color: #fff;\n\t\t\t&.status-on {\n\t\t\t\tbackground-color: #000;\n\t\t\t}\n\t\t}\n\t\t&.cells-width-4 { width: @previewcell * 4 }\n\t\t&.cells-width-5 { width: @previewcell * 5 }\n\t\t&.cells-width-6 { width: @previewcell * 6 }\n\t\t&.cells-width-7 { width: @previewcell * 7 }\n\t\t&.cells-width-8 { width: @previewcell * 8 }\n\t\t&.cells-width-9 { width: @previewcell * 9 }\n\t\t&.cells-width-10 { width: @previewcell * 10 }\n\t}\n\t.preview-2x {\n\t\tgap: @previewcell * 2;\n\t\t.glyph-grid {\n\t\t\twidth: @previewcell * 2 * 5;\n\t\t\t.glyph-cell {\n\t\t\t\twidth: @previewcell * 2;\n\t\t\t\theight: @previewcell * 2;\n\t\t\t}\n\t\t\t&.cells-width-4  { width: @previewcell * 4  * 2}\n\t\t\t&.cells-width-5  { width: @previewcell * 5  * 2}\n\t\t\t&.cells-width-6  { width: @previewcell * 6  * 2}\n\t\t\t&.cells-width-7  { width: @previewcell * 7  * 2}\n\t\t\t&.cells-width-8  { width: @previewcell * 8  * 2}\n\t\t\t&.cells-width-9  { width: @previewcell * 9  * 2}\n\t\t\t&.cells-width-10 { width: @previewcell * 10 * 2}\n\t\t}\n\t}\n\t.preview-4x {\n\t\tgap: @previewcell * 4;\n\t\t.glyph-grid {\n\t\t\twidth: @previewcell * 4 * 5;\n\t\t\t.glyph-cell {\n\t\t\t\twidth: @previewcell * 4;\n\t\t\t\theight: @previewcell * 4;\n\t\t\t}\n\t\t\t&.cells-width-4  { width: @previewcell * 4  * 4}\n\t\t\t&.cells-width-5  { width: @previewcell * 5  * 4}\n\t\t\t&.cells-width-6  { width: @previewcell * 6  * 4}\n\t\t\t&.cells-width-7  { width: @previewcell * 7  * 4}\n\t\t\t&.cells-width-8  { width: @previewcell * 8  * 4}\n\t\t\t&.cells-width-9  { width: @previewcell * 9  * 4}\n\t\t\t&.cells-width-10 { width: @previewcell * 10 * 4}\n\t\t}\n\t}\n}\n\n\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -27768,7 +27913,9 @@ function Cell(_ref) {
     className: classes,
     style: styles,
     onClick: onClickToggle
-  });
+  }, /*#__PURE__*/React.createElement("img", {
+    src: "assets/empty5x5.png"
+  }));
 }
 
 /***/ }),
@@ -27791,6 +27938,10 @@ function EditorPanel(_ref) {
       'name': 'A',
       'cells': []
     } : _ref$glyph,
+    _ref$width = _ref.width,
+    width = _ref$width === void 0 ? 5 : _ref$width,
+    _ref$height = _ref.height,
+    height = _ref$height === void 0 ? 5 : _ref$height,
     _ref$toggle = _ref.toggle,
     toggle = _ref$toggle === void 0 ? function (f) {
       return f;
@@ -27798,8 +27949,8 @@ function EditorPanel(_ref) {
   return /*#__PURE__*/React.createElement("section", {
     className: "editor-panel"
   }, /*#__PURE__*/React.createElement("h2", null, "Editing: '", glyph.glyphName, "'"), /*#__PURE__*/React.createElement(_GlyphGrid__WEBPACK_IMPORTED_MODULE_0__["default"], {
-    width: 5,
-    height: 5,
+    width: width,
+    height: height,
     editable: 1,
     selectable: 0,
     toggle: toggle,
@@ -27821,11 +27972,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* binding */ FontIndexPanel)
 /* harmony export */ });
-/* harmony import */ var _GlyphGrid__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./GlyphGrid */ "./src/components/GlyphGrid.js");
+/* harmony import */ var _GlyphTile__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./GlyphTile */ "./src/components/GlyphTile.js");
 
 function FontIndexPanel(_ref) {
   var _ref$glyphs = _ref.glyphs,
     glyphs = _ref$glyphs === void 0 ? [] : _ref$glyphs,
+    _ref$currentGlyph = _ref.currentGlyph,
+    currentGlyph = _ref$currentGlyph === void 0 ? 0 : _ref$currentGlyph,
+    _ref$width = _ref.width,
+    width = _ref$width === void 0 ? 5 : _ref$width,
     _ref$select = _ref.select,
     select = _ref$select === void 0 ? function (f) {
       return f;
@@ -27835,15 +27990,66 @@ function FontIndexPanel(_ref) {
   }, /*#__PURE__*/React.createElement("h2", null, "Font index"), /*#__PURE__*/React.createElement("div", {
     className: "glyph-tiles"
   }, glyphs.map(function (glyph, i) {
-    return /*#__PURE__*/React.createElement(_GlyphGrid__WEBPACK_IMPORTED_MODULE_0__["default"], {
+    return /*#__PURE__*/React.createElement(_GlyphTile__WEBPACK_IMPORTED_MODULE_0__["default"], {
       key: i,
-      glyphIndex: i,
+      width: width,
+      highlighted: currentGlyph == glyph.glyphIndex ? 1 : 0,
       editable: 0,
       selectable: 1,
       select: select,
-      glyphName: glyph.glyphName,
-      cellContents: glyph.cells
+      glyph: glyph
     });
+  })));
+}
+
+/***/ }),
+
+/***/ "./src/components/FontSettingsPanel.js":
+/*!*********************************************!*\
+  !*** ./src/components/FontSettingsPanel.js ***!
+  \*********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ FontSettingsPanel)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+function FontSettingsPanel(_ref) {
+  var _ref$width = _ref.width,
+    width = _ref$width === void 0 ? 5 : _ref$width,
+    _ref$height = _ref.height,
+    height = _ref$height === void 0 ? 5 : _ref$height,
+    _ref$updateDimensions = _ref.updateDimensions,
+    updateDimensions = _ref$updateDimensions === void 0 ? function (f) {
+      return f;
+    } : _ref$updateDimensions;
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("section", {
+    className: "font-settings-panel"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", null, "Font settings"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("form", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("label", {
+    htmlFor: "width"
+  }, "width"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("input", {
+    htmlname: "width",
+    type: "number",
+    min: "4",
+    max: "10",
+    value: width,
+    onChange: function onChange(event) {
+      return updateDimensions('width', event.target.value);
+    }
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("label", {
+    htmlFor: "height"
+  }, "height"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("input", {
+    htmlname: "height",
+    type: "number",
+    min: "4",
+    max: "10",
+    value: height,
+    onChange: function onChange(event) {
+      return updateDimensions('height', event.target.value);
+    }
   })));
 }
 
@@ -27866,14 +28072,10 @@ function GlyphGrid(_ref) {
     glyphName = _ref$glyphName === void 0 ? "A" : _ref$glyphName,
     _ref$glyphIndex = _ref.glyphIndex,
     glyphIndex = _ref$glyphIndex === void 0 ? 0 : _ref$glyphIndex,
-    _ref$width = _ref.width,
-    width = _ref$width === void 0 ? 5 : _ref$width,
-    _ref$height = _ref.height,
-    height = _ref$height === void 0 ? 5 : _ref$height,
     _ref$editable = _ref.editable,
     editable = _ref$editable === void 0 ? 0 : _ref$editable,
-    _ref$selectable = _ref.selectable,
-    selectable = _ref$selectable === void 0 ? 0 : _ref$selectable,
+    _ref$width = _ref.width,
+    width = _ref$width === void 0 ? 5 : _ref$width,
     _ref$cellContents = _ref.cellContents,
     cellContents = _ref$cellContents === void 0 ? [] : _ref$cellContents,
     _ref$select = _ref.select,
@@ -27884,16 +28086,10 @@ function GlyphGrid(_ref) {
     toggle = _ref$toggle === void 0 ? function (f) {
       return f;
     } : _ref$toggle;
-  var onClickSelect = selectable ? function () {
-    select(glyphIndex);
-  } : function () {};
+  var gridClasses = "glyph-grid cells-width-" + width;
   return /*#__PURE__*/React.createElement("div", {
-    className: "glyph-tile",
-    onClick: selectable ? onClickSelect : function () {}
-  }, /*#__PURE__*/React.createElement("div", {
-    className: "glyph-grid",
-    "data-glyphname": glyphName,
-    "data-selectable": selectable
+    className: gridClasses,
+    "data-glyphname": glyphName
   }, cellContents.map(function (cell, i) {
     return /*#__PURE__*/React.createElement(_Cell__WEBPACK_IMPORTED_MODULE_0__["default"], {
       id: i,
@@ -27904,9 +28100,63 @@ function GlyphGrid(_ref) {
       toggle: toggle,
       status: cell.status
     });
-  })), selectable ? /*#__PURE__*/React.createElement("h3", {
+  }));
+}
+
+/***/ }),
+
+/***/ "./src/components/GlyphTile.js":
+/*!*************************************!*\
+  !*** ./src/components/GlyphTile.js ***!
+  \*************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ GlyphTile)
+/* harmony export */ });
+/* harmony import */ var _GlyphGrid__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./GlyphGrid */ "./src/components/GlyphGrid.js");
+// wrapper for glyph grid with actions
+
+
+function GlyphTile(_ref) {
+  var _ref$glyph = _ref.glyph,
+    glyph = _ref$glyph === void 0 ? {} : _ref$glyph,
+    _ref$width = _ref.width,
+    width = _ref$width === void 0 ? 5 : _ref$width,
+    _ref$selectable = _ref.selectable,
+    selectable = _ref$selectable === void 0 ? 0 : _ref$selectable,
+    _ref$editable = _ref.editable,
+    editable = _ref$editable === void 0 ? 0 : _ref$editable,
+    _ref$highlighted = _ref.highlighted,
+    highlighted = _ref$highlighted === void 0 ? 0 : _ref$highlighted,
+    _ref$select = _ref.select,
+    select = _ref$select === void 0 ? function (f) {
+      return f;
+    } : _ref$select,
+    _ref$toggle = _ref.toggle,
+    toggle = _ref$toggle === void 0 ? function (f) {
+      return f;
+    } : _ref$toggle;
+  glyph.glyphName == 'space' ? selectable = 0 : selectable = selectable;
+  var onClickSelect = selectable ? function () {
+    select(glyph.glyphIndex);
+  } : function () {};
+  var classNames = "glyph-tile" + (highlighted ? ' highlighted' : '');
+  return /*#__PURE__*/React.createElement("div", {
+    className: classNames,
+    onClick: selectable ? onClickSelect : function () {}
+  }, /*#__PURE__*/React.createElement(_GlyphGrid__WEBPACK_IMPORTED_MODULE_0__["default"], {
+    glyphName: glyph.glyphName,
+    glyphIndex: glyph.glyphIndex,
+    editable: 0,
+    width: width,
+    select: select,
+    toggle: toggle,
+    cellContents: glyph.cells
+  }), selectable ? /*#__PURE__*/React.createElement("h3", {
     className: "glyph-name"
-  }, " ", glyphName, " ") : '');
+  }, " ", glyph.glyphName, " ") : '');
 }
 
 /***/ }),
@@ -27936,6 +28186,8 @@ function _arrayWithHoles(r) { if (Array.isArray(r)) return r; }
 function PreviewPanel(_ref) {
   var _ref$glyphs = _ref.glyphs,
     glyphs = _ref$glyphs === void 0 ? [] : _ref$glyphs,
+    _ref$width = _ref.width,
+    width = _ref$width === void 0 ? 5 : _ref$width,
     _ref$placeholderStrin = _ref.placeholderString,
     placeholderString = _ref$placeholderStrin === void 0 ? 'JACKDAWS LOVE MY BIG SPHINX OF QUARTZ 0123456789' : _ref$placeholderStrin,
     _ref$changePreviewStr = _ref.changePreviewString,
@@ -27973,11 +28225,11 @@ function PreviewPanel(_ref) {
     setPreviewString(newPreviewString);
     var newPreviewGlyphs = [];
     if (newPreviewString.length > 0) {
-      console.log(newPreviewString);
       for (var n = 0; n < newPreviewString.length; n++) {
         if (newPreviewString[n] != " ") {
-          console.log(n, newPreviewGlyphs[n]);
           newPreviewGlyphs[n] = _find(glyphs, newPreviewString[n]);
+        } else {
+          newPreviewGlyphs[n] = _find(glyphs, 'space');
         }
       }
     }
@@ -27986,11 +28238,36 @@ function PreviewPanel(_ref) {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("section", {
     className: "preview-panel"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("h2", null, "Preview"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("div", {
-    className: "glyph-tiles"
+    className: "preview-glyphs preview-1x"
   }, previewGlyphs.map(function (glyph, i) {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(_GlyphGrid__WEBPACK_IMPORTED_MODULE_0__["default"], {
       key: i,
       glyphIndex: glyph.glyphIndex,
+      width: width,
+      editable: 0,
+      selectable: 0,
+      glyphName: glyph.glyphName,
+      cellContents: glyph.cells
+    });
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("div", {
+    className: "preview-glyphs preview-2x"
+  }, previewGlyphs.map(function (glyph, i) {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(_GlyphGrid__WEBPACK_IMPORTED_MODULE_0__["default"], {
+      key: i,
+      glyphIndex: glyph.glyphIndex,
+      width: width,
+      editable: 0,
+      selectable: 0,
+      glyphName: glyph.glyphName,
+      cellContents: glyph.cells
+    });
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("div", {
+    className: "preview-glyphs preview-4x"
+  }, previewGlyphs.map(function (glyph, i) {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(_GlyphGrid__WEBPACK_IMPORTED_MODULE_0__["default"], {
+      key: i,
+      glyphIndex: glyph.glyphIndex,
+      width: width,
       editable: 0,
       selectable: 0,
       glyphName: glyph.glyphName,
@@ -28038,7 +28315,14 @@ function _arrayLikeToArray(r, a) { (null == a || a > r.length) && (a = r.length)
 function defaultGlyphs() {
   var glyphWidth = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 5;
   var glyphHeight = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 5;
-  var glyphs = [defaultGlyphData("A", 0, glyphWidth, glyphHeight), defaultGlyphData("B", 1, glyphWidth, glyphHeight), defaultGlyphData("C", 2, glyphWidth, glyphHeight), defaultGlyphData("D", 3, glyphWidth, glyphHeight), defaultGlyphData("E", 4, glyphWidth, glyphHeight), defaultGlyphData("F", 5, glyphWidth, glyphHeight), defaultGlyphData("G", 6, glyphWidth, glyphHeight), defaultGlyphData("H", 7, glyphWidth, glyphHeight), defaultGlyphData("I", 8, glyphWidth, glyphHeight), defaultGlyphData("J", 9, glyphWidth, glyphHeight), defaultGlyphData("K", 10, glyphWidth, glyphHeight), defaultGlyphData("L", 11, glyphWidth, glyphHeight), defaultGlyphData("M", 12, glyphWidth, glyphHeight), defaultGlyphData("N", 13, glyphWidth, glyphHeight), defaultGlyphData("O", 14, glyphWidth, glyphHeight), defaultGlyphData("P", 15, glyphWidth, glyphHeight), defaultGlyphData("Q", 16, glyphWidth, glyphHeight), defaultGlyphData("R", 17, glyphWidth, glyphHeight), defaultGlyphData("S", 18, glyphWidth, glyphHeight), defaultGlyphData("T", 19, glyphWidth, glyphHeight), defaultGlyphData("U", 20, glyphWidth, glyphHeight), defaultGlyphData("V", 21, glyphWidth, glyphHeight), defaultGlyphData("W", 22, glyphWidth, glyphHeight), defaultGlyphData("X", 23, glyphWidth, glyphHeight), defaultGlyphData("Y", 24, glyphWidth, glyphHeight), defaultGlyphData("Z", 25, glyphWidth, glyphHeight), defaultGlyphData("0", 26, glyphWidth, glyphHeight), defaultGlyphData("1", 27, glyphWidth, glyphHeight), defaultGlyphData("2", 28, glyphWidth, glyphHeight), defaultGlyphData("3", 29, glyphWidth, glyphHeight), defaultGlyphData("4", 30, glyphWidth, glyphHeight), defaultGlyphData("5", 31, glyphWidth, glyphHeight), defaultGlyphData("6", 32, glyphWidth, glyphHeight), defaultGlyphData("7", 33, glyphWidth, glyphHeight), defaultGlyphData("8", 34, glyphWidth, glyphHeight), defaultGlyphData("9", 35, glyphWidth, glyphHeight)];
+  var spaceCells = createArray(glyphWidth * glyphHeight).map(function (cell, i) {
+    return 0;
+  });
+  var glyphs = [defaultGlyphData("A", 0, glyphWidth, glyphHeight), defaultGlyphData("B", 1, glyphWidth, glyphHeight), defaultGlyphData("C", 2, glyphWidth, glyphHeight), defaultGlyphData("D", 3, glyphWidth, glyphHeight), defaultGlyphData("E", 4, glyphWidth, glyphHeight), defaultGlyphData("F", 5, glyphWidth, glyphHeight), defaultGlyphData("G", 6, glyphWidth, glyphHeight), defaultGlyphData("H", 7, glyphWidth, glyphHeight), defaultGlyphData("I", 8, glyphWidth, glyphHeight), defaultGlyphData("J", 9, glyphWidth, glyphHeight), defaultGlyphData("K", 10, glyphWidth, glyphHeight), defaultGlyphData("L", 11, glyphWidth, glyphHeight), defaultGlyphData("M", 12, glyphWidth, glyphHeight), defaultGlyphData("N", 13, glyphWidth, glyphHeight), defaultGlyphData("O", 14, glyphWidth, glyphHeight), defaultGlyphData("P", 15, glyphWidth, glyphHeight), defaultGlyphData("Q", 16, glyphWidth, glyphHeight), defaultGlyphData("R", 17, glyphWidth, glyphHeight), defaultGlyphData("S", 18, glyphWidth, glyphHeight), defaultGlyphData("T", 19, glyphWidth, glyphHeight), defaultGlyphData("U", 20, glyphWidth, glyphHeight), defaultGlyphData("V", 21, glyphWidth, glyphHeight), defaultGlyphData("W", 22, glyphWidth, glyphHeight), defaultGlyphData("X", 23, glyphWidth, glyphHeight), defaultGlyphData("Y", 24, glyphWidth, glyphHeight), defaultGlyphData("Z", 25, glyphWidth, glyphHeight), defaultGlyphData("0", 26, glyphWidth, glyphHeight), defaultGlyphData("1", 27, glyphWidth, glyphHeight), defaultGlyphData("2", 28, glyphWidth, glyphHeight), defaultGlyphData("3", 29, glyphWidth, glyphHeight), defaultGlyphData("4", 30, glyphWidth, glyphHeight), defaultGlyphData("5", 31, glyphWidth, glyphHeight), defaultGlyphData("6", 32, glyphWidth, glyphHeight), defaultGlyphData("7", 33, glyphWidth, glyphHeight), defaultGlyphData("8", 34, glyphWidth, glyphHeight), defaultGlyphData("9", 35, glyphWidth, glyphHeight), {
+    'glyphIndex': 36,
+    'glyphName': 'space',
+    'cells': spaceCells
+  }];
   return glyphs;
 }
 var createArray = function createArray(length) {
@@ -28283,9 +28567,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_EditorPanel__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/EditorPanel */ "./src/components/EditorPanel.js");
 /* harmony import */ var _components_FontIndexPanel__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/FontIndexPanel */ "./src/components/FontIndexPanel.js");
 /* harmony import */ var _components_PreviewPanel__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/PreviewPanel */ "./src/components/PreviewPanel.js");
-/* harmony import */ var _less_stylesy_less__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./less/stylesy.less */ "./src/less/stylesy.less");
-/* harmony import */ var _default_cells_json__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./default_cells.json */ "./src/default_cells.json");
-/* harmony import */ var _default_glyphs_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./default_glyphs.js */ "./src/default_glyphs.js");
+/* harmony import */ var _components_FontSettingsPanel__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/FontSettingsPanel */ "./src/components/FontSettingsPanel.js");
+/* harmony import */ var _less_stylesy_less__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./less/stylesy.less */ "./src/less/stylesy.less");
+/* harmony import */ var _default_cells_json__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./default_cells.json */ "./src/default_cells.json");
+/* harmony import */ var _default_glyphs_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./default_glyphs.js */ "./src/default_glyphs.js");
 function _slicedToArray(r, e) { return _arrayWithHoles(r) || _iterableToArrayLimit(r, e) || _unsupportedIterableToArray(r, e) || _nonIterableRest(); }
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
 function _unsupportedIterableToArray(r, a) { if (r) { if ("string" == typeof r) return _arrayLikeToArray(r, a); var t = {}.toString.call(r).slice(8, -1); return "Object" === t && r.constructor && (t = r.constructor.name), "Map" === t || "Set" === t ? Array.from(r) : "Arguments" === t || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t) ? _arrayLikeToArray(r, a) : void 0; } }
@@ -28302,22 +28587,51 @@ function _arrayWithHoles(r) { if (Array.isArray(r)) return r; }
 
 
 
-var defaultGlyphData = (0,_default_glyphs_js__WEBPACK_IMPORTED_MODULE_8__["default"])(5, 5); // width/height
+
+var defaultGlyphData = (0,_default_glyphs_js__WEBPACK_IMPORTED_MODULE_9__["default"])(5, 5); // width/height
 
 function App() {
   var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(defaultGlyphData),
     _useState2 = _slicedToArray(_useState, 2),
     glyphs = _useState2[0],
     setGlyphs = _useState2[1];
-  var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(0),
+  var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)({
+      'width': 5,
+      'height': 5
+    }),
     _useState4 = _slicedToArray(_useState3, 2),
-    currentGlyph = _useState4[0],
-    setCurrentGlyph = _useState4[1];
+    fontDimensions = _useState4[0],
+    setFontDimensions = _useState4[1];
+  var _useState5 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(0),
+    _useState6 = _slicedToArray(_useState5, 2),
+    currentGlyph = _useState6[0],
+    setCurrentGlyph = _useState6[1];
   //const [previewString, setPreviewSting] = useState('JACKDAWS LOVE MY BIG SPHINX OF QUARTZ');
 
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("section", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", null, "mint pixel font editor"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_EditorPanel__WEBPACK_IMPORTED_MODULE_3__["default"], {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("section", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", null, "mint pixel font editor"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_FontSettingsPanel__WEBPACK_IMPORTED_MODULE_6__["default"], {
+    width: fontDimensions.width,
+    height: fontDimensions.height,
+    updateDimensions: function updateDimensions(dimension, newValue) {
+      if (dimension === 'width') {
+        setFontDimensions({
+          'width': newValue,
+          'height': fontDimensions.height
+        });
+        setGlyphs((0,_default_glyphs_js__WEBPACK_IMPORTED_MODULE_9__["default"])(newValue, fontDimensions.height));
+      } else {
+        setFontDimensions({
+          'width': fontDimensions.width,
+          'height': newValue
+        });
+        setGlyphs((0,_default_glyphs_js__WEBPACK_IMPORTED_MODULE_9__["default"])(fontDimensions.width, newValue));
+      }
+      return newValue;
+    }
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_EditorPanel__WEBPACK_IMPORTED_MODULE_3__["default"], {
     glyph: glyphs[currentGlyph],
     glyphIndex: currentGlyph,
+    width: fontDimensions.width,
+    height: fontDimensions.height,
     toggle: function toggle(glyphIndex, id) {
       // glyphs may need to be an object for quick indexing?
       // get glyphs
@@ -28339,11 +28653,16 @@ function App() {
     }
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_FontIndexPanel__WEBPACK_IMPORTED_MODULE_4__["default"], {
     glyphs: glyphs,
+    width: fontDimensions.width,
+    height: fontDimensions.height,
+    currentGlyph: currentGlyph,
     select: function select(glyphIndex) {
       setCurrentGlyph(glyphIndex);
     }
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_PreviewPanel__WEBPACK_IMPORTED_MODULE_5__["default"], {
     glyphs: glyphs,
+    width: fontDimensions.width,
+    height: fontDimensions.height,
     changePreviewString: function changePreviewString(txt) {
       return console.log(txt);
     }

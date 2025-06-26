@@ -1,20 +1,20 @@
-import GlyphGrid from './GlyphGrid'
+import GlyphTile from './GlyphTile'
 
-export default function FontIndexPanel({ glyphs = [], select = f => f }) {
+export default function FontIndexPanel({ glyphs = [], currentGlyph = 0, width = 5, select = f => f }) {
 	
 	return (
 		<section className="font-index">
 			<h2>Font index</h2>
 			<div className="glyph-tiles">
 				{ glyphs.map((glyph, i) => (
-					<GlyphGrid
+					<GlyphTile
 						key={i}
-						glyphIndex={i}
+						width={ width }
+						highlighted={ currentGlyph == glyph.glyphIndex ? 1 : 0 }
 						editable={0}
 						selectable={1}
 						select={ select }
-						glyphName={ glyph.glyphName }
-						cellContents={ glyph.cells }
+						glyph={ glyph }
 					/>
 				)) }
 			</div>

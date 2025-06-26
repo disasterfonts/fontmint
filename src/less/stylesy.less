@@ -3,8 +3,19 @@
 @previewcell: 2px;
 @gutter: 15px;
 
+#react-container {
+	width: 1000px;
+	margin: 0 auto;
+}
+
+
 h2 {
 	margin-top: 0;
+}
+
+.font-settings-panel {
+	padding: @gutter;
+	background-color: #eee;
 }
 
 .glyph-grid {
@@ -19,11 +30,23 @@ h2 {
 		&.status-on {
 			background-color: red;
 		}
+		img {
+			display: block;
+			width: 100%;
+			height: 100%;
+		}
 	}
+	&.cells-width-4 { width: @editorcell * 4 }
+	&.cells-width-5 { width: @editorcell * 5 }
+	&.cells-width-6 { width: @editorcell * 6 }
+	&.cells-width-7 { width: @editorcell * 7 }
+	&.cells-width-8 { width: @editorcell * 8 }
+	&.cells-width-9 { width: @editorcell * 9 }
+	&.cells-width-10 { width: @editorcell * 10 }
 }
 .editor-panel {
 	padding: @gutter;
-	background-color: #eee;
+	background-color: #ddd;
 	.glyph-cell {
 		cursor: pointer;
 		&:hover {
@@ -35,9 +58,20 @@ h2 {
 	background-color: #fdd;
 	padding: @editorcell;
 }
+
+
+
+
+
+
+
+
+
+
+
 .font-index {
 	padding: @gutter;
-	background-color: #ddd;
+	background-color: #ccc;
 	.glyph-tiles {
 		display: flex;
 		flex-wrap: wrap;
@@ -51,6 +85,10 @@ h2 {
 		&:hover {
 			background-image: url('../../dist/assets/shade2x2.png');
 		}
+		&.highlighted {
+			background-color: #faa;
+		}
+		cursor: pointer;
 	}
 	.glyph-grid {
 		margin: @indexcell;
@@ -64,30 +102,67 @@ h2 {
 				background-color: red;
 			}
 		}
+		&.cells-width-4 { width: @indexcell * 4 }
+		&.cells-width-5 { width: @indexcell * 5 }
+		&.cells-width-6 { width: @indexcell * 6 }
+		&.cells-width-7 { width: @indexcell * 7 }
+		&.cells-width-8 { width: @indexcell * 8 }
+		&.cells-width-9 { width: @indexcell * 9 }
+		&.cells-width-10 { width: @indexcell * 10 }
 	}
 }
 
+
+
+
+
+
+
+
+
+.preview-glyph(@cellmultiplier) {
+	.glyph-grid {
+		width: @previewcell * @cellmultiplier * 5;
+		height: @previewcell * @cellmultiplier * 5;
+		.glyph-cell {
+			width: @previewcell * @cellmultiplier;
+			height: @previewcell * @cellmultiplier;
+		}
+		&.cells-width-4 { width: @previewcell * 4 }
+		&.cells-width-5 { width: @previewcell * 5 }
+		&.cells-width-6 { width: @previewcell * 6 }
+		&.cells-width-7 { width: @previewcell * 7 }
+		&.cells-width-8 { width: @previewcell * 8 }
+		&.cells-width-9 { width: @previewcell * 9 }
+		&.cells-width-10 { width: @previewcell * 10 }
+	}
+}
+
+
 .preview-panel {
 	padding: @gutter;
-	background-color: #ccc;
-	.glyph-tiles {
+	background-color: #bbb;
+	form {
+		margin-top: 1em;
+		input {
+			width: 30em;
+		}
+	}
+	.preview-glyphs {
 		display: flex;
 		flex-wrap: wrap;
 		padding: @previewcell;
-	}
-	.glyph-tile {
-		padding: 1px;
-		text-align: center;
+		gap: @previewcell;
 		background-color: #fff;
-		h3 {
-			margin: 0;
-		}
 	}
 	.glyph-grid {
+		display: flex;
+		flex-wrap: wrap;
 		width: @previewcell * 5;
 		margin: 0;
 		border: 0;
 		.glyph-cell {
+			display: block;
 			width: @previewcell;
 			height: @previewcell;
 			background-color: #fff;
@@ -95,5 +170,48 @@ h2 {
 				background-color: #000;
 			}
 		}
+		&.cells-width-4 { width: @previewcell * 4 }
+		&.cells-width-5 { width: @previewcell * 5 }
+		&.cells-width-6 { width: @previewcell * 6 }
+		&.cells-width-7 { width: @previewcell * 7 }
+		&.cells-width-8 { width: @previewcell * 8 }
+		&.cells-width-9 { width: @previewcell * 9 }
+		&.cells-width-10 { width: @previewcell * 10 }
+	}
+	.preview-2x {
+		gap: @previewcell * 2;
+		.glyph-grid {
+			width: @previewcell * 2 * 5;
+			.glyph-cell {
+				width: @previewcell * 2;
+				height: @previewcell * 2;
+			}
+			&.cells-width-4  { width: @previewcell * 4  * 2}
+			&.cells-width-5  { width: @previewcell * 5  * 2}
+			&.cells-width-6  { width: @previewcell * 6  * 2}
+			&.cells-width-7  { width: @previewcell * 7  * 2}
+			&.cells-width-8  { width: @previewcell * 8  * 2}
+			&.cells-width-9  { width: @previewcell * 9  * 2}
+			&.cells-width-10 { width: @previewcell * 10 * 2}
+		}
+	}
+	.preview-4x {
+		gap: @previewcell * 4;
+		.glyph-grid {
+			width: @previewcell * 4 * 5;
+			.glyph-cell {
+				width: @previewcell * 4;
+				height: @previewcell * 4;
+			}
+			&.cells-width-4  { width: @previewcell * 4  * 4}
+			&.cells-width-5  { width: @previewcell * 5  * 4}
+			&.cells-width-6  { width: @previewcell * 6  * 4}
+			&.cells-width-7  { width: @previewcell * 7  * 4}
+			&.cells-width-8  { width: @previewcell * 8  * 4}
+			&.cells-width-9  { width: @previewcell * 9  * 4}
+			&.cells-width-10 { width: @previewcell * 10 * 4}
+		}
 	}
 }
+
+

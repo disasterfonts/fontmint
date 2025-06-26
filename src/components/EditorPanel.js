@@ -1,13 +1,13 @@
 import GlyphGrid from './GlyphGrid'
 
-export default function EditorPanel({ glyph = {'name': 'A', 'cells': []}, toggle = f => f }) {
-
+export default function EditorPanel({ glyph = {'name': 'A', 'cells': []}, width=5, height=5, toggle = f => f }) {
+	
 	return (
 		<section className="editor-panel">
 			<h2>Editing: '{ glyph.glyphName }'</h2>
 			<GlyphGrid
-				width={5}
-				height={5}
+				width={ width }
+				height={ height }
 				editable={1}
 				selectable={0}
 				toggle={ toggle }

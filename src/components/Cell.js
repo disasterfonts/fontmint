@@ -13,6 +13,8 @@ export default function Cell({ id, glyphName = 'A', glyphIndex = 0, editable = 0
 			className={ classes }
 			style={ styles }
 			onClick={ onClickToggle }
-		/>
+		>
+		<img src='assets/empty5x5.png' />
+		</div>
 	)
 }
