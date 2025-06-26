@@ -1,33 +1,58 @@
 import GlyphGrid from './GlyphGrid'
-import React, { useRef } from "react";
+import React, { useState } from "react";
 
-export default function PreviewPanel ({ glyphs=[], previewString = 'JACKDAWS LOVE MY BIG SPHINX OF QUARTZ', changePreviewString = f => f }) {
+export default function PreviewPanel ({ glyphs=[], placeholderString = 'JACKDAWS LOVE MY BIG SPHINX OF QUARTZ 0123456789', changePreviewString = f => f }) {
 	
-	const formPreviewString = useRef();
+	const [previewString, setPreviewString] = useState(placeholderString);
+	const [previewGlyphs, setPreviewGlyphs] = useState(glyphs);
 	
-	const onChangePreviewString = () => {
-		const newString = formPreviewString.current.value
-		changePreviewString(newString);
+	const find = (glyphs = [], glyphName = "A") => {
+		// locate glyph in array by child object property glyphName
+		for (const glyph of glyphs) {
+			const result = glyph.glyphName === glyphName ? glyph : find(glyph.children, glyphName);
+			if(result) return result;
+		}
 	}
+	
+	const previewStringMesser = (inputTextValue) => {
+		let newPreviewString = inputTextValue.toUpperCase()
+		
+		setPreviewString(newPreviewString)
+		let newPreviewGlyphs = []
+		if (newPreviewString.length > 0) {
+			console.log(newPreviewString);
+			for (let n=0; n<newPreviewString.length; n++) {
+				if (newPreviewString[n] != " ") {
+					console.log(n, newPreviewGlyphs[n])
+					newPreviewGlyphs[n] = find(glyphs, newPreviewString[n]);
+				}
+			}
+		}
+		setPreviewGlyphs(newPreviewGlyphs)
+	}
+	
 	
 	return (
 		<section className="preview-panel">
 			<h2>Preview</h2>
 			<div className="glyph-tiles">
-				{ glyphs.map((glyph, i) => (
+				{ previewGlyphs.map((glyph, i) => (
 					<GlyphGrid
 						key={i}
-						glyphIndex={i}
+						glyphIndex={glyph.glyphIndex}
 						editable={0}
 						selectable={0}
-						glyphName={ glyph.name }
+						glyphName={ glyph.glyphName }
 						cellContents={ glyph.cells }
 					/>
 				))}
 			</div>
 			<form name="preview-edit">
 				<label>Edit:</label>
-				<input ref={formPreviewString} type="text" length="255" onChange={ onChangePreviewString } />
+				<input
+					value={ previewString }
+					type="text"
+					onChange={ event => previewStringMesser(event.target.value) } />
 			</form>
 		</section>
 	)

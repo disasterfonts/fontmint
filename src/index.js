@@ -15,7 +15,7 @@ export default function App() {
 
 	const [glyphs, setGlyphs] = useState(defaultGlyphData);
 	const [currentGlyph, setCurrentGlyph] = useState(0);
-	const [previewString, setPreviewSting] = useState('JACKDAWS LOVE MY BIG SPHINX OF QUARTZ');
+	//const [previewString, setPreviewSting] = useState('JACKDAWS LOVE MY BIG SPHINX OF QUARTZ');
 	
 	return (
 		<section>
@@ -54,7 +54,6 @@ export default function App() {
 			/>
 			<PreviewPanel 
 				glyphs={ glyphs }
-				previewString={ previewString }
 				changePreviewString={ (txt) => console.log(txt) }
 			/>
 		</section>

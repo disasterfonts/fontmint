@@ -4,13 +4,14 @@ export default function EditorPanel({ glyph = {'name': 'A', 'cells': []}, toggle
 
 	return (
 		<section className="editor-panel">
-			<h2>Editing: '{ glyph.name }'</h2>
+			<h2>Editing: '{ glyph.glyphName }'</h2>
 			<GlyphGrid
 				width={5}
 				height={5}
 				editable={1}
 				selectable={0}
 				toggle={ toggle }
+				glyphName={glyph.glyphName}
 				glyphIndex={glyph.glyphIndex}
 				cellContents={glyph.cells}
 			/>

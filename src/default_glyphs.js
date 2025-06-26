@@ -47,7 +47,7 @@ const defaultGlyphData = (name, glyphIndex = 0, glyphWidth = 5, glyphHeight = 5)
 	let cells = createArray(cellTotal).map( (cell,i) => ({'id': i, 'status':Math.round(Math.random(1))}) )
 	let glyph = {
 		'glyphIndex': glyphIndex,
-		'name': name,
+		'glyphName': name,
 		'cells': cells,
 	}
 	return glyph;

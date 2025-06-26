@@ -13,7 +13,7 @@ export default function FontIndexPanel({ glyphs = [], select = f => f }) {
 						editable={0}
 						selectable={1}
 						select={ select }
-						glyphName={ glyph.name }
+						glyphName={ glyph.glyphName }
 						cellContents={ glyph.cells }
 					/>
 				)) }

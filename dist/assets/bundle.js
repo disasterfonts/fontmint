@@ -57,6 +57,9 @@ ___CSS_LOADER_EXPORT___.push([module.id, `h2 {
   padding: 15px;
   background-color: #eee;
 }
+.editor-panel .glyph-cell {
+  cursor: pointer;
+}
 .editor-panel .glyph-cell:hover {
   background-image: url(${___CSS_LOADER_URL_REPLACEMENT_0___});
 }
@@ -125,7 +128,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `h2 {
 .preview-panel .glyph-grid .glyph-cell.status-on {
   background-color: #000;
 }
-`, "",{"version":3,"sources":["webpack://./src/less/stylesy.less"],"names":[],"mappings":"AAKA;EACC,aAAA;AAJD;AAOA;EACC,aAAA;EACA,eAAA;EACA,YAAA;EACA,sBAAA;AALD;AACA;EAME,WAAA;EACA,YAAA;EACA,sBAAA;AAJF;AAKE;EACC,qBAAA;AAHH;AAOA;EACC,aAAA;EACA,sBAAA;AALD;AAOE;EACC,yDAAA;AALH;AASA;EACC,sBAAA;EACA,aAAA;AAPD;AASA;EACC,aAAA;EACA,sBAAA;AAPD;AAKA;EAIE,aAAA;EACA,eAAA;AANF;AACA;EAQE,YAAA;EACA,kBAAA;AANF;AAHA;EAWG,SAAA;AALH;AAOE;EACC,yDAAA;AALH;AATA;EAkBE,WAAA;EACA,WAAA;EACA,SAAA;AANF;AAdA;EAsBG,UAAA;EACA,WAAA;EACA,sBAAA;AALH;AAMG;EACC,qBAAA;AAJJ;AAUA;EACC,aAAA;EACA,sBAAA;AARD;AAMA;EAIE,aAAA;EACA,eAAA;EACA,YAAA;AAPF;AACA;EASE,YAAA;EACA,kBAAA;EACA,sBAAA;AAPF;AAJA;EAaG,SAAA;AANH;AAPA;EAiBE,WAAA;EACA,SAAA;EACA,SAAA;AAPF;AAZA;EAqBG,UAAA;EACA,WAAA;EACA,sBAAA;AANH;AAOG;EACC,sBAAA;AALJ","sourcesContent":["@editorcell: 48px;\n@indexcell: 5px;\n@previewcell: 2px;\n@gutter: 15px;\n\nh2 {\n\tmargin-top: 0;\n}\n\n.glyph-grid {\n\tdisplay: flex;\n\tflex-wrap: wrap;\n\twidth: @editorcell * 5;\n\tborder: 2px solid #000;\n\t.glyph-cell {\n\t\twidth: @editorcell;\n\t\theight: @editorcell;\n\t\tbackground-color: #fff;\n\t\t&.status-on {\n\t\t\tbackground-color: red;\n\t\t}\n\t}\n}\n.editor-panel {\n\tpadding: @gutter;\n\tbackground-color: #eee;\n\t.glyph-cell {\n\t\t&:hover {\n\t\t\tbackground-image: url('../../dist/assets/shade2x2.png');\n\t\t}\n\t}\n}\n.glyph-tile {\n\tbackground-color: #fdd;\n\tpadding: @editorcell;\n}\n.font-index {\n\tpadding: @gutter;\n\tbackground-color: #ddd;\n\t.glyph-tiles {\n\t\tdisplay: flex;\n\t\tflex-wrap: wrap;\n\t}\n\t.glyph-tile {\n\t\tpadding: @indexcell;\n\t\ttext-align: center;\n\t\th3 {\n\t\t\tmargin: 0;\n\t\t}\n\t\t&:hover {\n\t\t\tbackground-image: url('../../dist/assets/shade2x2.png');\n\t\t}\n\t}\n\t.glyph-grid {\n\t\tmargin: @indexcell;\n\t\twidth: @indexcell * 5;\n\t\tborder: 0;\n\t\t.glyph-cell {\n\t\t\twidth: @indexcell;\n\t\t\theight: @indexcell;\n\t\t\tbackground-color: #fff;\n\t\t\t&.status-on {\n\t\t\t\tbackground-color: red;\n\t\t\t}\n\t\t}\n\t}\n}\n\n.preview-panel {\n\tpadding: @gutter;\n\tbackground-color: #ccc;\n\t.glyph-tiles {\n\t\tdisplay: flex;\n\t\tflex-wrap: wrap;\n\t\tpadding: @previewcell;\n\t}\n\t.glyph-tile {\n\t\tpadding: 1px;\n\t\ttext-align: center;\n\t\tbackground-color: #fff;\n\t\th3 {\n\t\t\tmargin: 0;\n\t\t}\n\t}\n\t.glyph-grid {\n\t\twidth: @previewcell * 5;\n\t\tmargin: 0;\n\t\tborder: 0;\n\t\t.glyph-cell {\n\t\t\twidth: @previewcell;\n\t\t\theight: @previewcell;\n\t\t\tbackground-color: #fff;\n\t\t\t&.status-on {\n\t\t\t\tbackground-color: #000;\n\t\t\t}\n\t\t}\n\t}\n}"],"sourceRoot":""}]);
+`, "",{"version":3,"sources":["webpack://./src/less/stylesy.less"],"names":[],"mappings":"AAKA;EACC,aAAA;AAJD;AAOA;EACC,aAAA;EACA,eAAA;EACA,YAAA;EACA,sBAAA;AALD;AACA;EAME,WAAA;EACA,YAAA;EACA,sBAAA;AAJF;AAKE;EACC,qBAAA;AAHH;AAOA;EACC,aAAA;EACA,sBAAA;AALD;AAGA;EAIE,eAAA;AAJF;AAKE;EACC,yDAAA;AAHH;AAOA;EACC,sBAAA;EACA,aAAA;AALD;AAOA;EACC,aAAA;EACA,sBAAA;AALD;AAGA;EAIE,aAAA;EACA,eAAA;AAJF;AADA;EAQE,YAAA;EACA,kBAAA;AAJF;AALA;EAWG,SAAA;AAHH;AAKE;EACC,yDAAA;AAHH;AAXA;EAkBE,WAAA;EACA,WAAA;EACA,SAAA;AAJF;AAhBA;EAsBG,UAAA;EACA,WAAA;EACA,sBAAA;AAHH;AAIG;EACC,qBAAA;AAFJ;AAQA;EACC,aAAA;EACA,sBAAA;AAND;AAIA;EAIE,aAAA;EACA,eAAA;EACA,YAAA;AALF;AADA;EASE,YAAA;EACA,kBAAA;EACA,sBAAA;AALF;AANA;EAaG,SAAA;AAJH;AATA;EAiBE,WAAA;EACA,SAAA;EACA,SAAA;AALF;AAdA;EAqBG,UAAA;EACA,WAAA;EACA,sBAAA;AAJH;AAKG;EACC,sBAAA;AAHJ","sourcesContent":["@editorcell: 48px;\n@indexcell: 5px;\n@previewcell: 2px;\n@gutter: 15px;\n\nh2 {\n\tmargin-top: 0;\n}\n\n.glyph-grid {\n\tdisplay: flex;\n\tflex-wrap: wrap;\n\twidth: @editorcell * 5;\n\tborder: 2px solid #000;\n\t.glyph-cell {\n\t\twidth: @editorcell;\n\t\theight: @editorcell;\n\t\tbackground-color: #fff;\n\t\t&.status-on {\n\t\t\tbackground-color: red;\n\t\t}\n\t}\n}\n.editor-panel {\n\tpadding: @gutter;\n\tbackground-color: #eee;\n\t.glyph-cell {\n\t\tcursor: pointer;\n\t\t&:hover {\n\t\t\tbackground-image: url('../../dist/assets/shade2x2.png');\n\t\t}\n\t}\n}\n.glyph-tile {\n\tbackground-color: #fdd;\n\tpadding: @editorcell;\n}\n.font-index {\n\tpadding: @gutter;\n\tbackground-color: #ddd;\n\t.glyph-tiles {\n\t\tdisplay: flex;\n\t\tflex-wrap: wrap;\n\t}\n\t.glyph-tile {\n\t\tpadding: @indexcell;\n\t\ttext-align: center;\n\t\th3 {\n\t\t\tmargin: 0;\n\t\t}\n\t\t&:hover {\n\t\t\tbackground-image: url('../../dist/assets/shade2x2.png');\n\t\t}\n\t}\n\t.glyph-grid {\n\t\tmargin: @indexcell;\n\t\twidth: @indexcell * 5;\n\t\tborder: 0;\n\t\t.glyph-cell {\n\t\t\twidth: @indexcell;\n\t\t\theight: @indexcell;\n\t\t\tbackground-color: #fff;\n\t\t\t&.status-on {\n\t\t\t\tbackground-color: red;\n\t\t\t}\n\t\t}\n\t}\n}\n\n.preview-panel {\n\tpadding: @gutter;\n\tbackground-color: #ccc;\n\t.glyph-tiles {\n\t\tdisplay: flex;\n\t\tflex-wrap: wrap;\n\t\tpadding: @previewcell;\n\t}\n\t.glyph-tile {\n\t\tpadding: 1px;\n\t\ttext-align: center;\n\t\tbackground-color: #fff;\n\t\th3 {\n\t\t\tmargin: 0;\n\t\t}\n\t}\n\t.glyph-grid {\n\t\twidth: @previewcell * 5;\n\t\tmargin: 0;\n\t\tborder: 0;\n\t\t.glyph-cell {\n\t\t\twidth: @previewcell;\n\t\t\theight: @previewcell;\n\t\t\tbackground-color: #fff;\n\t\t\t&.status-on {\n\t\t\t\tbackground-color: #000;\n\t\t\t}\n\t\t}\n\t}\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -27754,19 +27757,15 @@ function Cell(_ref) {
     _ref$style = _ref.style,
     style = _ref$style === void 0 ? {} : _ref$style;
   var classes = "glyph-cell status-" + (status ? 'on' : 'off');
-  var id_attr = "id-" + id;
+  var id_attr = "id-".concat(glyphIndex, "-").concat(id);
   var onClickToggle = editable ? function () {
     toggle(glyphIndex, id);
   } : function () {};
-  var styles = editable ? _objectSpread({
-    cursor: 'pointer'
-  }, style) : _objectSpread({}, style);
+  //let styles = editable ? {cursor: 'pointer', ...style} : { ...style}
+  var styles = _objectSpread({}, styles);
   return /*#__PURE__*/React.createElement("div", {
     id: id_attr,
     className: classes,
-    "data-status": status,
-    "data-id": id,
-    "data-index": glyphIndex,
     style: styles,
     onClick: onClickToggle
   });
@@ -27798,12 +27797,13 @@ function EditorPanel(_ref) {
     } : _ref$toggle;
   return /*#__PURE__*/React.createElement("section", {
     className: "editor-panel"
-  }, /*#__PURE__*/React.createElement("h2", null, "Editing: '", glyph.name, "'"), /*#__PURE__*/React.createElement(_GlyphGrid__WEBPACK_IMPORTED_MODULE_0__["default"], {
+  }, /*#__PURE__*/React.createElement("h2", null, "Editing: '", glyph.glyphName, "'"), /*#__PURE__*/React.createElement(_GlyphGrid__WEBPACK_IMPORTED_MODULE_0__["default"], {
     width: 5,
     height: 5,
     editable: 1,
     selectable: 0,
     toggle: toggle,
+    glyphName: glyph.glyphName,
     glyphIndex: glyph.glyphIndex,
     cellContents: glyph.cells
   }));
@@ -27841,7 +27841,7 @@ function FontIndexPanel(_ref) {
       editable: 0,
       selectable: 1,
       select: select,
-      glyphName: glyph.name,
+      glyphName: glyph.glyphName,
       cellContents: glyph.cells
     });
   })));
@@ -27924,42 +27924,86 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _GlyphGrid__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./GlyphGrid */ "./src/components/GlyphGrid.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+function _createForOfIteratorHelper(r, e) { var t = "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"]; if (!t) { if (Array.isArray(r) || (t = _unsupportedIterableToArray(r)) || e && r && "number" == typeof r.length) { t && (r = t); var _n = 0, F = function F() {}; return { s: F, n: function n() { return _n >= r.length ? { done: !0 } : { done: !1, value: r[_n++] }; }, e: function e(r) { throw r; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var o, a = !0, u = !1; return { s: function s() { t = t.call(r); }, n: function n() { var r = t.next(); return a = r.done, r; }, e: function e(r) { u = !0, o = r; }, f: function f() { try { a || null == t["return"] || t["return"](); } finally { if (u) throw o; } } }; }
+function _slicedToArray(r, e) { return _arrayWithHoles(r) || _iterableToArrayLimit(r, e) || _unsupportedIterableToArray(r, e) || _nonIterableRest(); }
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _unsupportedIterableToArray(r, a) { if (r) { if ("string" == typeof r) return _arrayLikeToArray(r, a); var t = {}.toString.call(r).slice(8, -1); return "Object" === t && r.constructor && (t = r.constructor.name), "Map" === t || "Set" === t ? Array.from(r) : "Arguments" === t || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t) ? _arrayLikeToArray(r, a) : void 0; } }
+function _arrayLikeToArray(r, a) { (null == a || a > r.length) && (a = r.length); for (var e = 0, n = Array(a); e < a; e++) n[e] = r[e]; return n; }
+function _iterableToArrayLimit(r, l) { var t = null == r ? null : "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"]; if (null != t) { var e, n, i, u, a = [], f = !0, o = !1; try { if (i = (t = t.call(r)).next, 0 === l) { if (Object(t) !== t) return; f = !1; } else for (; !(f = (e = i.call(t)).done) && (a.push(e.value), a.length !== l); f = !0); } catch (r) { o = !0, n = r; } finally { try { if (!f && null != t["return"] && (u = t["return"](), Object(u) !== u)) return; } finally { if (o) throw n; } } return a; } }
+function _arrayWithHoles(r) { if (Array.isArray(r)) return r; }
 
 
 function PreviewPanel(_ref) {
   var _ref$glyphs = _ref.glyphs,
     glyphs = _ref$glyphs === void 0 ? [] : _ref$glyphs,
-    _ref$previewString = _ref.previewString,
-    previewString = _ref$previewString === void 0 ? 'JACKDAWS LOVE MY BIG SPHINX OF QUARTZ' : _ref$previewString,
+    _ref$placeholderStrin = _ref.placeholderString,
+    placeholderString = _ref$placeholderStrin === void 0 ? 'JACKDAWS LOVE MY BIG SPHINX OF QUARTZ 0123456789' : _ref$placeholderStrin,
     _ref$changePreviewStr = _ref.changePreviewString,
     changePreviewString = _ref$changePreviewStr === void 0 ? function (f) {
       return f;
     } : _ref$changePreviewStr;
-  var formPreviewString = (0,react__WEBPACK_IMPORTED_MODULE_1__.useRef)();
-  var onChangePreviewString = function onChangePreviewString() {
-    var newString = formPreviewString.current.value;
-    changePreviewString(newString);
+  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(placeholderString),
+    _useState2 = _slicedToArray(_useState, 2),
+    previewString = _useState2[0],
+    setPreviewString = _useState2[1];
+  var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(glyphs),
+    _useState4 = _slicedToArray(_useState3, 2),
+    previewGlyphs = _useState4[0],
+    setPreviewGlyphs = _useState4[1];
+  var _find = function find() {
+    var glyphs = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
+    var glyphName = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : "A";
+    // locate glyph in array by child object property glyphName
+    var _iterator = _createForOfIteratorHelper(glyphs),
+      _step;
+    try {
+      for (_iterator.s(); !(_step = _iterator.n()).done;) {
+        var glyph = _step.value;
+        var result = glyph.glyphName === glyphName ? glyph : _find(glyph.children, glyphName);
+        if (result) return result;
+      }
+    } catch (err) {
+      _iterator.e(err);
+    } finally {
+      _iterator.f();
+    }
+  };
+  var previewStringMesser = function previewStringMesser(inputTextValue) {
+    var newPreviewString = inputTextValue.toUpperCase();
+    setPreviewString(newPreviewString);
+    var newPreviewGlyphs = [];
+    if (newPreviewString.length > 0) {
+      console.log(newPreviewString);
+      for (var n = 0; n < newPreviewString.length; n++) {
+        if (newPreviewString[n] != " ") {
+          console.log(n, newPreviewGlyphs[n]);
+          newPreviewGlyphs[n] = _find(glyphs, newPreviewString[n]);
+        }
+      }
+    }
+    setPreviewGlyphs(newPreviewGlyphs);
   };
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("section", {
     className: "preview-panel"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("h2", null, "Preview"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("div", {
     className: "glyph-tiles"
-  }, glyphs.map(function (glyph, i) {
+  }, previewGlyphs.map(function (glyph, i) {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(_GlyphGrid__WEBPACK_IMPORTED_MODULE_0__["default"], {
       key: i,
-      glyphIndex: i,
+      glyphIndex: glyph.glyphIndex,
       editable: 0,
       selectable: 0,
-      glyphName: glyph.name,
+      glyphName: glyph.glyphName,
       cellContents: glyph.cells
     });
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("form", {
     name: "preview-edit"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("label", null, "Edit:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("input", {
-    ref: formPreviewString,
+    value: previewString,
     type: "text",
-    length: "255",
-    onChange: onChangePreviewString
+    onChange: function onChange(event) {
+      return previewStringMesser(event.target.value);
+    }
   })));
 }
 
@@ -28013,7 +28057,7 @@ var defaultGlyphData = function defaultGlyphData(name) {
   });
   var glyph = {
     'glyphIndex': glyphIndex,
-    'name': name,
+    'glyphName': name,
     'cells': cells
   };
   return glyph;
@@ -28269,10 +28313,8 @@ function App() {
     _useState4 = _slicedToArray(_useState3, 2),
     currentGlyph = _useState4[0],
     setCurrentGlyph = _useState4[1];
-  var _useState5 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)('JACKDAWS LOVE MY BIG SPHINX OF QUARTZ'),
-    _useState6 = _slicedToArray(_useState5, 2),
-    previewString = _useState6[0],
-    setPreviewSting = _useState6[1];
+  //const [previewString, setPreviewSting] = useState('JACKDAWS LOVE MY BIG SPHINX OF QUARTZ');
+
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("section", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", null, "mint pixel font editor"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_EditorPanel__WEBPACK_IMPORTED_MODULE_3__["default"], {
     glyph: glyphs[currentGlyph],
     glyphIndex: currentGlyph,
@@ -28302,7 +28344,6 @@ function App() {
     }
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_PreviewPanel__WEBPACK_IMPORTED_MODULE_5__["default"], {
     glyphs: glyphs,
-    previewString: previewString,
     changePreviewString: function changePreviewString(txt) {
       return console.log(txt);
     }

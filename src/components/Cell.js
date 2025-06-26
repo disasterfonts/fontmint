@@ -2,18 +2,17 @@ export default function Cell({ id, glyphName = 'A', glyphIndex = 0, editable = 0
 	
 	const classes = "glyph-cell status-" + (status ? 'on' : 'off');
 	
-	let id_attr = "id-" + id;
+	let id_attr = `id-${glyphIndex}-${id}`;
 	let onClickToggle = editable ? (() => { toggle(glyphIndex, id) }) : function() {}
-	let styles = editable ? {cursor: 'pointer', ...style} : { ...style}
+	//let styles = editable ? {cursor: 'pointer', ...style} : { ...style}
+	let styles = {...styles}
 	
 	return (
 		<div
 			id={ id_attr }
 			className={ classes }
-			data-status={ status }
-			data-id={ id }
-			data-index={ glyphIndex }
 			style={ styles }
-			onClick={ onClickToggle } />
+			onClick={ onClickToggle }
+		/>
 	)
 }

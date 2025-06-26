@@ -10,7 +10,10 @@ app
 		glyphgrid, display
 			name
 			cell, display
-
+	previewpanel
+		glyphgrid, display
+		form
+			input
 
 data
 	glyphs
@@ -19,3 +22,31 @@ data
 		glyph
 			name
 			cells
+
+
+
+
+ideal features
+
+edit glyph
+	basic: toggle pixels by click
+	advanced: toggle pixels by drag
+	
+edit font
+	choose glyph to edit
+	change glyph dimensions (universal)
+
+preview font
+	custom string form updates a preview
+	advanced: being able to type in a box with the font glyphs
+
+export font (all advanced)
+	build vector shapes, export to json/svg
+	advanced: export to ufo
+	ridiculously advanced: export to ttf
+
+ui
+	persist edits after refresh (cookies?)
+	undo?
+	load
+	save (not export)
