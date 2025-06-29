@@ -1,6 +1,6 @@
 import GlyphGrid from './GlyphGrid'
 
-export default function EditorPanel({ glyph = {'name': 'A', 'cells': []}, width=5, height=5, toggle = f => f }) {
+export default function EditorPanel({ glyph = {'name': 'A', 'cells': []}, width=5, height=5, dragstatus = f => f, dragdraw = f => f, toggle = f => f }) {
 	
 	return (
 		<section className="editor-panel">
@@ -14,6 +14,8 @@ export default function EditorPanel({ glyph = {'name': 'A', 'cells': []}, width=
 				glyphName={glyph.glyphName}
 				glyphIndex={glyph.glyphIndex}
 				cellContents={glyph.cells}
+				dragstatus={ dragstatus }
+				dragdraw={ dragdraw }
 			/>
 		</section>
 	)

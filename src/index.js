@@ -1,11 +1,13 @@
 import React, { useState } from 'react'
 import ReactDOM from 'react-dom/client'
 import { createRoot } from 'react-dom/client'
-import GlyphGrid from './components/GlyphGrid'
+
+import FontSettingsPanel from './components/FontSettingsPanel'
 import EditorPanel from './components/EditorPanel'
 import FontIndexPanel from './components/FontIndexPanel'
 import PreviewPanel from './components/PreviewPanel'
-import FontSettingsPanel from './components/FontSettingsPanel'
+import ExportPanel from './components/ExportPanel'
+
 import './less/stylesy.less'
 import cellInitData from "./default_cells.json"
 import defaultGlyphs from "./default_glyphs.js"
@@ -17,11 +19,14 @@ export default function App() {
 	const [glyphs, setGlyphs] = useState(defaultGlyphData);
 	const [fontDimensions, setFontDimensions] = useState({'width':5,'height':5});
 	const [currentGlyph, setCurrentGlyph] = useState(0);
+	const [dragStatus, setDragStatus] = useState(0);
+	const [dragColour, setDragColour] = useState(1);
 	//const [previewString, setPreviewSting] = useState('JACKDAWS LOVE MY BIG SPHINX OF QUARTZ');
 	
 	return (
 		<section>
 			<h1>mint pixel font editor</h1>
+			
 			<FontSettingsPanel 
 				width={fontDimensions.width}
 				height={fontDimensions.height}
@@ -37,12 +42,15 @@ export default function App() {
 					}
 				}
 			/>
+			
 			<EditorPanel 
 				glyph={ glyphs[currentGlyph] }
 				glyphIndex = { currentGlyph }
 				width = { fontDimensions.width }
 				height = { fontDimensions.height }
 				toggle = { (glyphIndex, id) => {
+					
+					setDragStatus(0)
 					
 					// glyphs may need to be an object for quick indexing?
 					// get glyphs
@@ -63,7 +71,30 @@ export default function App() {
 					setGlyphs(newGlyphs);
 					}
 				}
+				dragstatus = { (status, colour) => {
+					//console.log('dragging:' + status, 'colour:' + colour)
+					setDragColour(colour)
+					setDragStatus(status)
+					}
+				}
+				dragdraw = { (glyphIndex, id) => {
+					if (dragStatus) {
+						//console.log('painting:' + dragColour)
+						
+						let newGlyphs = glyphs.map(glyph => glyph);
+						const newCells = newGlyphs[glyphIndex].cells.map((cell, i) => {
+							if (cell.id == id) {
+								cell.status = dragColour;
+							}
+							return cell;
+						});
+						newGlyphs[glyphIndex].cells = newCells;
+						setGlyphs(newGlyphs);
+					}
+					}
+				}
 			/>
+			
 			<FontIndexPanel 
 				glyphs={ glyphs }
 				width = { fontDimensions.width }
@@ -74,11 +105,15 @@ export default function App() {
 					}
 				}
 			/>
+			
 			<PreviewPanel 
 				glyphs={ glyphs }
 				width = { fontDimensions.width }
 				height = { fontDimensions.height }
 				changePreviewString={ (txt) => console.log(txt) }
+			/>
+			<ExportPanel
+				glyphs={ glyphs }
 			/>
 		</section>
 	)

@@ -273,7 +273,11 @@ h2 {
 .preview-panel .preview-4x .glyph-grid.cells-width-10 {
   width: 80px;
 }
-`, "",{"version":3,"sources":["webpack://./src/less/stylesy.less"],"names":[],"mappings":"AAKA;EACC,aAAA;EACA,cAAA;AAJD;AAQA;EACC,aAAA;AAND;AASA;EACC,aAAA;EACA,sBAAA;AAPD;AAUA;EACC,aAAA;EACA,eAAA;EACA,YAAA;EACA,sBAAA;AARD;AAIA;EAME,WAAA;EACA,YAAA;EACA,sBAAA;AAPF;AAQE;EACC,qBAAA;AANH;AAJA;EAaG,cAAA;EACA,WAAA;EACA,YAAA;AANH;AASC;EAAkB,YAAA;AANnB;AAOC;EAAkB,YAAA;AAJnB;AAKC;EAAkB,YAAA;AAFnB;AAGC;EAAkB,YAAA;AAAnB;AACC;EAAkB,YAAA;AAEnB;AADC;EAAkB,YAAA;AAInB;AAHC;EAAmB,YAAA;AAMpB;AAJA;EACC,aAAA;EACA,sBAAA;AAMD;AARA;EAIE,eAAA;AAOF;AANE;EACC,yDAAA;AAQH;AAJA;EACC,sBAAA;EACA,aAAA;AAMD;AAOA;EACC,aAAA;EACA,sBAAA;AALD;AAGA;EAIE,aAAA;EACA,eAAA;AAJF;AADA;EAQE,YAAA;EACA,kBAAA;EAUA,eAAA;AAbF;AANA;EAWG,SAAA;AAFH;AAIE;EACC,yDAAA;AAFH;AAIE;EACC,sBAAA;AAFH;AAfA;EAsBE,WAAA;EACA,WAAA;EACA,SAAA;AAJF;AApBA;EA0BG,UAAA;EACA,WAAA;EACA,sBAAA;AAHH;AAIG;EACC,qBAAA;AAFJ;AAKE;EAAkB,WAAA;AAFpB;AAGE;EAAkB,WAAA;AAApB;AACE;EAAkB,WAAA;AAEpB;AADE;EAAkB,WAAA;AAIpB;AAHE;EAAkB,WAAA;AAMpB;AALE;EAAkB,WAAA;AAQpB;AAPE;EAAmB,WAAA;AAUrB;AAqBA;EACC,aAAA;EACA,sBAAA;AAnBD;AAiBA;EAIE,eAAA;AAlBF;AAcA;EAMG,WAAA;AAjBH;AAWA;EAUE,aAAA;EACA,eAAA;EACA,YAAA;EACA,QAAA;EACA,sBAAA;AAlBF;AAIA;EAiBE,aAAA;EACA,eAAA;EACA,WAAA;EACA,SAAA;EACA,SAAA;AAlBF;AAHA;EAuBG,cAAA;EACA,UAAA;EACA,WAAA;EACA,sBAAA;AAjBH;AAkBG;EACC,sBAAA;AAhBJ;AAmBE;EAAkB,UAAA;AAhBpB;AAiBE;EAAkB,WAAA;AAdpB;AAeE;EAAkB,WAAA;AAZpB;AAaE;EAAkB,WAAA;AAVpB;AAWE;EAAkB,WAAA;AARpB;AASE;EAAkB,WAAA;AANpB;AAOE;EAAmB,WAAA;AAJrB;AAjCA;EAwCE,QAAA;AAJF;AApCA;EA0CG,WAAA;AAHH;AAvCA;EA4CI,UAAA;EACA,WAAA;AAFJ;AAIG;EAAmB,WAAA;AADtB;AAEG;EAAmB,WAAA;AACtB;AAAG;EAAmB,WAAA;AAGtB;AAFG;EAAmB,WAAA;AAKtB;AAJG;EAAmB,WAAA;AAOtB;AANG;EAAmB,WAAA;AAStB;AARG;EAAmB,WAAA;AAWtB;AAhEA;EAyDE,QAAA;AAUF;AAnEA;EA2DG,WAAA;AAWH;AAtEA;EA6DI,UAAA;EACA,WAAA;AAYJ;AAVG;EAAmB,WAAA;AAatB;AAZG;EAAmB,WAAA;AAetB;AAdG;EAAmB,WAAA;AAiBtB;AAhBG;EAAmB,WAAA;AAmBtB;AAlBG;EAAmB,WAAA;AAqBtB;AApBG;EAAmB,WAAA;AAuBtB;AAtBG;EAAmB,WAAA;AAyBtB","sourcesContent":["@editorcell: 48px;\n@indexcell: 5px;\n@previewcell: 2px;\n@gutter: 15px;\n\n#react-container {\n\twidth: 1000px;\n\tmargin: 0 auto;\n}\n\n\nh2 {\n\tmargin-top: 0;\n}\n\n.font-settings-panel {\n\tpadding: @gutter;\n\tbackground-color: #eee;\n}\n\n.glyph-grid {\n\tdisplay: flex;\n\tflex-wrap: wrap;\n\twidth: @editorcell * 5;\n\tborder: 2px solid #000;\n\t.glyph-cell {\n\t\twidth: @editorcell;\n\t\theight: @editorcell;\n\t\tbackground-color: #fff;\n\t\t&.status-on {\n\t\t\tbackground-color: red;\n\t\t}\n\t\timg {\n\t\t\tdisplay: block;\n\t\t\twidth: 100%;\n\t\t\theight: 100%;\n\t\t}\n\t}\n\t&.cells-width-4 { width: @editorcell * 4 }\n\t&.cells-width-5 { width: @editorcell * 5 }\n\t&.cells-width-6 { width: @editorcell * 6 }\n\t&.cells-width-7 { width: @editorcell * 7 }\n\t&.cells-width-8 { width: @editorcell * 8 }\n\t&.cells-width-9 { width: @editorcell * 9 }\n\t&.cells-width-10 { width: @editorcell * 10 }\n}\n.editor-panel {\n\tpadding: @gutter;\n\tbackground-color: #ddd;\n\t.glyph-cell {\n\t\tcursor: pointer;\n\t\t&:hover {\n\t\t\tbackground-image: url('../../dist/assets/shade2x2.png');\n\t\t}\n\t}\n}\n.glyph-tile {\n\tbackground-color: #fdd;\n\tpadding: @editorcell;\n}\n\n\n\n\n\n\n\n\n\n\n\n.font-index {\n\tpadding: @gutter;\n\tbackground-color: #ccc;\n\t.glyph-tiles {\n\t\tdisplay: flex;\n\t\tflex-wrap: wrap;\n\t}\n\t.glyph-tile {\n\t\tpadding: @indexcell;\n\t\ttext-align: center;\n\t\th3 {\n\t\t\tmargin: 0;\n\t\t}\n\t\t&:hover {\n\t\t\tbackground-image: url('../../dist/assets/shade2x2.png');\n\t\t}\n\t\t&.highlighted {\n\t\t\tbackground-color: #faa;\n\t\t}\n\t\tcursor: pointer;\n\t}\n\t.glyph-grid {\n\t\tmargin: @indexcell;\n\t\twidth: @indexcell * 5;\n\t\tborder: 0;\n\t\t.glyph-cell {\n\t\t\twidth: @indexcell;\n\t\t\theight: @indexcell;\n\t\t\tbackground-color: #fff;\n\t\t\t&.status-on {\n\t\t\t\tbackground-color: red;\n\t\t\t}\n\t\t}\n\t\t&.cells-width-4 { width: @indexcell * 4 }\n\t\t&.cells-width-5 { width: @indexcell * 5 }\n\t\t&.cells-width-6 { width: @indexcell * 6 }\n\t\t&.cells-width-7 { width: @indexcell * 7 }\n\t\t&.cells-width-8 { width: @indexcell * 8 }\n\t\t&.cells-width-9 { width: @indexcell * 9 }\n\t\t&.cells-width-10 { width: @indexcell * 10 }\n\t}\n}\n\n\n\n\n\n\n\n\n\n.preview-glyph(@cellmultiplier) {\n\t.glyph-grid {\n\t\twidth: @previewcell * @cellmultiplier * 5;\n\t\theight: @previewcell * @cellmultiplier * 5;\n\t\t.glyph-cell {\n\t\t\twidth: @previewcell * @cellmultiplier;\n\t\t\theight: @previewcell * @cellmultiplier;\n\t\t}\n\t\t&.cells-width-4 { width: @previewcell * 4 }\n\t\t&.cells-width-5 { width: @previewcell * 5 }\n\t\t&.cells-width-6 { width: @previewcell * 6 }\n\t\t&.cells-width-7 { width: @previewcell * 7 }\n\t\t&.cells-width-8 { width: @previewcell * 8 }\n\t\t&.cells-width-9 { width: @previewcell * 9 }\n\t\t&.cells-width-10 { width: @previewcell * 10 }\n\t}\n}\n\n\n.preview-panel {\n\tpadding: @gutter;\n\tbackground-color: #bbb;\n\tform {\n\t\tmargin-top: 1em;\n\t\tinput {\n\t\t\twidth: 30em;\n\t\t}\n\t}\n\t.preview-glyphs {\n\t\tdisplay: flex;\n\t\tflex-wrap: wrap;\n\t\tpadding: @previewcell;\n\t\tgap: @previewcell;\n\t\tbackground-color: #fff;\n\t}\n\t.glyph-grid {\n\t\tdisplay: flex;\n\t\tflex-wrap: wrap;\n\t\twidth: @previewcell * 5;\n\t\tmargin: 0;\n\t\tborder: 0;\n\t\t.glyph-cell {\n\t\t\tdisplay: block;\n\t\t\twidth: @previewcell;\n\t\t\theight: @previewcell;\n\t\t\tbackground-color: #fff;\n\t\t\t&.status-on {\n\t\t\t\tbackground-color: #000;\n\t\t\t}\n\t\t}\n\t\t&.cells-width-4 { width: @previewcell * 4 }\n\t\t&.cells-width-5 { width: @previewcell * 5 }\n\t\t&.cells-width-6 { width: @previewcell * 6 }\n\t\t&.cells-width-7 { width: @previewcell * 7 }\n\t\t&.cells-width-8 { width: @previewcell * 8 }\n\t\t&.cells-width-9 { width: @previewcell * 9 }\n\t\t&.cells-width-10 { width: @previewcell * 10 }\n\t}\n\t.preview-2x {\n\t\tgap: @previewcell * 2;\n\t\t.glyph-grid {\n\t\t\twidth: @previewcell * 2 * 5;\n\t\t\t.glyph-cell {\n\t\t\t\twidth: @previewcell * 2;\n\t\t\t\theight: @previewcell * 2;\n\t\t\t}\n\t\t\t&.cells-width-4  { width: @previewcell * 4  * 2}\n\t\t\t&.cells-width-5  { width: @previewcell * 5  * 2}\n\t\t\t&.cells-width-6  { width: @previewcell * 6  * 2}\n\t\t\t&.cells-width-7  { width: @previewcell * 7  * 2}\n\t\t\t&.cells-width-8  { width: @previewcell * 8  * 2}\n\t\t\t&.cells-width-9  { width: @previewcell * 9  * 2}\n\t\t\t&.cells-width-10 { width: @previewcell * 10 * 2}\n\t\t}\n\t}\n\t.preview-4x {\n\t\tgap: @previewcell * 4;\n\t\t.glyph-grid {\n\t\t\twidth: @previewcell * 4 * 5;\n\t\t\t.glyph-cell {\n\t\t\t\twidth: @previewcell * 4;\n\t\t\t\theight: @previewcell * 4;\n\t\t\t}\n\t\t\t&.cells-width-4  { width: @previewcell * 4  * 4}\n\t\t\t&.cells-width-5  { width: @previewcell * 5  * 4}\n\t\t\t&.cells-width-6  { width: @previewcell * 6  * 4}\n\t\t\t&.cells-width-7  { width: @previewcell * 7  * 4}\n\t\t\t&.cells-width-8  { width: @previewcell * 8  * 4}\n\t\t\t&.cells-width-9  { width: @previewcell * 9  * 4}\n\t\t\t&.cells-width-10 { width: @previewcell * 10 * 4}\n\t\t}\n\t}\n}\n\n\n"],"sourceRoot":""}]);
+.export-panel {
+  padding: 15px;
+  background-color: #aaa;
+}
+`, "",{"version":3,"sources":["webpack://./src/less/stylesy.less"],"names":[],"mappings":"AAKA;EACC,aAAA;EACA,cAAA;AAJD;AAQA;EACC,aAAA;AAND;AASA;EACC,aAAA;EACA,sBAAA;AAPD;AAUA;EACC,aAAA;EACA,eAAA;EACA,YAAA;EACA,sBAAA;AARD;AAIA;EAME,WAAA;EACA,YAAA;EACA,sBAAA;AAPF;AAQE;EACC,qBAAA;AANH;AAJA;EAaG,cAAA;EACA,WAAA;EACA,YAAA;AANH;AASC;EAAkB,YAAA;AANnB;AAOC;EAAkB,YAAA;AAJnB;AAKC;EAAkB,YAAA;AAFnB;AAGC;EAAkB,YAAA;AAAnB;AACC;EAAkB,YAAA;AAEnB;AADC;EAAkB,YAAA;AAInB;AAHC;EAAmB,YAAA;AAMpB;AAJA;EACC,aAAA;EACA,sBAAA;AAMD;AARA;EAIE,eAAA;AAOF;AANE;EACC,yDAAA;AAQH;AAJA;EACC,sBAAA;EACA,aAAA;AAMD;AAOA;EACC,aAAA;EACA,sBAAA;AALD;AAGA;EAIE,aAAA;EACA,eAAA;AAJF;AADA;EAQE,YAAA;EACA,kBAAA;EAUA,eAAA;AAbF;AANA;EAWG,SAAA;AAFH;AAIE;EACC,yDAAA;AAFH;AAIE;EACC,sBAAA;AAFH;AAfA;EAsBE,WAAA;EACA,WAAA;EACA,SAAA;AAJF;AApBA;EA0BG,UAAA;EACA,WAAA;EACA,sBAAA;AAHH;AAIG;EACC,qBAAA;AAFJ;AAKE;EAAkB,WAAA;AAFpB;AAGE;EAAkB,WAAA;AAApB;AACE;EAAkB,WAAA;AAEpB;AADE;EAAkB,WAAA;AAIpB;AAHE;EAAkB,WAAA;AAMpB;AALE;EAAkB,WAAA;AAQpB;AAPE;EAAmB,WAAA;AAUrB;AAqBA;EACC,aAAA;EACA,sBAAA;AAnBD;AAiBA;EAIE,eAAA;AAlBF;AAcA;EAMG,WAAA;AAjBH;AAWA;EAUE,aAAA;EACA,eAAA;EACA,YAAA;EACA,QAAA;EACA,sBAAA;AAlBF;AAIA;EAiBE,aAAA;EACA,eAAA;EACA,WAAA;EACA,SAAA;EACA,SAAA;AAlBF;AAHA;EAuBG,cAAA;EACA,UAAA;EACA,WAAA;EACA,sBAAA;AAjBH;AAkBG;EACC,sBAAA;AAhBJ;AAmBE;EAAkB,UAAA;AAhBpB;AAiBE;EAAkB,WAAA;AAdpB;AAeE;EAAkB,WAAA;AAZpB;AAaE;EAAkB,WAAA;AAVpB;AAWE;EAAkB,WAAA;AARpB;AASE;EAAkB,WAAA;AANpB;AAOE;EAAmB,WAAA;AAJrB;AAjCA;EAwCE,QAAA;AAJF;AApCA;EA0CG,WAAA;AAHH;AAvCA;EA4CI,UAAA;EACA,WAAA;AAFJ;AAIG;EAAmB,WAAA;AADtB;AAEG;EAAmB,WAAA;AACtB;AAAG;EAAmB,WAAA;AAGtB;AAFG;EAAmB,WAAA;AAKtB;AAJG;EAAmB,WAAA;AAOtB;AANG;EAAmB,WAAA;AAStB;AARG;EAAmB,WAAA;AAWtB;AAhEA;EAyDE,QAAA;AAUF;AAnEA;EA2DG,WAAA;AAWH;AAtEA;EA6DI,UAAA;EACA,WAAA;AAYJ;AAVG;EAAmB,WAAA;AAatB;AAZG;EAAmB,WAAA;AAetB;AAdG;EAAmB,WAAA;AAiBtB;AAhBG;EAAmB,WAAA;AAmBtB;AAlBG;EAAmB,WAAA;AAqBtB;AApBG;EAAmB,WAAA;AAuBtB;AAtBG;EAAmB,WAAA;AAyBtB;AAnBA;EACC,aAAA;EACA,sBAAA;AAqBD","sourcesContent":["@editorcell: 48px;\n@indexcell: 5px;\n@previewcell: 2px;\n@gutter: 15px;\n\n#react-container {\n\twidth: 1000px;\n\tmargin: 0 auto;\n}\n\n\nh2 {\n\tmargin-top: 0;\n}\n\n.font-settings-panel {\n\tpadding: @gutter;\n\tbackground-color: #eee;\n}\n\n.glyph-grid {\n\tdisplay: flex;\n\tflex-wrap: wrap;\n\twidth: @editorcell * 5;\n\tborder: 2px solid #000;\n\t.glyph-cell {\n\t\twidth: @editorcell;\n\t\theight: @editorcell;\n\t\tbackground-color: #fff;\n\t\t&.status-on {\n\t\t\tbackground-color: red;\n\t\t}\n\t\timg {\n\t\t\tdisplay: block;\n\t\t\twidth: 100%;\n\t\t\theight: 100%;\n\t\t}\n\t}\n\t&.cells-width-4 { width: @editorcell * 4 }\n\t&.cells-width-5 { width: @editorcell * 5 }\n\t&.cells-width-6 { width: @editorcell * 6 }\n\t&.cells-width-7 { width: @editorcell * 7 }\n\t&.cells-width-8 { width: @editorcell * 8 }\n\t&.cells-width-9 { width: @editorcell * 9 }\n\t&.cells-width-10 { width: @editorcell * 10 }\n}\n.editor-panel {\n\tpadding: @gutter;\n\tbackground-color: #ddd;\n\t.glyph-cell {\n\t\tcursor: pointer;\n\t\t&:hover {\n\t\t\tbackground-image: url('../../dist/assets/shade2x2.png');\n\t\t}\n\t}\n}\n.glyph-tile {\n\tbackground-color: #fdd;\n\tpadding: @editorcell;\n}\n\n\n\n\n\n\n\n\n\n\n\n.font-index {\n\tpadding: @gutter;\n\tbackground-color: #ccc;\n\t.glyph-tiles {\n\t\tdisplay: flex;\n\t\tflex-wrap: wrap;\n\t}\n\t.glyph-tile {\n\t\tpadding: @indexcell;\n\t\ttext-align: center;\n\t\th3 {\n\t\t\tmargin: 0;\n\t\t}\n\t\t&:hover {\n\t\t\tbackground-image: url('../../dist/assets/shade2x2.png');\n\t\t}\n\t\t&.highlighted {\n\t\t\tbackground-color: #faa;\n\t\t}\n\t\tcursor: pointer;\n\t}\n\t.glyph-grid {\n\t\tmargin: @indexcell;\n\t\twidth: @indexcell * 5;\n\t\tborder: 0;\n\t\t.glyph-cell {\n\t\t\twidth: @indexcell;\n\t\t\theight: @indexcell;\n\t\t\tbackground-color: #fff;\n\t\t\t&.status-on {\n\t\t\t\tbackground-color: red;\n\t\t\t}\n\t\t}\n\t\t&.cells-width-4 { width: @indexcell * 4 }\n\t\t&.cells-width-5 { width: @indexcell * 5 }\n\t\t&.cells-width-6 { width: @indexcell * 6 }\n\t\t&.cells-width-7 { width: @indexcell * 7 }\n\t\t&.cells-width-8 { width: @indexcell * 8 }\n\t\t&.cells-width-9 { width: @indexcell * 9 }\n\t\t&.cells-width-10 { width: @indexcell * 10 }\n\t}\n}\n\n\n\n\n\n\n\n\n\n.preview-glyph(@cellmultiplier) {\n\t.glyph-grid {\n\t\twidth: @previewcell * @cellmultiplier * 5;\n\t\theight: @previewcell * @cellmultiplier * 5;\n\t\t.glyph-cell {\n\t\t\twidth: @previewcell * @cellmultiplier;\n\t\t\theight: @previewcell * @cellmultiplier;\n\t\t}\n\t\t&.cells-width-4 { width: @previewcell * 4 }\n\t\t&.cells-width-5 { width: @previewcell * 5 }\n\t\t&.cells-width-6 { width: @previewcell * 6 }\n\t\t&.cells-width-7 { width: @previewcell * 7 }\n\t\t&.cells-width-8 { width: @previewcell * 8 }\n\t\t&.cells-width-9 { width: @previewcell * 9 }\n\t\t&.cells-width-10 { width: @previewcell * 10 }\n\t}\n}\n\n\n.preview-panel {\n\tpadding: @gutter;\n\tbackground-color: #bbb;\n\tform {\n\t\tmargin-top: 1em;\n\t\tinput {\n\t\t\twidth: 30em;\n\t\t}\n\t}\n\t.preview-glyphs {\n\t\tdisplay: flex;\n\t\tflex-wrap: wrap;\n\t\tpadding: @previewcell;\n\t\tgap: @previewcell;\n\t\tbackground-color: #fff;\n\t}\n\t.glyph-grid {\n\t\tdisplay: flex;\n\t\tflex-wrap: wrap;\n\t\twidth: @previewcell * 5;\n\t\tmargin: 0;\n\t\tborder: 0;\n\t\t.glyph-cell {\n\t\t\tdisplay: block;\n\t\t\twidth: @previewcell;\n\t\t\theight: @previewcell;\n\t\t\tbackground-color: #fff;\n\t\t\t&.status-on {\n\t\t\t\tbackground-color: #000;\n\t\t\t}\n\t\t}\n\t\t&.cells-width-4 { width: @previewcell * 4 }\n\t\t&.cells-width-5 { width: @previewcell * 5 }\n\t\t&.cells-width-6 { width: @previewcell * 6 }\n\t\t&.cells-width-7 { width: @previewcell * 7 }\n\t\t&.cells-width-8 { width: @previewcell * 8 }\n\t\t&.cells-width-9 { width: @previewcell * 9 }\n\t\t&.cells-width-10 { width: @previewcell * 10 }\n\t}\n\t.preview-2x {\n\t\tgap: @previewcell * 2;\n\t\t.glyph-grid {\n\t\t\twidth: @previewcell * 2 * 5;\n\t\t\t.glyph-cell {\n\t\t\t\twidth: @previewcell * 2;\n\t\t\t\theight: @previewcell * 2;\n\t\t\t}\n\t\t\t&.cells-width-4  { width: @previewcell * 4  * 2}\n\t\t\t&.cells-width-5  { width: @previewcell * 5  * 2}\n\t\t\t&.cells-width-6  { width: @previewcell * 6  * 2}\n\t\t\t&.cells-width-7  { width: @previewcell * 7  * 2}\n\t\t\t&.cells-width-8  { width: @previewcell * 8  * 2}\n\t\t\t&.cells-width-9  { width: @previewcell * 9  * 2}\n\t\t\t&.cells-width-10 { width: @previewcell * 10 * 2}\n\t\t}\n\t}\n\t.preview-4x {\n\t\tgap: @previewcell * 4;\n\t\t.glyph-grid {\n\t\t\twidth: @previewcell * 4 * 5;\n\t\t\t.glyph-cell {\n\t\t\t\twidth: @previewcell * 4;\n\t\t\t\theight: @previewcell * 4;\n\t\t\t}\n\t\t\t&.cells-width-4  { width: @previewcell * 4  * 4}\n\t\t\t&.cells-width-5  { width: @previewcell * 5  * 4}\n\t\t\t&.cells-width-6  { width: @previewcell * 6  * 4}\n\t\t\t&.cells-width-7  { width: @previewcell * 7  * 4}\n\t\t\t&.cells-width-8  { width: @previewcell * 8  * 4}\n\t\t\t&.cells-width-9  { width: @previewcell * 9  * 4}\n\t\t\t&.cells-width-10 { width: @previewcell * 10 * 4}\n\t\t}\n\t}\n}\n\n\n.export-panel {\n\tpadding: @gutter;\n\tbackground-color: #aaa;\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -27893,6 +27897,14 @@ function Cell(_ref) {
     glyphIndex = _ref$glyphIndex === void 0 ? 0 : _ref$glyphIndex,
     _ref$editable = _ref.editable,
     editable = _ref$editable === void 0 ? 0 : _ref$editable,
+    _ref$dragstatus = _ref.dragstatus,
+    dragstatus = _ref$dragstatus === void 0 ? function (f) {
+      return f;
+    } : _ref$dragstatus,
+    _ref$dragdraw = _ref.dragdraw,
+    dragdraw = _ref$dragdraw === void 0 ? function (f) {
+      return f;
+    } : _ref$dragdraw,
     _ref$toggle = _ref.toggle,
     toggle = _ref$toggle === void 0 ? function (f) {
       return f;
@@ -27906,16 +27918,39 @@ function Cell(_ref) {
   var onClickToggle = editable ? function () {
     toggle(glyphIndex, id);
   } : function () {};
+  var mouseDown = editable ? function (evt) {
+    return dragstatus(1, 1 - status);
+  } : function () {};
+  var mouseUp = editable ? function (evt) {
+    return dragstatus(0, 0);
+  } : function () {};
+  var mouseOver = editable ? function (evt) {
+    return dragdraw(glyphIndex, id);
+  } : function () {};
+  var mouseOut = editable ? function (evt) {
+    return dragdraw(glyphIndex, id);
+  } : function () {};
   //let styles = editable ? {cursor: 'pointer', ...style} : { ...style}
   var styles = _objectSpread({}, styles);
   return /*#__PURE__*/React.createElement("div", {
+    draggable: "false",
     id: id_attr,
     className: classes,
     style: styles,
-    onClick: onClickToggle
-  }, /*#__PURE__*/React.createElement("img", {
-    src: "assets/empty5x5.png"
-  }));
+    onClick: onClickToggle,
+    onMouseDown: function onMouseDown(evt) {
+      return dragstatus(1, 1 - status);
+    },
+    onMouseUp: function onMouseUp(evt) {
+      return dragstatus(0, 0);
+    },
+    onMouseOver: function onMouseOver(evt) {
+      return dragdraw(glyphIndex, id);
+    },
+    onMouseOut: function onMouseOut(evt) {
+      return dragdraw(glyphIndex, id);
+    }
+  });
 }
 
 /***/ }),
@@ -27942,6 +27977,14 @@ function EditorPanel(_ref) {
     width = _ref$width === void 0 ? 5 : _ref$width,
     _ref$height = _ref.height,
     height = _ref$height === void 0 ? 5 : _ref$height,
+    _ref$dragstatus = _ref.dragstatus,
+    dragstatus = _ref$dragstatus === void 0 ? function (f) {
+      return f;
+    } : _ref$dragstatus,
+    _ref$dragdraw = _ref.dragdraw,
+    dragdraw = _ref$dragdraw === void 0 ? function (f) {
+      return f;
+    } : _ref$dragdraw,
     _ref$toggle = _ref.toggle,
     toggle = _ref$toggle === void 0 ? function (f) {
       return f;
@@ -27956,8 +27999,29 @@ function EditorPanel(_ref) {
     toggle: toggle,
     glyphName: glyph.glyphName,
     glyphIndex: glyph.glyphIndex,
-    cellContents: glyph.cells
+    cellContents: glyph.cells,
+    dragstatus: dragstatus,
+    dragdraw: dragdraw
   }));
+}
+
+/***/ }),
+
+/***/ "./src/components/ExportPanel.js":
+/*!***************************************!*\
+  !*** ./src/components/ExportPanel.js ***!
+  \***************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ ExportPanel)
+/* harmony export */ });
+function ExportPanel(_ref) {
+  var glyphs = _ref.glyphs;
+  return /*#__PURE__*/React.createElement("section", {
+    className: "export-panel"
+  }, /*#__PURE__*/React.createElement("h2", null, "Export"), /*#__PURE__*/React.createElement("button", null, "not yet"));
 }
 
 /***/ }),
@@ -28078,6 +28142,14 @@ function GlyphGrid(_ref) {
     width = _ref$width === void 0 ? 5 : _ref$width,
     _ref$cellContents = _ref.cellContents,
     cellContents = _ref$cellContents === void 0 ? [] : _ref$cellContents,
+    _ref$dragstatus = _ref.dragstatus,
+    dragstatus = _ref$dragstatus === void 0 ? function (f) {
+      return f;
+    } : _ref$dragstatus,
+    _ref$dragdraw = _ref.dragdraw,
+    dragdraw = _ref$dragdraw === void 0 ? function (f) {
+      return f;
+    } : _ref$dragdraw,
     _ref$select = _ref.select,
     select = _ref$select === void 0 ? function (f) {
       return f;
@@ -28089,7 +28161,8 @@ function GlyphGrid(_ref) {
   var gridClasses = "glyph-grid cells-width-" + width;
   return /*#__PURE__*/React.createElement("div", {
     className: gridClasses,
-    "data-glyphname": glyphName
+    "data-glyphname": glyphName,
+    draggable: "false"
   }, cellContents.map(function (cell, i) {
     return /*#__PURE__*/React.createElement(_Cell__WEBPACK_IMPORTED_MODULE_0__["default"], {
       id: i,
@@ -28098,7 +28171,9 @@ function GlyphGrid(_ref) {
       key: i,
       editable: editable,
       toggle: toggle,
-      status: cell.status
+      status: cell.status,
+      dragstatus: dragstatus,
+      dragdraw: dragdraw
     });
   }));
 }
@@ -28563,11 +28638,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_dom_client__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom/client */ "./node_modules/react-dom/client.js");
-/* harmony import */ var _components_GlyphGrid__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/GlyphGrid */ "./src/components/GlyphGrid.js");
+/* harmony import */ var _components_FontSettingsPanel__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/FontSettingsPanel */ "./src/components/FontSettingsPanel.js");
 /* harmony import */ var _components_EditorPanel__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/EditorPanel */ "./src/components/EditorPanel.js");
 /* harmony import */ var _components_FontIndexPanel__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/FontIndexPanel */ "./src/components/FontIndexPanel.js");
 /* harmony import */ var _components_PreviewPanel__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/PreviewPanel */ "./src/components/PreviewPanel.js");
-/* harmony import */ var _components_FontSettingsPanel__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/FontSettingsPanel */ "./src/components/FontSettingsPanel.js");
+/* harmony import */ var _components_ExportPanel__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/ExportPanel */ "./src/components/ExportPanel.js");
 /* harmony import */ var _less_stylesy_less__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./less/stylesy.less */ "./src/less/stylesy.less");
 /* harmony import */ var _default_cells_json__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./default_cells.json */ "./src/default_cells.json");
 /* harmony import */ var _default_glyphs_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./default_glyphs.js */ "./src/default_glyphs.js");
@@ -28606,9 +28681,17 @@ function App() {
     _useState6 = _slicedToArray(_useState5, 2),
     currentGlyph = _useState6[0],
     setCurrentGlyph = _useState6[1];
+  var _useState7 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(0),
+    _useState8 = _slicedToArray(_useState7, 2),
+    dragStatus = _useState8[0],
+    setDragStatus = _useState8[1];
+  var _useState9 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(1),
+    _useState0 = _slicedToArray(_useState9, 2),
+    dragColour = _useState0[0],
+    setDragColour = _useState0[1];
   //const [previewString, setPreviewSting] = useState('JACKDAWS LOVE MY BIG SPHINX OF QUARTZ');
 
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("section", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", null, "mint pixel font editor"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_FontSettingsPanel__WEBPACK_IMPORTED_MODULE_6__["default"], {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("section", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", null, "mint pixel font editor"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_FontSettingsPanel__WEBPACK_IMPORTED_MODULE_2__["default"], {
     width: fontDimensions.width,
     height: fontDimensions.height,
     updateDimensions: function updateDimensions(dimension, newValue) {
@@ -28633,6 +28716,8 @@ function App() {
     width: fontDimensions.width,
     height: fontDimensions.height,
     toggle: function toggle(glyphIndex, id) {
+      setDragStatus(0);
+
       // glyphs may need to be an object for quick indexing?
       // get glyphs
       // get glyph's cells
@@ -28650,6 +28735,28 @@ function App() {
       });
       newGlyphs[glyphIndex].cells = newCells;
       setGlyphs(newGlyphs);
+    },
+    dragstatus: function dragstatus(status, colour) {
+      //console.log('dragging:' + status, 'colour:' + colour)
+      setDragColour(colour);
+      setDragStatus(status);
+    },
+    dragdraw: function dragdraw(glyphIndex, id) {
+      if (dragStatus) {
+        //console.log('painting:' + dragColour)
+
+        var newGlyphs = glyphs.map(function (glyph) {
+          return glyph;
+        });
+        var newCells = newGlyphs[glyphIndex].cells.map(function (cell, i) {
+          if (cell.id == id) {
+            cell.status = dragColour;
+          }
+          return cell;
+        });
+        newGlyphs[glyphIndex].cells = newCells;
+        setGlyphs(newGlyphs);
+      }
     }
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_FontIndexPanel__WEBPACK_IMPORTED_MODULE_4__["default"], {
     glyphs: glyphs,
@@ -28666,6 +28773,8 @@ function App() {
     changePreviewString: function changePreviewString(txt) {
       return console.log(txt);
     }
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_ExportPanel__WEBPACK_IMPORTED_MODULE_6__["default"], {
+    glyphs: glyphs
   }));
 }
 

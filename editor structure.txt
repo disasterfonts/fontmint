@@ -29,15 +29,17 @@ data
 ideal features
 
 edit glyph
-	basic: toggle pixels by click
+	*basic: toggle pixels by click
 	advanced: toggle pixels by drag
 	
 edit font
-	choose glyph to edit
-	change glyph dimensions (universal)
+	*choose glyph to edit
+	*change glyph dimensions (universal)
+	use ascii index numbers for glyph objects without weird stuff happening
 
 preview font
-	custom string form updates a preview
+	*custom string form updates a preview
+	fix browser pixel grid (maybe use canvas instead of div cells?)
 	advanced: being able to type in a box with the font glyphs
 
 export font (all advanced)
@@ -47,6 +49,9 @@ export font (all advanced)
 
 ui
 	persist edits after refresh (cookies?)
+	nice changes to grid dimensions
+		adds space when expanding
+		remembers details outside the crop when reducing
 	undo?
 	load
 	save (not export)
