@@ -4,8 +4,12 @@ export default function GlyphGrid({ glyphName = "A", glyphIndex = 0, editable = 
 	
 	const gridClasses = "glyph-grid cells-width-" + width;
 	
+	const mouseLeave = (evt) => {
+		dragstatus(0, 0)
+	}
+	
 	return (
-		<div className={ gridClasses } data-glyphname={ glyphName } draggable="false">
+		<div className={ gridClasses } data-glyphname={ glyphName } draggable="false" onMouseLeave={ mouseLeave }>
 			{ cellContents.map((cell, i) => (
 				<Cell
 					id={i}

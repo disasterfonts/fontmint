@@ -1,4 +1,4 @@
-@editorcell: 48px;
+@editorcell: 46px;
 @indexcell: 5px;
 @previewcell: 2px;
 @gutter: 15px;
@@ -21,8 +21,8 @@ h2 {
 .glyph-grid {
 	display: flex;
 	flex-wrap: wrap;
-	width: @editorcell * 5;
-	border: 2px solid #000;
+	width: (@editorcell + 2) * 5;
+
 	.glyph-cell {
 		width: @editorcell;
 		height: @editorcell;
@@ -37,7 +37,7 @@ h2 {
 		}
 	}
 	&.cells-width-4 { width: @editorcell * 4 }
-	&.cells-width-5 { width: @editorcell * 5 }
+	&.cells-width-5 { width: (@editorcell + 2) * 5; }
 	&.cells-width-6 { width: @editorcell * 6 }
 	&.cells-width-7 { width: @editorcell * 7 }
 	&.cells-width-8 { width: @editorcell * 8 }
@@ -49,8 +49,9 @@ h2 {
 	background-color: #ddd;
 	.glyph-cell {
 		cursor: pointer;
+		border: 1px solid transparent;
 		&:hover {
-			background-image: url('../../dist/assets/shade2x2.png');
+			border: 1px solid #000;
 		}
 	}
 }

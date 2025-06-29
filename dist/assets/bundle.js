@@ -51,11 +51,10 @@ h2 {
   display: flex;
   flex-wrap: wrap;
   width: 240px;
-  border: 2px solid #000;
 }
 .glyph-grid .glyph-cell {
-  width: 48px;
-  height: 48px;
+  width: 46px;
+  height: 46px;
   background-color: #fff;
 }
 .glyph-grid .glyph-cell.status-on {
@@ -67,25 +66,25 @@ h2 {
   height: 100%;
 }
 .glyph-grid.cells-width-4 {
-  width: 192px;
+  width: 184px;
 }
 .glyph-grid.cells-width-5 {
   width: 240px;
 }
 .glyph-grid.cells-width-6 {
-  width: 288px;
+  width: 276px;
 }
 .glyph-grid.cells-width-7 {
-  width: 336px;
+  width: 322px;
 }
 .glyph-grid.cells-width-8 {
-  width: 384px;
+  width: 368px;
 }
 .glyph-grid.cells-width-9 {
-  width: 432px;
+  width: 414px;
 }
 .glyph-grid.cells-width-10 {
-  width: 480px;
+  width: 460px;
 }
 .editor-panel {
   padding: 15px;
@@ -93,13 +92,14 @@ h2 {
 }
 .editor-panel .glyph-cell {
   cursor: pointer;
+  border: 1px solid transparent;
 }
 .editor-panel .glyph-cell:hover {
-  background-image: url(${___CSS_LOADER_URL_REPLACEMENT_0___});
+  border: 1px solid #000;
 }
 .glyph-tile {
   background-color: #fdd;
-  padding: 48px;
+  padding: 46px;
 }
 .font-index {
   padding: 15px;
@@ -277,7 +277,7 @@ h2 {
   padding: 15px;
   background-color: #aaa;
 }
-`, "",{"version":3,"sources":["webpack://./src/less/stylesy.less"],"names":[],"mappings":"AAKA;EACC,aAAA;EACA,cAAA;AAJD;AAQA;EACC,aAAA;AAND;AASA;EACC,aAAA;EACA,sBAAA;AAPD;AAUA;EACC,aAAA;EACA,eAAA;EACA,YAAA;EACA,sBAAA;AARD;AAIA;EAME,WAAA;EACA,YAAA;EACA,sBAAA;AAPF;AAQE;EACC,qBAAA;AANH;AAJA;EAaG,cAAA;EACA,WAAA;EACA,YAAA;AANH;AASC;EAAkB,YAAA;AANnB;AAOC;EAAkB,YAAA;AAJnB;AAKC;EAAkB,YAAA;AAFnB;AAGC;EAAkB,YAAA;AAAnB;AACC;EAAkB,YAAA;AAEnB;AADC;EAAkB,YAAA;AAInB;AAHC;EAAmB,YAAA;AAMpB;AAJA;EACC,aAAA;EACA,sBAAA;AAMD;AARA;EAIE,eAAA;AAOF;AANE;EACC,yDAAA;AAQH;AAJA;EACC,sBAAA;EACA,aAAA;AAMD;AAOA;EACC,aAAA;EACA,sBAAA;AALD;AAGA;EAIE,aAAA;EACA,eAAA;AAJF;AADA;EAQE,YAAA;EACA,kBAAA;EAUA,eAAA;AAbF;AANA;EAWG,SAAA;AAFH;AAIE;EACC,yDAAA;AAFH;AAIE;EACC,sBAAA;AAFH;AAfA;EAsBE,WAAA;EACA,WAAA;EACA,SAAA;AAJF;AApBA;EA0BG,UAAA;EACA,WAAA;EACA,sBAAA;AAHH;AAIG;EACC,qBAAA;AAFJ;AAKE;EAAkB,WAAA;AAFpB;AAGE;EAAkB,WAAA;AAApB;AACE;EAAkB,WAAA;AAEpB;AADE;EAAkB,WAAA;AAIpB;AAHE;EAAkB,WAAA;AAMpB;AALE;EAAkB,WAAA;AAQpB;AAPE;EAAmB,WAAA;AAUrB;AAqBA;EACC,aAAA;EACA,sBAAA;AAnBD;AAiBA;EAIE,eAAA;AAlBF;AAcA;EAMG,WAAA;AAjBH;AAWA;EAUE,aAAA;EACA,eAAA;EACA,YAAA;EACA,QAAA;EACA,sBAAA;AAlBF;AAIA;EAiBE,aAAA;EACA,eAAA;EACA,WAAA;EACA,SAAA;EACA,SAAA;AAlBF;AAHA;EAuBG,cAAA;EACA,UAAA;EACA,WAAA;EACA,sBAAA;AAjBH;AAkBG;EACC,sBAAA;AAhBJ;AAmBE;EAAkB,UAAA;AAhBpB;AAiBE;EAAkB,WAAA;AAdpB;AAeE;EAAkB,WAAA;AAZpB;AAaE;EAAkB,WAAA;AAVpB;AAWE;EAAkB,WAAA;AARpB;AASE;EAAkB,WAAA;AANpB;AAOE;EAAmB,WAAA;AAJrB;AAjCA;EAwCE,QAAA;AAJF;AApCA;EA0CG,WAAA;AAHH;AAvCA;EA4CI,UAAA;EACA,WAAA;AAFJ;AAIG;EAAmB,WAAA;AADtB;AAEG;EAAmB,WAAA;AACtB;AAAG;EAAmB,WAAA;AAGtB;AAFG;EAAmB,WAAA;AAKtB;AAJG;EAAmB,WAAA;AAOtB;AANG;EAAmB,WAAA;AAStB;AARG;EAAmB,WAAA;AAWtB;AAhEA;EAyDE,QAAA;AAUF;AAnEA;EA2DG,WAAA;AAWH;AAtEA;EA6DI,UAAA;EACA,WAAA;AAYJ;AAVG;EAAmB,WAAA;AAatB;AAZG;EAAmB,WAAA;AAetB;AAdG;EAAmB,WAAA;AAiBtB;AAhBG;EAAmB,WAAA;AAmBtB;AAlBG;EAAmB,WAAA;AAqBtB;AApBG;EAAmB,WAAA;AAuBtB;AAtBG;EAAmB,WAAA;AAyBtB;AAnBA;EACC,aAAA;EACA,sBAAA;AAqBD","sourcesContent":["@editorcell: 48px;\n@indexcell: 5px;\n@previewcell: 2px;\n@gutter: 15px;\n\n#react-container {\n\twidth: 1000px;\n\tmargin: 0 auto;\n}\n\n\nh2 {\n\tmargin-top: 0;\n}\n\n.font-settings-panel {\n\tpadding: @gutter;\n\tbackground-color: #eee;\n}\n\n.glyph-grid {\n\tdisplay: flex;\n\tflex-wrap: wrap;\n\twidth: @editorcell * 5;\n\tborder: 2px solid #000;\n\t.glyph-cell {\n\t\twidth: @editorcell;\n\t\theight: @editorcell;\n\t\tbackground-color: #fff;\n\t\t&.status-on {\n\t\t\tbackground-color: red;\n\t\t}\n\t\timg {\n\t\t\tdisplay: block;\n\t\t\twidth: 100%;\n\t\t\theight: 100%;\n\t\t}\n\t}\n\t&.cells-width-4 { width: @editorcell * 4 }\n\t&.cells-width-5 { width: @editorcell * 5 }\n\t&.cells-width-6 { width: @editorcell * 6 }\n\t&.cells-width-7 { width: @editorcell * 7 }\n\t&.cells-width-8 { width: @editorcell * 8 }\n\t&.cells-width-9 { width: @editorcell * 9 }\n\t&.cells-width-10 { width: @editorcell * 10 }\n}\n.editor-panel {\n\tpadding: @gutter;\n\tbackground-color: #ddd;\n\t.glyph-cell {\n\t\tcursor: pointer;\n\t\t&:hover {\n\t\t\tbackground-image: url('../../dist/assets/shade2x2.png');\n\t\t}\n\t}\n}\n.glyph-tile {\n\tbackground-color: #fdd;\n\tpadding: @editorcell;\n}\n\n\n\n\n\n\n\n\n\n\n\n.font-index {\n\tpadding: @gutter;\n\tbackground-color: #ccc;\n\t.glyph-tiles {\n\t\tdisplay: flex;\n\t\tflex-wrap: wrap;\n\t}\n\t.glyph-tile {\n\t\tpadding: @indexcell;\n\t\ttext-align: center;\n\t\th3 {\n\t\t\tmargin: 0;\n\t\t}\n\t\t&:hover {\n\t\t\tbackground-image: url('../../dist/assets/shade2x2.png');\n\t\t}\n\t\t&.highlighted {\n\t\t\tbackground-color: #faa;\n\t\t}\n\t\tcursor: pointer;\n\t}\n\t.glyph-grid {\n\t\tmargin: @indexcell;\n\t\twidth: @indexcell * 5;\n\t\tborder: 0;\n\t\t.glyph-cell {\n\t\t\twidth: @indexcell;\n\t\t\theight: @indexcell;\n\t\t\tbackground-color: #fff;\n\t\t\t&.status-on {\n\t\t\t\tbackground-color: red;\n\t\t\t}\n\t\t}\n\t\t&.cells-width-4 { width: @indexcell * 4 }\n\t\t&.cells-width-5 { width: @indexcell * 5 }\n\t\t&.cells-width-6 { width: @indexcell * 6 }\n\t\t&.cells-width-7 { width: @indexcell * 7 }\n\t\t&.cells-width-8 { width: @indexcell * 8 }\n\t\t&.cells-width-9 { width: @indexcell * 9 }\n\t\t&.cells-width-10 { width: @indexcell * 10 }\n\t}\n}\n\n\n\n\n\n\n\n\n\n.preview-glyph(@cellmultiplier) {\n\t.glyph-grid {\n\t\twidth: @previewcell * @cellmultiplier * 5;\n\t\theight: @previewcell * @cellmultiplier * 5;\n\t\t.glyph-cell {\n\t\t\twidth: @previewcell * @cellmultiplier;\n\t\t\theight: @previewcell * @cellmultiplier;\n\t\t}\n\t\t&.cells-width-4 { width: @previewcell * 4 }\n\t\t&.cells-width-5 { width: @previewcell * 5 }\n\t\t&.cells-width-6 { width: @previewcell * 6 }\n\t\t&.cells-width-7 { width: @previewcell * 7 }\n\t\t&.cells-width-8 { width: @previewcell * 8 }\n\t\t&.cells-width-9 { width: @previewcell * 9 }\n\t\t&.cells-width-10 { width: @previewcell * 10 }\n\t}\n}\n\n\n.preview-panel {\n\tpadding: @gutter;\n\tbackground-color: #bbb;\n\tform {\n\t\tmargin-top: 1em;\n\t\tinput {\n\t\t\twidth: 30em;\n\t\t}\n\t}\n\t.preview-glyphs {\n\t\tdisplay: flex;\n\t\tflex-wrap: wrap;\n\t\tpadding: @previewcell;\n\t\tgap: @previewcell;\n\t\tbackground-color: #fff;\n\t}\n\t.glyph-grid {\n\t\tdisplay: flex;\n\t\tflex-wrap: wrap;\n\t\twidth: @previewcell * 5;\n\t\tmargin: 0;\n\t\tborder: 0;\n\t\t.glyph-cell {\n\t\t\tdisplay: block;\n\t\t\twidth: @previewcell;\n\t\t\theight: @previewcell;\n\t\t\tbackground-color: #fff;\n\t\t\t&.status-on {\n\t\t\t\tbackground-color: #000;\n\t\t\t}\n\t\t}\n\t\t&.cells-width-4 { width: @previewcell * 4 }\n\t\t&.cells-width-5 { width: @previewcell * 5 }\n\t\t&.cells-width-6 { width: @previewcell * 6 }\n\t\t&.cells-width-7 { width: @previewcell * 7 }\n\t\t&.cells-width-8 { width: @previewcell * 8 }\n\t\t&.cells-width-9 { width: @previewcell * 9 }\n\t\t&.cells-width-10 { width: @previewcell * 10 }\n\t}\n\t.preview-2x {\n\t\tgap: @previewcell * 2;\n\t\t.glyph-grid {\n\t\t\twidth: @previewcell * 2 * 5;\n\t\t\t.glyph-cell {\n\t\t\t\twidth: @previewcell * 2;\n\t\t\t\theight: @previewcell * 2;\n\t\t\t}\n\t\t\t&.cells-width-4  { width: @previewcell * 4  * 2}\n\t\t\t&.cells-width-5  { width: @previewcell * 5  * 2}\n\t\t\t&.cells-width-6  { width: @previewcell * 6  * 2}\n\t\t\t&.cells-width-7  { width: @previewcell * 7  * 2}\n\t\t\t&.cells-width-8  { width: @previewcell * 8  * 2}\n\t\t\t&.cells-width-9  { width: @previewcell * 9  * 2}\n\t\t\t&.cells-width-10 { width: @previewcell * 10 * 2}\n\t\t}\n\t}\n\t.preview-4x {\n\t\tgap: @previewcell * 4;\n\t\t.glyph-grid {\n\t\t\twidth: @previewcell * 4 * 5;\n\t\t\t.glyph-cell {\n\t\t\t\twidth: @previewcell * 4;\n\t\t\t\theight: @previewcell * 4;\n\t\t\t}\n\t\t\t&.cells-width-4  { width: @previewcell * 4  * 4}\n\t\t\t&.cells-width-5  { width: @previewcell * 5  * 4}\n\t\t\t&.cells-width-6  { width: @previewcell * 6  * 4}\n\t\t\t&.cells-width-7  { width: @previewcell * 7  * 4}\n\t\t\t&.cells-width-8  { width: @previewcell * 8  * 4}\n\t\t\t&.cells-width-9  { width: @previewcell * 9  * 4}\n\t\t\t&.cells-width-10 { width: @previewcell * 10 * 4}\n\t\t}\n\t}\n}\n\n\n.export-panel {\n\tpadding: @gutter;\n\tbackground-color: #aaa;\n}"],"sourceRoot":""}]);
+`, "",{"version":3,"sources":["webpack://./src/less/stylesy.less"],"names":[],"mappings":"AAKA;EACC,aAAA;EACA,cAAA;AAJD;AAQA;EACC,aAAA;AAND;AASA;EACC,aAAA;EACA,sBAAA;AAPD;AAUA;EACC,aAAA;EACA,eAAA;EACA,YAAA;AARD;AAKA;EAME,WAAA;EACA,YAAA;EACA,sBAAA;AARF;AASE;EACC,qBAAA;AAPH;AAHA;EAaG,cAAA;EACA,WAAA;EACA,YAAA;AAPH;AAUC;EAAkB,YAAA;AAPnB;AAQC;EAAkB,YAAA;AALnB;AAMC;EAAkB,YAAA;AAHnB;AAIC;EAAkB,YAAA;AADnB;AAEC;EAAkB,YAAA;AACnB;AAAC;EAAkB,YAAA;AAGnB;AAFC;EAAmB,YAAA;AAKpB;AAHA;EACC,aAAA;EACA,sBAAA;AAKD;AAPA;EAIE,eAAA;EACA,6BAAA;AAMF;AALE;EACC,sBAAA;AAOH;AAHA;EACC,sBAAA;EACA,aAAA;AAKD;AAQA;EACC,aAAA;EACA,sBAAA;AAND;AAIA;EAIE,aAAA;EACA,eAAA;AALF;AAAA;EAQE,YAAA;EACA,kBAAA;EAUA,eAAA;AAdF;AALA;EAWG,SAAA;AAHH;AAKE;EACC,yDAAA;AAHH;AAKE;EACC,sBAAA;AAHH;AAdA;EAsBE,WAAA;EACA,WAAA;EACA,SAAA;AALF;AAnBA;EA0BG,UAAA;EACA,WAAA;EACA,sBAAA;AAJH;AAKG;EACC,qBAAA;AAHJ;AAME;EAAkB,WAAA;AAHpB;AAIE;EAAkB,WAAA;AADpB;AAEE;EAAkB,WAAA;AACpB;AAAE;EAAkB,WAAA;AAGpB;AAFE;EAAkB,WAAA;AAKpB;AAJE;EAAkB,WAAA;AAOpB;AANE;EAAmB,WAAA;AASrB;AAsBA;EACC,aAAA;EACA,sBAAA;AApBD;AAkBA;EAIE,eAAA;AAnBF;AAeA;EAMG,WAAA;AAlBH;AAYA;EAUE,aAAA;EACA,eAAA;EACA,YAAA;EACA,QAAA;EACA,sBAAA;AAnBF;AAKA;EAiBE,aAAA;EACA,eAAA;EACA,WAAA;EACA,SAAA;EACA,SAAA;AAnBF;AAFA;EAuBG,cAAA;EACA,UAAA;EACA,WAAA;EACA,sBAAA;AAlBH;AAmBG;EACC,sBAAA;AAjBJ;AAoBE;EAAkB,UAAA;AAjBpB;AAkBE;EAAkB,WAAA;AAfpB;AAgBE;EAAkB,WAAA;AAbpB;AAcE;EAAkB,WAAA;AAXpB;AAYE;EAAkB,WAAA;AATpB;AAUE;EAAkB,WAAA;AAPpB;AAQE;EAAmB,WAAA;AALrB;AAhCA;EAwCE,QAAA;AALF;AAnCA;EA0CG,WAAA;AAJH;AAtCA;EA4CI,UAAA;EACA,WAAA;AAHJ;AAKG;EAAmB,WAAA;AAFtB;AAGG;EAAmB,WAAA;AAAtB;AACG;EAAmB,WAAA;AAEtB;AADG;EAAmB,WAAA;AAItB;AAHG;EAAmB,WAAA;AAMtB;AALG;EAAmB,WAAA;AAQtB;AAPG;EAAmB,WAAA;AAUtB;AA/DA;EAyDE,QAAA;AASF;AAlEA;EA2DG,WAAA;AAUH;AArEA;EA6DI,UAAA;EACA,WAAA;AAWJ;AATG;EAAmB,WAAA;AAYtB;AAXG;EAAmB,WAAA;AActB;AAbG;EAAmB,WAAA;AAgBtB;AAfG;EAAmB,WAAA;AAkBtB;AAjBG;EAAmB,WAAA;AAoBtB;AAnBG;EAAmB,WAAA;AAsBtB;AArBG;EAAmB,WAAA;AAwBtB;AAlBA;EACC,aAAA;EACA,sBAAA;AAoBD","sourcesContent":["@editorcell: 46px;\n@indexcell: 5px;\n@previewcell: 2px;\n@gutter: 15px;\n\n#react-container {\n\twidth: 1000px;\n\tmargin: 0 auto;\n}\n\n\nh2 {\n\tmargin-top: 0;\n}\n\n.font-settings-panel {\n\tpadding: @gutter;\n\tbackground-color: #eee;\n}\n\n.glyph-grid {\n\tdisplay: flex;\n\tflex-wrap: wrap;\n\twidth: (@editorcell + 2) * 5;\n\n\t.glyph-cell {\n\t\twidth: @editorcell;\n\t\theight: @editorcell;\n\t\tbackground-color: #fff;\n\t\t&.status-on {\n\t\t\tbackground-color: red;\n\t\t}\n\t\timg {\n\t\t\tdisplay: block;\n\t\t\twidth: 100%;\n\t\t\theight: 100%;\n\t\t}\n\t}\n\t&.cells-width-4 { width: @editorcell * 4 }\n\t&.cells-width-5 { width: (@editorcell + 2) * 5; }\n\t&.cells-width-6 { width: @editorcell * 6 }\n\t&.cells-width-7 { width: @editorcell * 7 }\n\t&.cells-width-8 { width: @editorcell * 8 }\n\t&.cells-width-9 { width: @editorcell * 9 }\n\t&.cells-width-10 { width: @editorcell * 10 }\n}\n.editor-panel {\n\tpadding: @gutter;\n\tbackground-color: #ddd;\n\t.glyph-cell {\n\t\tcursor: pointer;\n\t\tborder: 1px solid transparent;\n\t\t&:hover {\n\t\t\tborder: 1px solid #000;\n\t\t}\n\t}\n}\n.glyph-tile {\n\tbackground-color: #fdd;\n\tpadding: @editorcell;\n}\n\n\n\n\n\n\n\n\n\n\n\n.font-index {\n\tpadding: @gutter;\n\tbackground-color: #ccc;\n\t.glyph-tiles {\n\t\tdisplay: flex;\n\t\tflex-wrap: wrap;\n\t}\n\t.glyph-tile {\n\t\tpadding: @indexcell;\n\t\ttext-align: center;\n\t\th3 {\n\t\t\tmargin: 0;\n\t\t}\n\t\t&:hover {\n\t\t\tbackground-image: url('../../dist/assets/shade2x2.png');\n\t\t}\n\t\t&.highlighted {\n\t\t\tbackground-color: #faa;\n\t\t}\n\t\tcursor: pointer;\n\t}\n\t.glyph-grid {\n\t\tmargin: @indexcell;\n\t\twidth: @indexcell * 5;\n\t\tborder: 0;\n\t\t.glyph-cell {\n\t\t\twidth: @indexcell;\n\t\t\theight: @indexcell;\n\t\t\tbackground-color: #fff;\n\t\t\t&.status-on {\n\t\t\t\tbackground-color: red;\n\t\t\t}\n\t\t}\n\t\t&.cells-width-4 { width: @indexcell * 4 }\n\t\t&.cells-width-5 { width: @indexcell * 5 }\n\t\t&.cells-width-6 { width: @indexcell * 6 }\n\t\t&.cells-width-7 { width: @indexcell * 7 }\n\t\t&.cells-width-8 { width: @indexcell * 8 }\n\t\t&.cells-width-9 { width: @indexcell * 9 }\n\t\t&.cells-width-10 { width: @indexcell * 10 }\n\t}\n}\n\n\n\n\n\n\n\n\n\n.preview-glyph(@cellmultiplier) {\n\t.glyph-grid {\n\t\twidth: @previewcell * @cellmultiplier * 5;\n\t\theight: @previewcell * @cellmultiplier * 5;\n\t\t.glyph-cell {\n\t\t\twidth: @previewcell * @cellmultiplier;\n\t\t\theight: @previewcell * @cellmultiplier;\n\t\t}\n\t\t&.cells-width-4 { width: @previewcell * 4 }\n\t\t&.cells-width-5 { width: @previewcell * 5 }\n\t\t&.cells-width-6 { width: @previewcell * 6 }\n\t\t&.cells-width-7 { width: @previewcell * 7 }\n\t\t&.cells-width-8 { width: @previewcell * 8 }\n\t\t&.cells-width-9 { width: @previewcell * 9 }\n\t\t&.cells-width-10 { width: @previewcell * 10 }\n\t}\n}\n\n\n.preview-panel {\n\tpadding: @gutter;\n\tbackground-color: #bbb;\n\tform {\n\t\tmargin-top: 1em;\n\t\tinput {\n\t\t\twidth: 30em;\n\t\t}\n\t}\n\t.preview-glyphs {\n\t\tdisplay: flex;\n\t\tflex-wrap: wrap;\n\t\tpadding: @previewcell;\n\t\tgap: @previewcell;\n\t\tbackground-color: #fff;\n\t}\n\t.glyph-grid {\n\t\tdisplay: flex;\n\t\tflex-wrap: wrap;\n\t\twidth: @previewcell * 5;\n\t\tmargin: 0;\n\t\tborder: 0;\n\t\t.glyph-cell {\n\t\t\tdisplay: block;\n\t\t\twidth: @previewcell;\n\t\t\theight: @previewcell;\n\t\t\tbackground-color: #fff;\n\t\t\t&.status-on {\n\t\t\t\tbackground-color: #000;\n\t\t\t}\n\t\t}\n\t\t&.cells-width-4 { width: @previewcell * 4 }\n\t\t&.cells-width-5 { width: @previewcell * 5 }\n\t\t&.cells-width-6 { width: @previewcell * 6 }\n\t\t&.cells-width-7 { width: @previewcell * 7 }\n\t\t&.cells-width-8 { width: @previewcell * 8 }\n\t\t&.cells-width-9 { width: @previewcell * 9 }\n\t\t&.cells-width-10 { width: @previewcell * 10 }\n\t}\n\t.preview-2x {\n\t\tgap: @previewcell * 2;\n\t\t.glyph-grid {\n\t\t\twidth: @previewcell * 2 * 5;\n\t\t\t.glyph-cell {\n\t\t\t\twidth: @previewcell * 2;\n\t\t\t\theight: @previewcell * 2;\n\t\t\t}\n\t\t\t&.cells-width-4  { width: @previewcell * 4  * 2}\n\t\t\t&.cells-width-5  { width: @previewcell * 5  * 2}\n\t\t\t&.cells-width-6  { width: @previewcell * 6  * 2}\n\t\t\t&.cells-width-7  { width: @previewcell * 7  * 2}\n\t\t\t&.cells-width-8  { width: @previewcell * 8  * 2}\n\t\t\t&.cells-width-9  { width: @previewcell * 9  * 2}\n\t\t\t&.cells-width-10 { width: @previewcell * 10 * 2}\n\t\t}\n\t}\n\t.preview-4x {\n\t\tgap: @previewcell * 4;\n\t\t.glyph-grid {\n\t\t\twidth: @previewcell * 4 * 5;\n\t\t\t.glyph-cell {\n\t\t\t\twidth: @previewcell * 4;\n\t\t\t\theight: @previewcell * 4;\n\t\t\t}\n\t\t\t&.cells-width-4  { width: @previewcell * 4  * 4}\n\t\t\t&.cells-width-5  { width: @previewcell * 5  * 4}\n\t\t\t&.cells-width-6  { width: @previewcell * 6  * 4}\n\t\t\t&.cells-width-7  { width: @previewcell * 7  * 4}\n\t\t\t&.cells-width-8  { width: @previewcell * 8  * 4}\n\t\t\t&.cells-width-9  { width: @previewcell * 9  * 4}\n\t\t\t&.cells-width-10 { width: @previewcell * 10 * 4}\n\t\t}\n\t}\n}\n\n\n.export-panel {\n\tpadding: @gutter;\n\tbackground-color: #aaa;\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -27915,41 +27915,48 @@ function Cell(_ref) {
     style = _ref$style === void 0 ? {} : _ref$style;
   var classes = "glyph-cell status-" + (status ? 'on' : 'off');
   var id_attr = "id-".concat(glyphIndex, "-").concat(id);
-  var onClickToggle = editable ? function () {
-    toggle(glyphIndex, id);
-  } : function () {};
-  var mouseDown = editable ? function (evt) {
-    return dragstatus(1, 1 - status);
-  } : function () {};
-  var mouseUp = editable ? function (evt) {
-    return dragstatus(0, 0);
-  } : function () {};
-  var mouseOver = editable ? function (evt) {
-    return dragdraw(glyphIndex, id);
-  } : function () {};
-  var mouseOut = editable ? function (evt) {
-    return dragdraw(glyphIndex, id);
-  } : function () {};
+
+  // var onClickToggle = (evt) => {}
+  var mouseDown = function mouseDown(evt) {};
+  var mouseUp = function mouseUp(evt) {};
+  var mouseOver = function mouseOver(evt) {};
+  var mouseOut = function mouseOut(evt) {};
+  if (editable) {
+    // onClickToggle = () => {
+    // 	toggle(glyphIndex, id)
+    // }
+    mouseDown = function mouseDown(evt) {
+      evt.preventDefault();
+      toggle(glyphIndex, id);
+      dragstatus(1, 1 - status);
+    };
+    mouseUp = function mouseUp(evt) {
+      evt.preventDefault();
+      dragstatus(0, 0);
+    };
+    mouseOver = function mouseOver(evt) {
+      evt.preventDefault();
+      dragdraw(glyphIndex, id);
+    };
+    mouseOut = function mouseOut(evt) {
+      evt.preventDefault();
+      dragdraw(glyphIndex, id);
+    };
+  }
+
   //let styles = editable ? {cursor: 'pointer', ...style} : { ...style}
   var styles = _objectSpread({}, styles);
   return /*#__PURE__*/React.createElement("div", {
     draggable: "false",
     id: id_attr,
     className: classes,
-    style: styles,
-    onClick: onClickToggle,
-    onMouseDown: function onMouseDown(evt) {
-      return dragstatus(1, 1 - status);
-    },
-    onMouseUp: function onMouseUp(evt) {
-      return dragstatus(0, 0);
-    },
-    onMouseOver: function onMouseOver(evt) {
-      return dragdraw(glyphIndex, id);
-    },
-    onMouseOut: function onMouseOut(evt) {
-      return dragdraw(glyphIndex, id);
-    }
+    style: styles
+    // onClick={ onClickToggle }
+    ,
+    onMouseDown: mouseDown,
+    onMouseUp: mouseUp,
+    onMouseOver: mouseOver,
+    onMouseOut: mouseOut
   });
 }
 
@@ -28159,10 +28166,14 @@ function GlyphGrid(_ref) {
       return f;
     } : _ref$toggle;
   var gridClasses = "glyph-grid cells-width-" + width;
+  var mouseLeave = function mouseLeave(evt) {
+    dragstatus(0, 0);
+  };
   return /*#__PURE__*/React.createElement("div", {
     className: gridClasses,
     "data-glyphname": glyphName,
-    draggable: "false"
+    draggable: "false",
+    onMouseLeave: mouseLeave
   }, cellContents.map(function (cell, i) {
     return /*#__PURE__*/React.createElement(_Cell__WEBPACK_IMPORTED_MODULE_0__["default"], {
       id: i,

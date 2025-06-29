@@ -3,11 +3,36 @@ export default function Cell({ id, glyphName = 'A', glyphIndex = 0, editable = 0
 	const classes = "glyph-cell status-" + (status ? 'on' : 'off');
 	
 	let id_attr = `id-${glyphIndex}-${id}`;
-	let onClickToggle = editable ? (() => { toggle(glyphIndex, id) }) : function() {}
-	let mouseDown = editable ? ((evt) => dragstatus(1, 1 - status)) : function() {}
-	let mouseUp = editable ? ((evt) => dragstatus(0, 0)) : function() {}
-	let mouseOver = editable ? ((evt) => dragdraw(glyphIndex, id)) : function() {}
-	let mouseOut = editable ?  ((evt) => dragdraw(glyphIndex, id)) : function() {}
+	
+	// var onClickToggle = (evt) => {}
+	var mouseDown = (evt) => {}
+	var mouseUp = (evt) => {}
+	var mouseOver = (evt) => {}
+	var mouseOut = (evt) => {}
+	if (editable) {
+		// onClickToggle = () => {
+		// 	toggle(glyphIndex, id)
+		// }
+		mouseDown = (evt) => {
+			evt.preventDefault()
+			toggle(glyphIndex, id)
+			dragstatus(1, 1 - status)
+		}
+		mouseUp = (evt) => {
+			evt.preventDefault()
+			dragstatus(0, 0)
+		}
+		mouseOver = (evt) => {
+			evt.preventDefault()
+			dragdraw(glyphIndex, id)
+		}
+		mouseOut = (evt) => {
+			evt.preventDefault()
+			dragdraw(glyphIndex, id)
+		}
+	}
+	
+	
 	//let styles = editable ? {cursor: 'pointer', ...style} : { ...style}
 	let styles = {...styles}
 	
@@ -17,11 +42,11 @@ export default function Cell({ id, glyphName = 'A', glyphIndex = 0, editable = 0
 			id={ id_attr }
 			className={ classes }
 			style={ styles }
-			onClick={ onClickToggle }
-			onMouseDown={ (evt) => dragstatus(1, 1 - status) }
-			onMouseUp={ (evt) => dragstatus(0, 0) }
-			onMouseOver={ (evt) => dragdraw(glyphIndex,id) }
-			onMouseOut={ (evt) => dragdraw(glyphIndex,id) }
+			// onClick={ onClickToggle }
+			onMouseDown={ mouseDown }
+			onMouseUp={ mouseUp }
+			onMouseOver={ mouseOver }
+			onMouseOut={ mouseOut }
 		>
 		{/*<img src='assets/empty5x5.png' />*/}
 		</div>
