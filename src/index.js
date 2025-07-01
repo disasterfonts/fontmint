@@ -12,6 +12,7 @@ import './less/stylesy.less'
 import cellInitData from "./default_cells.json"
 import defaultGlyphs from "./default_glyphs.js"
 
+
 let defaultGlyphData = defaultGlyphs(5,5); // width/height
 
 export default function App() {
@@ -31,13 +32,50 @@ export default function App() {
 				width={fontDimensions.width}
 				height={fontDimensions.height}
 				updateDimensions = { (dimension, newValue) => {
+						const createArray = length => [...Array(length)];
+						var newGlyphs;
+						
 						if (dimension === 'width') {
+							let xdifference = 0;
+							let newGlyphs = createArray(newValue * fontDimensions.height);
+							
+							newGlyphs = glyphs.map((glyph, i) => {
+								if (fontDimensions.width < newValue) {
+									// grow
+									for (let y=0; y<fontDimensions.height; y++) {
+										xdifference = newValue - fontDimensions.width;
+										for (let x = 0; x<xdifference; x++) {
+											// splice in x difference at end of each row
+											// column 'width' shifts with the xdiff every row
+											glyph.cells.splice((fontDimensions.width * (y+1)) + (y*xdifference), 0, {'id': i, 'status': 0});
+										}
+									}
+								} else {
+									// shrink
+									for (let y=0; y<fontDimensions.height; y++) {
+										xdifference = fontDimensions.width - newValue;
+										for (let x = 0; x<xdifference; x++) {
+											glyph.cells.splice( ((fontDimensions.width * (y+1))-1) - (y*xdifference), 1);
+										}
+									}
+								}
+								var newGlyphCells = glyph.cells.map( (cell,i) => ({'id': i, 'status': cell.status}))
+								glyph.cells = newGlyphCells
+								return glyph
+							})
+							//setGlyphs(defaultGlyphs(newValue, fontDimensions.height));
+							setGlyphs(newGlyphs);
 							setFontDimensions({ 'width': newValue, 'height': fontDimensions.height })
-							setGlyphs(defaultGlyphs(newValue, fontDimensions.height));
 						} else {
-							 setFontDimensions({ 'width': fontDimensions.width, 'height': newValue })
-							 setGlyphs(defaultGlyphs(fontDimensions.width, newValue));
+							let ydifference = 0;
+							if (fontDimensions.height < newValue) {
+								ydifference = newValue - fontDimensions.height;
+								
+							}
+							setGlyphs(defaultGlyphs(fontDimensions.width, newValue));
+							setFontDimensions({ 'width': fontDimensions.width, 'height': newValue })
 						}
+						// update form input
 						return newValue;
 					}
 				}

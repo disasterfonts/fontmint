@@ -36,13 +36,13 @@ h2 {
 			height: 100%;
 		}
 	}
-	&.cells-width-4 { width: @editorcell * 4 }
+	&.cells-width-4 { width: (@editorcell + 2) * 4 }
 	&.cells-width-5 { width: (@editorcell + 2) * 5; }
-	&.cells-width-6 { width: @editorcell * 6 }
-	&.cells-width-7 { width: @editorcell * 7 }
-	&.cells-width-8 { width: @editorcell * 8 }
-	&.cells-width-9 { width: @editorcell * 9 }
-	&.cells-width-10 { width: @editorcell * 10 }
+	&.cells-width-6 { width: (@editorcell + 2) * 6 }
+	&.cells-width-7 { width: (@editorcell + 2) * 7 }
+	&.cells-width-8 { width: (@editorcell + 2) * 8 }
+	&.cells-width-9 { width: (@editorcell + 2) * 9 }
+	&.cells-width-10 { width: (@editorcell + 2) * 10 }
 }
 .editor-panel {
 	padding: @gutter;

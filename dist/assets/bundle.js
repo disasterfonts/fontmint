@@ -66,25 +66,25 @@ h2 {
   height: 100%;
 }
 .glyph-grid.cells-width-4 {
-  width: 184px;
+  width: 192px;
 }
 .glyph-grid.cells-width-5 {
   width: 240px;
 }
 .glyph-grid.cells-width-6 {
-  width: 276px;
+  width: 288px;
 }
 .glyph-grid.cells-width-7 {
-  width: 322px;
+  width: 336px;
 }
 .glyph-grid.cells-width-8 {
-  width: 368px;
+  width: 384px;
 }
 .glyph-grid.cells-width-9 {
-  width: 414px;
+  width: 432px;
 }
 .glyph-grid.cells-width-10 {
-  width: 460px;
+  width: 480px;
 }
 .editor-panel {
   padding: 15px;
@@ -277,7 +277,7 @@ h2 {
   padding: 15px;
   background-color: #aaa;
 }
-`, "",{"version":3,"sources":["webpack://./src/less/stylesy.less"],"names":[],"mappings":"AAKA;EACC,aAAA;EACA,cAAA;AAJD;AAQA;EACC,aAAA;AAND;AASA;EACC,aAAA;EACA,sBAAA;AAPD;AAUA;EACC,aAAA;EACA,eAAA;EACA,YAAA;AARD;AAKA;EAME,WAAA;EACA,YAAA;EACA,sBAAA;AARF;AASE;EACC,qBAAA;AAPH;AAHA;EAaG,cAAA;EACA,WAAA;EACA,YAAA;AAPH;AAUC;EAAkB,YAAA;AAPnB;AAQC;EAAkB,YAAA;AALnB;AAMC;EAAkB,YAAA;AAHnB;AAIC;EAAkB,YAAA;AADnB;AAEC;EAAkB,YAAA;AACnB;AAAC;EAAkB,YAAA;AAGnB;AAFC;EAAmB,YAAA;AAKpB;AAHA;EACC,aAAA;EACA,sBAAA;AAKD;AAPA;EAIE,eAAA;EACA,6BAAA;AAMF;AALE;EACC,sBAAA;AAOH;AAHA;EACC,sBAAA;EACA,aAAA;AAKD;AAQA;EACC,aAAA;EACA,sBAAA;AAND;AAIA;EAIE,aAAA;EACA,eAAA;AALF;AAAA;EAQE,YAAA;EACA,kBAAA;EAUA,eAAA;AAdF;AALA;EAWG,SAAA;AAHH;AAKE;EACC,yDAAA;AAHH;AAKE;EACC,sBAAA;AAHH;AAdA;EAsBE,WAAA;EACA,WAAA;EACA,SAAA;AALF;AAnBA;EA0BG,UAAA;EACA,WAAA;EACA,sBAAA;AAJH;AAKG;EACC,qBAAA;AAHJ;AAME;EAAkB,WAAA;AAHpB;AAIE;EAAkB,WAAA;AADpB;AAEE;EAAkB,WAAA;AACpB;AAAE;EAAkB,WAAA;AAGpB;AAFE;EAAkB,WAAA;AAKpB;AAJE;EAAkB,WAAA;AAOpB;AANE;EAAmB,WAAA;AASrB;AAsBA;EACC,aAAA;EACA,sBAAA;AApBD;AAkBA;EAIE,eAAA;AAnBF;AAeA;EAMG,WAAA;AAlBH;AAYA;EAUE,aAAA;EACA,eAAA;EACA,YAAA;EACA,QAAA;EACA,sBAAA;AAnBF;AAKA;EAiBE,aAAA;EACA,eAAA;EACA,WAAA;EACA,SAAA;EACA,SAAA;AAnBF;AAFA;EAuBG,cAAA;EACA,UAAA;EACA,WAAA;EACA,sBAAA;AAlBH;AAmBG;EACC,sBAAA;AAjBJ;AAoBE;EAAkB,UAAA;AAjBpB;AAkBE;EAAkB,WAAA;AAfpB;AAgBE;EAAkB,WAAA;AAbpB;AAcE;EAAkB,WAAA;AAXpB;AAYE;EAAkB,WAAA;AATpB;AAUE;EAAkB,WAAA;AAPpB;AAQE;EAAmB,WAAA;AALrB;AAhCA;EAwCE,QAAA;AALF;AAnCA;EA0CG,WAAA;AAJH;AAtCA;EA4CI,UAAA;EACA,WAAA;AAHJ;AAKG;EAAmB,WAAA;AAFtB;AAGG;EAAmB,WAAA;AAAtB;AACG;EAAmB,WAAA;AAEtB;AADG;EAAmB,WAAA;AAItB;AAHG;EAAmB,WAAA;AAMtB;AALG;EAAmB,WAAA;AAQtB;AAPG;EAAmB,WAAA;AAUtB;AA/DA;EAyDE,QAAA;AASF;AAlEA;EA2DG,WAAA;AAUH;AArEA;EA6DI,UAAA;EACA,WAAA;AAWJ;AATG;EAAmB,WAAA;AAYtB;AAXG;EAAmB,WAAA;AActB;AAbG;EAAmB,WAAA;AAgBtB;AAfG;EAAmB,WAAA;AAkBtB;AAjBG;EAAmB,WAAA;AAoBtB;AAnBG;EAAmB,WAAA;AAsBtB;AArBG;EAAmB,WAAA;AAwBtB;AAlBA;EACC,aAAA;EACA,sBAAA;AAoBD","sourcesContent":["@editorcell: 46px;\n@indexcell: 5px;\n@previewcell: 2px;\n@gutter: 15px;\n\n#react-container {\n\twidth: 1000px;\n\tmargin: 0 auto;\n}\n\n\nh2 {\n\tmargin-top: 0;\n}\n\n.font-settings-panel {\n\tpadding: @gutter;\n\tbackground-color: #eee;\n}\n\n.glyph-grid {\n\tdisplay: flex;\n\tflex-wrap: wrap;\n\twidth: (@editorcell + 2) * 5;\n\n\t.glyph-cell {\n\t\twidth: @editorcell;\n\t\theight: @editorcell;\n\t\tbackground-color: #fff;\n\t\t&.status-on {\n\t\t\tbackground-color: red;\n\t\t}\n\t\timg {\n\t\t\tdisplay: block;\n\t\t\twidth: 100%;\n\t\t\theight: 100%;\n\t\t}\n\t}\n\t&.cells-width-4 { width: @editorcell * 4 }\n\t&.cells-width-5 { width: (@editorcell + 2) * 5; }\n\t&.cells-width-6 { width: @editorcell * 6 }\n\t&.cells-width-7 { width: @editorcell * 7 }\n\t&.cells-width-8 { width: @editorcell * 8 }\n\t&.cells-width-9 { width: @editorcell * 9 }\n\t&.cells-width-10 { width: @editorcell * 10 }\n}\n.editor-panel {\n\tpadding: @gutter;\n\tbackground-color: #ddd;\n\t.glyph-cell {\n\t\tcursor: pointer;\n\t\tborder: 1px solid transparent;\n\t\t&:hover {\n\t\t\tborder: 1px solid #000;\n\t\t}\n\t}\n}\n.glyph-tile {\n\tbackground-color: #fdd;\n\tpadding: @editorcell;\n}\n\n\n\n\n\n\n\n\n\n\n\n.font-index {\n\tpadding: @gutter;\n\tbackground-color: #ccc;\n\t.glyph-tiles {\n\t\tdisplay: flex;\n\t\tflex-wrap: wrap;\n\t}\n\t.glyph-tile {\n\t\tpadding: @indexcell;\n\t\ttext-align: center;\n\t\th3 {\n\t\t\tmargin: 0;\n\t\t}\n\t\t&:hover {\n\t\t\tbackground-image: url('../../dist/assets/shade2x2.png');\n\t\t}\n\t\t&.highlighted {\n\t\t\tbackground-color: #faa;\n\t\t}\n\t\tcursor: pointer;\n\t}\n\t.glyph-grid {\n\t\tmargin: @indexcell;\n\t\twidth: @indexcell * 5;\n\t\tborder: 0;\n\t\t.glyph-cell {\n\t\t\twidth: @indexcell;\n\t\t\theight: @indexcell;\n\t\t\tbackground-color: #fff;\n\t\t\t&.status-on {\n\t\t\t\tbackground-color: red;\n\t\t\t}\n\t\t}\n\t\t&.cells-width-4 { width: @indexcell * 4 }\n\t\t&.cells-width-5 { width: @indexcell * 5 }\n\t\t&.cells-width-6 { width: @indexcell * 6 }\n\t\t&.cells-width-7 { width: @indexcell * 7 }\n\t\t&.cells-width-8 { width: @indexcell * 8 }\n\t\t&.cells-width-9 { width: @indexcell * 9 }\n\t\t&.cells-width-10 { width: @indexcell * 10 }\n\t}\n}\n\n\n\n\n\n\n\n\n\n.preview-glyph(@cellmultiplier) {\n\t.glyph-grid {\n\t\twidth: @previewcell * @cellmultiplier * 5;\n\t\theight: @previewcell * @cellmultiplier * 5;\n\t\t.glyph-cell {\n\t\t\twidth: @previewcell * @cellmultiplier;\n\t\t\theight: @previewcell * @cellmultiplier;\n\t\t}\n\t\t&.cells-width-4 { width: @previewcell * 4 }\n\t\t&.cells-width-5 { width: @previewcell * 5 }\n\t\t&.cells-width-6 { width: @previewcell * 6 }\n\t\t&.cells-width-7 { width: @previewcell * 7 }\n\t\t&.cells-width-8 { width: @previewcell * 8 }\n\t\t&.cells-width-9 { width: @previewcell * 9 }\n\t\t&.cells-width-10 { width: @previewcell * 10 }\n\t}\n}\n\n\n.preview-panel {\n\tpadding: @gutter;\n\tbackground-color: #bbb;\n\tform {\n\t\tmargin-top: 1em;\n\t\tinput {\n\t\t\twidth: 30em;\n\t\t}\n\t}\n\t.preview-glyphs {\n\t\tdisplay: flex;\n\t\tflex-wrap: wrap;\n\t\tpadding: @previewcell;\n\t\tgap: @previewcell;\n\t\tbackground-color: #fff;\n\t}\n\t.glyph-grid {\n\t\tdisplay: flex;\n\t\tflex-wrap: wrap;\n\t\twidth: @previewcell * 5;\n\t\tmargin: 0;\n\t\tborder: 0;\n\t\t.glyph-cell {\n\t\t\tdisplay: block;\n\t\t\twidth: @previewcell;\n\t\t\theight: @previewcell;\n\t\t\tbackground-color: #fff;\n\t\t\t&.status-on {\n\t\t\t\tbackground-color: #000;\n\t\t\t}\n\t\t}\n\t\t&.cells-width-4 { width: @previewcell * 4 }\n\t\t&.cells-width-5 { width: @previewcell * 5 }\n\t\t&.cells-width-6 { width: @previewcell * 6 }\n\t\t&.cells-width-7 { width: @previewcell * 7 }\n\t\t&.cells-width-8 { width: @previewcell * 8 }\n\t\t&.cells-width-9 { width: @previewcell * 9 }\n\t\t&.cells-width-10 { width: @previewcell * 10 }\n\t}\n\t.preview-2x {\n\t\tgap: @previewcell * 2;\n\t\t.glyph-grid {\n\t\t\twidth: @previewcell * 2 * 5;\n\t\t\t.glyph-cell {\n\t\t\t\twidth: @previewcell * 2;\n\t\t\t\theight: @previewcell * 2;\n\t\t\t}\n\t\t\t&.cells-width-4  { width: @previewcell * 4  * 2}\n\t\t\t&.cells-width-5  { width: @previewcell * 5  * 2}\n\t\t\t&.cells-width-6  { width: @previewcell * 6  * 2}\n\t\t\t&.cells-width-7  { width: @previewcell * 7  * 2}\n\t\t\t&.cells-width-8  { width: @previewcell * 8  * 2}\n\t\t\t&.cells-width-9  { width: @previewcell * 9  * 2}\n\t\t\t&.cells-width-10 { width: @previewcell * 10 * 2}\n\t\t}\n\t}\n\t.preview-4x {\n\t\tgap: @previewcell * 4;\n\t\t.glyph-grid {\n\t\t\twidth: @previewcell * 4 * 5;\n\t\t\t.glyph-cell {\n\t\t\t\twidth: @previewcell * 4;\n\t\t\t\theight: @previewcell * 4;\n\t\t\t}\n\t\t\t&.cells-width-4  { width: @previewcell * 4  * 4}\n\t\t\t&.cells-width-5  { width: @previewcell * 5  * 4}\n\t\t\t&.cells-width-6  { width: @previewcell * 6  * 4}\n\t\t\t&.cells-width-7  { width: @previewcell * 7  * 4}\n\t\t\t&.cells-width-8  { width: @previewcell * 8  * 4}\n\t\t\t&.cells-width-9  { width: @previewcell * 9  * 4}\n\t\t\t&.cells-width-10 { width: @previewcell * 10 * 4}\n\t\t}\n\t}\n}\n\n\n.export-panel {\n\tpadding: @gutter;\n\tbackground-color: #aaa;\n}"],"sourceRoot":""}]);
+`, "",{"version":3,"sources":["webpack://./src/less/stylesy.less"],"names":[],"mappings":"AAKA;EACC,aAAA;EACA,cAAA;AAJD;AAQA;EACC,aAAA;AAND;AASA;EACC,aAAA;EACA,sBAAA;AAPD;AAUA;EACC,aAAA;EACA,eAAA;EACA,YAAA;AARD;AAKA;EAME,WAAA;EACA,YAAA;EACA,sBAAA;AARF;AASE;EACC,qBAAA;AAPH;AAHA;EAaG,cAAA;EACA,WAAA;EACA,YAAA;AAPH;AAUC;EAAkB,YAAA;AAPnB;AAQC;EAAkB,YAAA;AALnB;AAMC;EAAkB,YAAA;AAHnB;AAIC;EAAkB,YAAA;AADnB;AAEC;EAAkB,YAAA;AACnB;AAAC;EAAkB,YAAA;AAGnB;AAFC;EAAmB,YAAA;AAKpB;AAHA;EACC,aAAA;EACA,sBAAA;AAKD;AAPA;EAIE,eAAA;EACA,6BAAA;AAMF;AALE;EACC,sBAAA;AAOH;AAHA;EACC,sBAAA;EACA,aAAA;AAKD;AAQA;EACC,aAAA;EACA,sBAAA;AAND;AAIA;EAIE,aAAA;EACA,eAAA;AALF;AAAA;EAQE,YAAA;EACA,kBAAA;EAUA,eAAA;AAdF;AALA;EAWG,SAAA;AAHH;AAKE;EACC,yDAAA;AAHH;AAKE;EACC,sBAAA;AAHH;AAdA;EAsBE,WAAA;EACA,WAAA;EACA,SAAA;AALF;AAnBA;EA0BG,UAAA;EACA,WAAA;EACA,sBAAA;AAJH;AAKG;EACC,qBAAA;AAHJ;AAME;EAAkB,WAAA;AAHpB;AAIE;EAAkB,WAAA;AADpB;AAEE;EAAkB,WAAA;AACpB;AAAE;EAAkB,WAAA;AAGpB;AAFE;EAAkB,WAAA;AAKpB;AAJE;EAAkB,WAAA;AAOpB;AANE;EAAmB,WAAA;AASrB;AAsBA;EACC,aAAA;EACA,sBAAA;AApBD;AAkBA;EAIE,eAAA;AAnBF;AAeA;EAMG,WAAA;AAlBH;AAYA;EAUE,aAAA;EACA,eAAA;EACA,YAAA;EACA,QAAA;EACA,sBAAA;AAnBF;AAKA;EAiBE,aAAA;EACA,eAAA;EACA,WAAA;EACA,SAAA;EACA,SAAA;AAnBF;AAFA;EAuBG,cAAA;EACA,UAAA;EACA,WAAA;EACA,sBAAA;AAlBH;AAmBG;EACC,sBAAA;AAjBJ;AAoBE;EAAkB,UAAA;AAjBpB;AAkBE;EAAkB,WAAA;AAfpB;AAgBE;EAAkB,WAAA;AAbpB;AAcE;EAAkB,WAAA;AAXpB;AAYE;EAAkB,WAAA;AATpB;AAUE;EAAkB,WAAA;AAPpB;AAQE;EAAmB,WAAA;AALrB;AAhCA;EAwCE,QAAA;AALF;AAnCA;EA0CG,WAAA;AAJH;AAtCA;EA4CI,UAAA;EACA,WAAA;AAHJ;AAKG;EAAmB,WAAA;AAFtB;AAGG;EAAmB,WAAA;AAAtB;AACG;EAAmB,WAAA;AAEtB;AADG;EAAmB,WAAA;AAItB;AAHG;EAAmB,WAAA;AAMtB;AALG;EAAmB,WAAA;AAQtB;AAPG;EAAmB,WAAA;AAUtB;AA/DA;EAyDE,QAAA;AASF;AAlEA;EA2DG,WAAA;AAUH;AArEA;EA6DI,UAAA;EACA,WAAA;AAWJ;AATG;EAAmB,WAAA;AAYtB;AAXG;EAAmB,WAAA;AActB;AAbG;EAAmB,WAAA;AAgBtB;AAfG;EAAmB,WAAA;AAkBtB;AAjBG;EAAmB,WAAA;AAoBtB;AAnBG;EAAmB,WAAA;AAsBtB;AArBG;EAAmB,WAAA;AAwBtB;AAlBA;EACC,aAAA;EACA,sBAAA;AAoBD","sourcesContent":["@editorcell: 46px;\n@indexcell: 5px;\n@previewcell: 2px;\n@gutter: 15px;\n\n#react-container {\n\twidth: 1000px;\n\tmargin: 0 auto;\n}\n\n\nh2 {\n\tmargin-top: 0;\n}\n\n.font-settings-panel {\n\tpadding: @gutter;\n\tbackground-color: #eee;\n}\n\n.glyph-grid {\n\tdisplay: flex;\n\tflex-wrap: wrap;\n\twidth: (@editorcell + 2) * 5;\n\n\t.glyph-cell {\n\t\twidth: @editorcell;\n\t\theight: @editorcell;\n\t\tbackground-color: #fff;\n\t\t&.status-on {\n\t\t\tbackground-color: red;\n\t\t}\n\t\timg {\n\t\t\tdisplay: block;\n\t\t\twidth: 100%;\n\t\t\theight: 100%;\n\t\t}\n\t}\n\t&.cells-width-4 { width: (@editorcell + 2) * 4 }\n\t&.cells-width-5 { width: (@editorcell + 2) * 5; }\n\t&.cells-width-6 { width: (@editorcell + 2) * 6 }\n\t&.cells-width-7 { width: (@editorcell + 2) * 7 }\n\t&.cells-width-8 { width: (@editorcell + 2) * 8 }\n\t&.cells-width-9 { width: (@editorcell + 2) * 9 }\n\t&.cells-width-10 { width: (@editorcell + 2) * 10 }\n}\n.editor-panel {\n\tpadding: @gutter;\n\tbackground-color: #ddd;\n\t.glyph-cell {\n\t\tcursor: pointer;\n\t\tborder: 1px solid transparent;\n\t\t&:hover {\n\t\t\tborder: 1px solid #000;\n\t\t}\n\t}\n}\n.glyph-tile {\n\tbackground-color: #fdd;\n\tpadding: @editorcell;\n}\n\n\n\n\n\n\n\n\n\n\n\n.font-index {\n\tpadding: @gutter;\n\tbackground-color: #ccc;\n\t.glyph-tiles {\n\t\tdisplay: flex;\n\t\tflex-wrap: wrap;\n\t}\n\t.glyph-tile {\n\t\tpadding: @indexcell;\n\t\ttext-align: center;\n\t\th3 {\n\t\t\tmargin: 0;\n\t\t}\n\t\t&:hover {\n\t\t\tbackground-image: url('../../dist/assets/shade2x2.png');\n\t\t}\n\t\t&.highlighted {\n\t\t\tbackground-color: #faa;\n\t\t}\n\t\tcursor: pointer;\n\t}\n\t.glyph-grid {\n\t\tmargin: @indexcell;\n\t\twidth: @indexcell * 5;\n\t\tborder: 0;\n\t\t.glyph-cell {\n\t\t\twidth: @indexcell;\n\t\t\theight: @indexcell;\n\t\t\tbackground-color: #fff;\n\t\t\t&.status-on {\n\t\t\t\tbackground-color: red;\n\t\t\t}\n\t\t}\n\t\t&.cells-width-4 { width: @indexcell * 4 }\n\t\t&.cells-width-5 { width: @indexcell * 5 }\n\t\t&.cells-width-6 { width: @indexcell * 6 }\n\t\t&.cells-width-7 { width: @indexcell * 7 }\n\t\t&.cells-width-8 { width: @indexcell * 8 }\n\t\t&.cells-width-9 { width: @indexcell * 9 }\n\t\t&.cells-width-10 { width: @indexcell * 10 }\n\t}\n}\n\n\n\n\n\n\n\n\n\n.preview-glyph(@cellmultiplier) {\n\t.glyph-grid {\n\t\twidth: @previewcell * @cellmultiplier * 5;\n\t\theight: @previewcell * @cellmultiplier * 5;\n\t\t.glyph-cell {\n\t\t\twidth: @previewcell * @cellmultiplier;\n\t\t\theight: @previewcell * @cellmultiplier;\n\t\t}\n\t\t&.cells-width-4 { width: @previewcell * 4 }\n\t\t&.cells-width-5 { width: @previewcell * 5 }\n\t\t&.cells-width-6 { width: @previewcell * 6 }\n\t\t&.cells-width-7 { width: @previewcell * 7 }\n\t\t&.cells-width-8 { width: @previewcell * 8 }\n\t\t&.cells-width-9 { width: @previewcell * 9 }\n\t\t&.cells-width-10 { width: @previewcell * 10 }\n\t}\n}\n\n\n.preview-panel {\n\tpadding: @gutter;\n\tbackground-color: #bbb;\n\tform {\n\t\tmargin-top: 1em;\n\t\tinput {\n\t\t\twidth: 30em;\n\t\t}\n\t}\n\t.preview-glyphs {\n\t\tdisplay: flex;\n\t\tflex-wrap: wrap;\n\t\tpadding: @previewcell;\n\t\tgap: @previewcell;\n\t\tbackground-color: #fff;\n\t}\n\t.glyph-grid {\n\t\tdisplay: flex;\n\t\tflex-wrap: wrap;\n\t\twidth: @previewcell * 5;\n\t\tmargin: 0;\n\t\tborder: 0;\n\t\t.glyph-cell {\n\t\t\tdisplay: block;\n\t\t\twidth: @previewcell;\n\t\t\theight: @previewcell;\n\t\t\tbackground-color: #fff;\n\t\t\t&.status-on {\n\t\t\t\tbackground-color: #000;\n\t\t\t}\n\t\t}\n\t\t&.cells-width-4 { width: @previewcell * 4 }\n\t\t&.cells-width-5 { width: @previewcell * 5 }\n\t\t&.cells-width-6 { width: @previewcell * 6 }\n\t\t&.cells-width-7 { width: @previewcell * 7 }\n\t\t&.cells-width-8 { width: @previewcell * 8 }\n\t\t&.cells-width-9 { width: @previewcell * 9 }\n\t\t&.cells-width-10 { width: @previewcell * 10 }\n\t}\n\t.preview-2x {\n\t\tgap: @previewcell * 2;\n\t\t.glyph-grid {\n\t\t\twidth: @previewcell * 2 * 5;\n\t\t\t.glyph-cell {\n\t\t\t\twidth: @previewcell * 2;\n\t\t\t\theight: @previewcell * 2;\n\t\t\t}\n\t\t\t&.cells-width-4  { width: @previewcell * 4  * 2}\n\t\t\t&.cells-width-5  { width: @previewcell * 5  * 2}\n\t\t\t&.cells-width-6  { width: @previewcell * 6  * 2}\n\t\t\t&.cells-width-7  { width: @previewcell * 7  * 2}\n\t\t\t&.cells-width-8  { width: @previewcell * 8  * 2}\n\t\t\t&.cells-width-9  { width: @previewcell * 9  * 2}\n\t\t\t&.cells-width-10 { width: @previewcell * 10 * 2}\n\t\t}\n\t}\n\t.preview-4x {\n\t\tgap: @previewcell * 4;\n\t\t.glyph-grid {\n\t\t\twidth: @previewcell * 4 * 5;\n\t\t\t.glyph-cell {\n\t\t\t\twidth: @previewcell * 4;\n\t\t\t\theight: @previewcell * 4;\n\t\t\t}\n\t\t\t&.cells-width-4  { width: @previewcell * 4  * 4}\n\t\t\t&.cells-width-5  { width: @previewcell * 5  * 4}\n\t\t\t&.cells-width-6  { width: @previewcell * 6  * 4}\n\t\t\t&.cells-width-7  { width: @previewcell * 7  * 4}\n\t\t\t&.cells-width-8  { width: @previewcell * 8  * 4}\n\t\t\t&.cells-width-9  { width: @previewcell * 9  * 4}\n\t\t\t&.cells-width-10 { width: @previewcell * 10 * 4}\n\t\t}\n\t}\n}\n\n\n.export-panel {\n\tpadding: @gutter;\n\tbackground-color: #aaa;\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -28089,10 +28089,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 
 function FontSettingsPanel(_ref) {
-  var _ref$width = _ref.width,
+  var _ref$fontname = _ref.fontname,
+    fontname = _ref$fontname === void 0 ? "fonto" : _ref$fontname,
+    _ref$width = _ref.width,
     width = _ref$width === void 0 ? 5 : _ref$width,
     _ref$height = _ref.height,
     height = _ref$height === void 0 ? 5 : _ref$height,
+    _ref$updateFontName = _ref.updateFontName,
+    updateFontName = _ref$updateFontName === void 0 ? function (f) {
+      return f;
+    } : _ref$updateFontName,
     _ref$updateDimensions = _ref.updateDimensions,
     updateDimensions = _ref$updateDimensions === void 0 ? function (f) {
       return f;
@@ -28100,6 +28106,15 @@ function FontSettingsPanel(_ref) {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("section", {
     className: "font-settings-panel"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", null, "Font settings"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("form", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("label", {
+    htmlFor: "fontname"
+  }, "Name"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("input", {
+    htmlname: "fontname",
+    type: "text",
+    value: fontname,
+    onChange: function onChange(event) {
+      return updateFontName('fontname', event.target.value);
+    }
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("label", {
     htmlFor: "width"
   }, "width"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("input", {
     htmlname: "width",
@@ -28312,7 +28327,7 @@ function PreviewPanel(_ref) {
     var newPreviewGlyphs = [];
     if (newPreviewString.length > 0) {
       for (var n = 0; n < newPreviewString.length; n++) {
-        if (newPreviewString[n] != " ") {
+        if (newPreviewString[n] != " " && (newPreviewString[n].charCodeAt(0) >= 65 && newPreviewString[n].charCodeAt(0) <= 90 || newPreviewString[n].charCodeAt(0) >= 48 && newPreviewString[n].charCodeAt(0) <= 57)) {
           newPreviewGlyphs[n] = _find(glyphs, newPreviewString[n]);
         } else {
           newPreviewGlyphs[n] = _find(glyphs, 'space');
@@ -28404,9 +28419,10 @@ function defaultGlyphs() {
   var spaceCells = createArray(glyphWidth * glyphHeight).map(function (cell, i) {
     return 0;
   });
-  var glyphs = [defaultGlyphData("A", 0, glyphWidth, glyphHeight), defaultGlyphData("B", 1, glyphWidth, glyphHeight), defaultGlyphData("C", 2, glyphWidth, glyphHeight), defaultGlyphData("D", 3, glyphWidth, glyphHeight), defaultGlyphData("E", 4, glyphWidth, glyphHeight), defaultGlyphData("F", 5, glyphWidth, glyphHeight), defaultGlyphData("G", 6, glyphWidth, glyphHeight), defaultGlyphData("H", 7, glyphWidth, glyphHeight), defaultGlyphData("I", 8, glyphWidth, glyphHeight), defaultGlyphData("J", 9, glyphWidth, glyphHeight), defaultGlyphData("K", 10, glyphWidth, glyphHeight), defaultGlyphData("L", 11, glyphWidth, glyphHeight), defaultGlyphData("M", 12, glyphWidth, glyphHeight), defaultGlyphData("N", 13, glyphWidth, glyphHeight), defaultGlyphData("O", 14, glyphWidth, glyphHeight), defaultGlyphData("P", 15, glyphWidth, glyphHeight), defaultGlyphData("Q", 16, glyphWidth, glyphHeight), defaultGlyphData("R", 17, glyphWidth, glyphHeight), defaultGlyphData("S", 18, glyphWidth, glyphHeight), defaultGlyphData("T", 19, glyphWidth, glyphHeight), defaultGlyphData("U", 20, glyphWidth, glyphHeight), defaultGlyphData("V", 21, glyphWidth, glyphHeight), defaultGlyphData("W", 22, glyphWidth, glyphHeight), defaultGlyphData("X", 23, glyphWidth, glyphHeight), defaultGlyphData("Y", 24, glyphWidth, glyphHeight), defaultGlyphData("Z", 25, glyphWidth, glyphHeight), defaultGlyphData("0", 26, glyphWidth, glyphHeight), defaultGlyphData("1", 27, glyphWidth, glyphHeight), defaultGlyphData("2", 28, glyphWidth, glyphHeight), defaultGlyphData("3", 29, glyphWidth, glyphHeight), defaultGlyphData("4", 30, glyphWidth, glyphHeight), defaultGlyphData("5", 31, glyphWidth, glyphHeight), defaultGlyphData("6", 32, glyphWidth, glyphHeight), defaultGlyphData("7", 33, glyphWidth, glyphHeight), defaultGlyphData("8", 34, glyphWidth, glyphHeight), defaultGlyphData("9", 35, glyphWidth, glyphHeight), {
-    'glyphIndex': 36,
+  var glyphs = [defaultGlyphData("A", "0041", 0, glyphWidth, glyphHeight), defaultGlyphData("B", "0042", 1, glyphWidth, glyphHeight), defaultGlyphData("C", "0043", 2, glyphWidth, glyphHeight), defaultGlyphData("D", "0044", 3, glyphWidth, glyphHeight), defaultGlyphData("E", "0045", 4, glyphWidth, glyphHeight), defaultGlyphData("F", "0046", 5, glyphWidth, glyphHeight), defaultGlyphData("G", "0047", 6, glyphWidth, glyphHeight), defaultGlyphData("H", "0048", 7, glyphWidth, glyphHeight), defaultGlyphData("I", "0049", 8, glyphWidth, glyphHeight), defaultGlyphData("J", "004A", 9, glyphWidth, glyphHeight), defaultGlyphData("K", "004B", 10, glyphWidth, glyphHeight), defaultGlyphData("L", "004C", 11, glyphWidth, glyphHeight), defaultGlyphData("M", "004D", 12, glyphWidth, glyphHeight), defaultGlyphData("N", "004E", 13, glyphWidth, glyphHeight), defaultGlyphData("O", "004F", 14, glyphWidth, glyphHeight), defaultGlyphData("P", "0050", 15, glyphWidth, glyphHeight), defaultGlyphData("Q", "0051", 16, glyphWidth, glyphHeight), defaultGlyphData("R", "0052", 17, glyphWidth, glyphHeight), defaultGlyphData("S", "0053", 18, glyphWidth, glyphHeight), defaultGlyphData("T", "0054", 19, glyphWidth, glyphHeight), defaultGlyphData("U", "0055", 20, glyphWidth, glyphHeight), defaultGlyphData("V", "0056", 21, glyphWidth, glyphHeight), defaultGlyphData("W", "0057", 22, glyphWidth, glyphHeight), defaultGlyphData("X", "0058", 23, glyphWidth, glyphHeight), defaultGlyphData("Y", "0059", 24, glyphWidth, glyphHeight), defaultGlyphData("Z", "005A", 25, glyphWidth, glyphHeight), defaultGlyphData("0", "0030", 26, glyphWidth, glyphHeight), defaultGlyphData("1", "0031", 27, glyphWidth, glyphHeight), defaultGlyphData("2", "0032", 28, glyphWidth, glyphHeight), defaultGlyphData("3", "0033", 29, glyphWidth, glyphHeight), defaultGlyphData("4", "0034", 30, glyphWidth, glyphHeight), defaultGlyphData("5", "0035", 31, glyphWidth, glyphHeight), defaultGlyphData("6", "0036", 32, glyphWidth, glyphHeight), defaultGlyphData("7", "0037", 33, glyphWidth, glyphHeight), defaultGlyphData("8", "0038", 34, glyphWidth, glyphHeight), defaultGlyphData("9", "0039", 35, glyphWidth, glyphHeight), {
     'glyphName': 'space',
+    'glyphIndex': 36,
+    'unicode': '0020',
     'cells': spaceCells
   }];
   return glyphs;
@@ -28415,9 +28431,10 @@ var createArray = function createArray(length) {
   return _toConsumableArray(Array(length));
 };
 var defaultGlyphData = function defaultGlyphData(name) {
-  var glyphIndex = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
-  var glyphWidth = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 5;
-  var glyphHeight = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : 5;
+  var unicode = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : "0000";
+  var glyphIndex = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 0;
+  var glyphWidth = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : 5;
+  var glyphHeight = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : 5;
   var cellTotal = glyphWidth * glyphHeight;
   var cells = createArray(cellTotal).map(function (cell, i) {
     return {
@@ -28426,6 +28443,7 @@ var defaultGlyphData = function defaultGlyphData(name) {
     };
   });
   var glyph = {
+    'unicode': unicode,
     'glyphIndex': glyphIndex,
     'glyphName': name,
     'cells': cells
@@ -28657,6 +28675,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _less_stylesy_less__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./less/stylesy.less */ "./src/less/stylesy.less");
 /* harmony import */ var _default_cells_json__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./default_cells.json */ "./src/default_cells.json");
 /* harmony import */ var _default_glyphs_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./default_glyphs.js */ "./src/default_glyphs.js");
+function _toConsumableArray(r) { return _arrayWithoutHoles(r) || _iterableToArray(r) || _unsupportedIterableToArray(r) || _nonIterableSpread(); }
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _iterableToArray(r) { if ("undefined" != typeof Symbol && null != r[Symbol.iterator] || null != r["@@iterator"]) return Array.from(r); }
+function _arrayWithoutHoles(r) { if (Array.isArray(r)) return _arrayLikeToArray(r); }
 function _slicedToArray(r, e) { return _arrayWithHoles(r) || _iterableToArrayLimit(r, e) || _unsupportedIterableToArray(r, e) || _nonIterableRest(); }
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
 function _unsupportedIterableToArray(r, a) { if (r) { if ("string" == typeof r) return _arrayLikeToArray(r, a); var t = {}.toString.call(r).slice(8, -1); return "Object" === t && r.constructor && (t = r.constructor.name), "Map" === t || "Set" === t ? Array.from(r) : "Arguments" === t || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t) ? _arrayLikeToArray(r, a) : void 0; } }
@@ -28706,19 +28728,63 @@ function App() {
     width: fontDimensions.width,
     height: fontDimensions.height,
     updateDimensions: function updateDimensions(dimension, newValue) {
+      var createArray = function createArray(length) {
+        return _toConsumableArray(Array(length));
+      };
+      var newGlyphs;
       if (dimension === 'width') {
+        var xdifference = 0;
+        var _newGlyphs = createArray(newValue * fontDimensions.height);
+        _newGlyphs = glyphs.map(function (glyph, i) {
+          if (fontDimensions.width < newValue) {
+            // grow
+            for (var y = 0; y < fontDimensions.height; y++) {
+              xdifference = newValue - fontDimensions.width;
+              for (var x = 0; x < xdifference; x++) {
+                // splice in x difference at end of each row
+                // column 'width' shifts with the xdiff every row
+                glyph.cells.splice(fontDimensions.width * (y + 1) + y * xdifference, 0, {
+                  'id': i,
+                  'status': 0
+                });
+              }
+            }
+          } else {
+            // shrink
+            for (var _y = 0; _y < fontDimensions.height; _y++) {
+              xdifference = fontDimensions.width - newValue;
+              for (var _x = 0; _x < xdifference; _x++) {
+                glyph.cells.splice(fontDimensions.width * (_y + 1) - 1 - _y * xdifference, 1);
+              }
+            }
+          }
+          var newGlyphCells = glyph.cells.map(function (cell, i) {
+            return {
+              'id': i,
+              'status': cell.status
+            };
+          });
+          glyph.cells = newGlyphCells;
+          return glyph;
+        });
+        //setGlyphs(defaultGlyphs(newValue, fontDimensions.height));
+        setGlyphs(_newGlyphs);
         setFontDimensions({
           'width': newValue,
           'height': fontDimensions.height
         });
-        setGlyphs((0,_default_glyphs_js__WEBPACK_IMPORTED_MODULE_9__["default"])(newValue, fontDimensions.height));
       } else {
+        var ydifference = 0;
+        if (fontDimensions.height < newValue) {
+          ydifference = newValue - fontDimensions.height;
+        }
+        setGlyphs((0,_default_glyphs_js__WEBPACK_IMPORTED_MODULE_9__["default"])(fontDimensions.width, newValue));
         setFontDimensions({
           'width': fontDimensions.width,
           'height': newValue
         });
-        setGlyphs((0,_default_glyphs_js__WEBPACK_IMPORTED_MODULE_9__["default"])(fontDimensions.width, newValue));
       }
+      // update form input
       return newValue;
     }
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_EditorPanel__WEBPACK_IMPORTED_MODULE_3__["default"], {

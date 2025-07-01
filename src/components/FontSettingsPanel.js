@@ -1,14 +1,19 @@
 import React, { useState } from "react";
 
-export default function FontSettingsPanel({ width=5, height=5, updateDimensions = f => f }) {
-	
-	
-	
-	
+
+export default function FontSettingsPanel({ fontname="fonto", width=5, height=5, updateFontName = f => f, updateDimensions = f => f }) {
+		
 	return (
 		<section className="font-settings-panel">
 			<h2>Font settings</h2>
 			<form>
+				<label htmlFor="fontname">Name</label>
+				<input
+					htmlname="fontname"
+					type="text"
+					value={ fontname }
+					onChange={ event => updateFontName('fontname', event.target.value) }
+				/>
 				<label htmlFor="width">width</label>
 				<input
 					htmlname="width"

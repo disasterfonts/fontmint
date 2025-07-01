@@ -21,7 +21,7 @@ export default function PreviewPanel ({ glyphs=[], width = 5, placeholderString 
 		let newPreviewGlyphs = []
 		if (newPreviewString.length > 0) {
 			for (let n=0; n<newPreviewString.length; n++) {
-				if (newPreviewString[n] != " ") {
+				if (newPreviewString[n] != " " && ((newPreviewString[n].charCodeAt(0) >= 65 && newPreviewString[n].charCodeAt(0) <= 90) || (newPreviewString[n].charCodeAt(0) >= 48 && newPreviewString[n].charCodeAt(0) <= 57)) ) {
 					newPreviewGlyphs[n] = find(glyphs, newPreviewString[n]);
 				} else {
 					newPreviewGlyphs[n] = find(glyphs, 'space');

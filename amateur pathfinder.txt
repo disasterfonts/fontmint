@@ -1,0 +1,49 @@
+XXX X
+ XX X
+X X X
+ X X 
+   XX
+
+XX  X
+ XX X
+  XXX
+   XX
+XXX  
+
+XXXX 
+X  X 
+X  X 
+X XX 
+XXXXX
+
+XXXXX
+X   X
+X X X
+X   X
+XXXXX
+
+
+edge following: (need to remove colinear points, need to do a second anticlockwise operation on the inverse for empty cells)
+
+start at 0,0 tile, NW point
+log NW point
+if tile empty or point already logged
+	next tile, start at NW point
+else
+	open contour (if not already open)
+	advance along cardinal (init E) to new point
+	if point already logged, close contour
+	if next tile is empty, rotate 90, advance along new cardinal to new point
+	else
+		if -90 diagonal tile is also full, rotate -90, advance along new cardinal to new point
+		else advance along existing cardinal to new point
+
+
+
+boundary contrast
+create grid from all edges
+remove edges that straddle two squares of the same colour
+merge colinear edges horizontally, store as start/end
+merge colinear edges vertically, store as start/end
+???
+win
