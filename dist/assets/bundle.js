@@ -12,10 +12,10 @@ module.exports = __webpack_require__.p + "c65be32ef50a5066e01a.png";
 
 /***/ }),
 
-/***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/less-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/less/stylesy.less":
-/*!**********************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/less-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/less/stylesy.less ***!
-  \**********************************************************************************************************************************************************************************/
+/***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./node_modules/less-loader/dist/cjs.js!./src/less/stylesy.less":
+/*!******************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./node_modules/less-loader/dist/cjs.js!./src/less/stylesy.less ***!
+  \******************************************************************************************************************************************************/
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -27922,9 +27922,6 @@ function Cell(_ref) {
   var mouseOver = function mouseOver(evt) {};
   var mouseOut = function mouseOut(evt) {};
   if (editable) {
-    // onClickToggle = () => {
-    // 	toggle(glyphIndex, id)
-    // }
     mouseDown = function mouseDown(evt) {
       evt.preventDefault();
       toggle(glyphIndex, id);
@@ -27950,9 +27947,7 @@ function Cell(_ref) {
     draggable: "false",
     id: id_attr,
     className: classes,
-    style: styles
-    // onClick={ onClickToggle }
-    ,
+    style: styles,
     onMouseDown: mouseDown,
     onMouseUp: mouseUp,
     onMouseOver: mouseOver,
@@ -27995,7 +27990,14 @@ function EditorPanel(_ref) {
     _ref$toggle = _ref.toggle,
     toggle = _ref$toggle === void 0 ? function (f) {
       return f;
-    } : _ref$toggle;
+    } : _ref$toggle,
+    _ref$clearCells = _ref.clearCells,
+    clearCells = _ref$clearCells === void 0 ? function (f) {
+      return f;
+    } : _ref$clearCells;
+  var clearCellsClick = function clearCellsClick(evt) {
+    clearCells(glyph.glyphIndex);
+  };
   return /*#__PURE__*/React.createElement("section", {
     className: "editor-panel"
   }, /*#__PURE__*/React.createElement("h2", null, "Editing: '", glyph.glyphName, "'"), /*#__PURE__*/React.createElement(_GlyphGrid__WEBPACK_IMPORTED_MODULE_0__["default"], {
@@ -28009,7 +28011,9 @@ function EditorPanel(_ref) {
     cellContents: glyph.cells,
     dragstatus: dragstatus,
     dragdraw: dragdraw
-  }));
+  }), /*#__PURE__*/React.createElement("button", {
+    onClick: clearCellsClick
+  }, "Clear"));
 }
 
 /***/ }),
@@ -28024,11 +28028,50 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* binding */ ExportPanel)
 /* harmony export */ });
+function _regenerator() { /*! regenerator-runtime -- Copyright (c) 2014-present, Facebook, Inc. -- license (MIT): https://github.com/babel/babel/blob/main/packages/babel-helpers/LICENSE */ var e, t, r = "function" == typeof Symbol ? Symbol : {}, n = r.iterator || "@@iterator", o = r.toStringTag || "@@toStringTag"; function i(r, n, o, i) { var c = n && n.prototype instanceof Generator ? n : Generator, u = Object.create(c.prototype); return _regeneratorDefine2(u, "_invoke", function (r, n, o) { var i, c, u, f = 0, p = o || [], y = !1, G = { p: 0, n: 0, v: e, a: d, f: d.bind(e, 4), d: function d(t, r) { return i = t, c = 0, u = e, G.n = r, a; } }; function d(r, n) { for (c = r, u = n, t = 0; !y && f && !o && t < p.length; t++) { var o, i = p[t], d = G.p, l = i[2]; r > 3 ? (o = l === n) && (u = i[(c = i[4]) ? 5 : (c = 3, 3)], i[4] = i[5] = e) : i[0] <= d && ((o = r < 2 && d < i[1]) ? (c = 0, G.v = n, G.n = i[1]) : d < l && (o = r < 3 || i[0] > n || n > l) && (i[4] = r, i[5] = n, G.n = l, c = 0)); } if (o || r > 1) return a; throw y = !0, n; } return function (o, p, l) { if (f > 1) throw TypeError("Generator is already running"); for (y && 1 === p && d(p, l), c = p, u = l; (t = c < 2 ? e : u) || !y;) { i || (c ? c < 3 ? (c > 1 && (G.n = -1), d(c, u)) : G.n = u : G.v = u); try { if (f = 2, i) { if (c || (o = "next"), t = i[o]) { if (!(t = t.call(i, u))) throw TypeError("iterator result is not an object"); if (!t.done) return t; u = t.value, c < 2 && (c = 0); } else 1 === c && (t = i["return"]) && t.call(i), c < 2 && (u = TypeError("The iterator does not provide a '" + o + "' method"), c = 1); i = e; } else if ((t = (y = G.n < 0) ? u : r.call(n, G)) !== a) break; } catch (t) { i = e, c = 1, u = t; } finally { f = 1; } } return { value: t, done: y }; }; }(r, o, i), !0), u; } var a = {}; function Generator() {} function GeneratorFunction() {} function GeneratorFunctionPrototype() {} t = Object.getPrototypeOf; var c = [][n] ? t(t([][n]())) : (_regeneratorDefine2(t = {}, n, function () { return this; }), t), u = GeneratorFunctionPrototype.prototype = Generator.prototype = Object.create(c); function f(e) { return Object.setPrototypeOf ? Object.setPrototypeOf(e, GeneratorFunctionPrototype) : (e.__proto__ = GeneratorFunctionPrototype, _regeneratorDefine2(e, o, "GeneratorFunction")), e.prototype = Object.create(u), e; } return GeneratorFunction.prototype = GeneratorFunctionPrototype, _regeneratorDefine2(u, "constructor", GeneratorFunctionPrototype), _regeneratorDefine2(GeneratorFunctionPrototype, "constructor", GeneratorFunction), GeneratorFunction.displayName = "GeneratorFunction", _regeneratorDefine2(GeneratorFunctionPrototype, o, "GeneratorFunction"), _regeneratorDefine2(u), _regeneratorDefine2(u, o, "Generator"), _regeneratorDefine2(u, n, function () { return this; }), _regeneratorDefine2(u, "toString", function () { return "[object Generator]"; }), (_regenerator = function _regenerator() { return { w: i, m: f }; })(); }
+function _regeneratorDefine2(e, r, n, t) { var i = Object.defineProperty; try { i({}, "", {}); } catch (e) { i = 0; } _regeneratorDefine2 = function _regeneratorDefine(e, r, n, t) { if (r) i ? i(e, r, { value: n, enumerable: !t, configurable: !t, writable: !t }) : e[r] = n;else { var o = function o(r, n) { _regeneratorDefine2(e, r, function (e) { return this._invoke(r, n, e); }); }; o("next", 0), o("throw", 1), o("return", 2); } }, _regeneratorDefine2(e, r, n, t); }
+function asyncGeneratorStep(n, t, e, r, o, a, c) { try { var i = n[a](c), u = i.value; } catch (n) { return void e(n); } i.done ? t(u) : Promise.resolve(u).then(r, o); }
+function _asyncToGenerator(n) { return function () { var t = this, e = arguments; return new Promise(function (r, o) { var a = n.apply(t, e); function _next(n) { asyncGeneratorStep(a, r, o, _next, _throw, "next", n); } function _throw(n) { asyncGeneratorStep(a, r, o, _next, _throw, "throw", n); } _next(void 0); }); }; }
 function ExportPanel(_ref) {
-  var glyphs = _ref.glyphs;
+  var glyphs = _ref.glyphs,
+    fontName = _ref.fontName,
+    fontDimensions = _ref.fontDimensions;
+  var exporter = /*#__PURE__*/function () {
+    var _ref2 = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee(evt) {
+      var exportInfo, exportInfoString;
+      return _regenerator().w(function (_context) {
+        while (1) switch (_context.n) {
+          case 0:
+            exportInfo = {
+              fontName: fontName,
+              fontDimensions: fontDimensions,
+              glyphs: glyphs
+            };
+            exportInfoString = JSON.stringify(exportInfo);
+            console.log(exportInfoString);
+            fetch("http://weblite.vag/ufowriter/index.php", {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json"
+              },
+              body: exportInfoString
+            }).then(function (responsetext) {
+              console.log(responsetext.text());
+            });
+          case 1:
+            return _context.a(2);
+        }
+      }, _callee);
+    }));
+    return function exporter(_x) {
+      return _ref2.apply(this, arguments);
+    };
+  }();
   return /*#__PURE__*/React.createElement("section", {
     className: "export-panel"
-  }, /*#__PURE__*/React.createElement("h2", null, "Export"), /*#__PURE__*/React.createElement("button", null, "not yet"));
+  }, /*#__PURE__*/React.createElement("h2", null, "Export"), /*#__PURE__*/React.createElement("button", {
+    onClick: exporter
+  }, "maybe"));
 }
 
 /***/ }),
@@ -28056,11 +28099,14 @@ function FontIndexPanel(_ref) {
     select = _ref$select === void 0 ? function (f) {
       return f;
     } : _ref$select;
+  var visibleGlyphs = glyphs.filter(function (glyph) {
+    return glyph.visible;
+  });
   return /*#__PURE__*/React.createElement("section", {
     className: "font-index"
   }, /*#__PURE__*/React.createElement("h2", null, "Font index"), /*#__PURE__*/React.createElement("div", {
     className: "glyph-tiles"
-  }, glyphs.map(function (glyph, i) {
+  }, visibleGlyphs.map(function (glyph, i) {
     return /*#__PURE__*/React.createElement(_GlyphTile__WEBPACK_IMPORTED_MODULE_0__["default"], {
       key: i,
       width: width,
@@ -28089,8 +28135,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 
 function FontSettingsPanel(_ref) {
-  var _ref$fontname = _ref.fontname,
-    fontname = _ref$fontname === void 0 ? "fonto" : _ref$fontname,
+  var _ref$fontName = _ref.fontName,
+    fontName = _ref$fontName === void 0 ? "fonto" : _ref$fontName,
     _ref$width = _ref.width,
     width = _ref$width === void 0 ? 5 : _ref$width,
     _ref$height = _ref.height,
@@ -28110,9 +28156,9 @@ function FontSettingsPanel(_ref) {
   }, "Name"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("input", {
     htmlname: "fontname",
     type: "text",
-    value: fontname,
+    value: fontName,
     onChange: function onChange(event) {
-      return updateFontName('fontname', event.target.value);
+      return updateFontName(event.target.value);
     }
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("label", {
     htmlFor: "width"
@@ -28419,22 +28465,20 @@ function defaultGlyphs() {
   var spaceCells = createArray(glyphWidth * glyphHeight).map(function (cell, i) {
     return 0;
   });
-  var glyphs = [defaultGlyphData("A", "0041", 0, glyphWidth, glyphHeight), defaultGlyphData("B", "0042", 1, glyphWidth, glyphHeight), defaultGlyphData("C", "0043", 2, glyphWidth, glyphHeight), defaultGlyphData("D", "0044", 3, glyphWidth, glyphHeight), defaultGlyphData("E", "0045", 4, glyphWidth, glyphHeight), defaultGlyphData("F", "0046", 5, glyphWidth, glyphHeight), defaultGlyphData("G", "0047", 6, glyphWidth, glyphHeight), defaultGlyphData("H", "0048", 7, glyphWidth, glyphHeight), defaultGlyphData("I", "0049", 8, glyphWidth, glyphHeight), defaultGlyphData("J", "004A", 9, glyphWidth, glyphHeight), defaultGlyphData("K", "004B", 10, glyphWidth, glyphHeight), defaultGlyphData("L", "004C", 11, glyphWidth, glyphHeight), defaultGlyphData("M", "004D", 12, glyphWidth, glyphHeight), defaultGlyphData("N", "004E", 13, glyphWidth, glyphHeight), defaultGlyphData("O", "004F", 14, glyphWidth, glyphHeight), defaultGlyphData("P", "0050", 15, glyphWidth, glyphHeight), defaultGlyphData("Q", "0051", 16, glyphWidth, glyphHeight), defaultGlyphData("R", "0052", 17, glyphWidth, glyphHeight), defaultGlyphData("S", "0053", 18, glyphWidth, glyphHeight), defaultGlyphData("T", "0054", 19, glyphWidth, glyphHeight), defaultGlyphData("U", "0055", 20, glyphWidth, glyphHeight), defaultGlyphData("V", "0056", 21, glyphWidth, glyphHeight), defaultGlyphData("W", "0057", 22, glyphWidth, glyphHeight), defaultGlyphData("X", "0058", 23, glyphWidth, glyphHeight), defaultGlyphData("Y", "0059", 24, glyphWidth, glyphHeight), defaultGlyphData("Z", "005A", 25, glyphWidth, glyphHeight), defaultGlyphData("0", "0030", 26, glyphWidth, glyphHeight), defaultGlyphData("1", "0031", 27, glyphWidth, glyphHeight), defaultGlyphData("2", "0032", 28, glyphWidth, glyphHeight), defaultGlyphData("3", "0033", 29, glyphWidth, glyphHeight), defaultGlyphData("4", "0034", 30, glyphWidth, glyphHeight), defaultGlyphData("5", "0035", 31, glyphWidth, glyphHeight), defaultGlyphData("6", "0036", 32, glyphWidth, glyphHeight), defaultGlyphData("7", "0037", 33, glyphWidth, glyphHeight), defaultGlyphData("8", "0038", 34, glyphWidth, glyphHeight), defaultGlyphData("9", "0039", 35, glyphWidth, glyphHeight), {
-    'glyphName': 'space',
-    'glyphIndex': 36,
-    'unicode': '0020',
-    'cells': spaceCells
-  }];
+  var glyphs = [randomGlyphData("A", "0041", 0, glyphWidth, glyphHeight, false, false, true), randomGlyphData("B", "0042", 1, glyphWidth, glyphHeight, false, false, true), randomGlyphData("C", "0043", 2, glyphWidth, glyphHeight, false, false, true), randomGlyphData("D", "0044", 3, glyphWidth, glyphHeight, false, false, true), randomGlyphData("E", "0045", 4, glyphWidth, glyphHeight, false, false, true), randomGlyphData("F", "0046", 5, glyphWidth, glyphHeight, false, false, true), randomGlyphData("G", "0047", 6, glyphWidth, glyphHeight, false, false, true), randomGlyphData("H", "0048", 7, glyphWidth, glyphHeight, false, false, true), randomGlyphData("I", "0049", 8, glyphWidth, glyphHeight, false, false, true), randomGlyphData("J", "004A", 9, glyphWidth, glyphHeight, false, false, true), randomGlyphData("K", "004B", 10, glyphWidth, glyphHeight, false, false, true), randomGlyphData("L", "004C", 11, glyphWidth, glyphHeight, false, false, true), randomGlyphData("M", "004D", 12, glyphWidth, glyphHeight, false, false, true), randomGlyphData("N", "004E", 13, glyphWidth, glyphHeight, false, false, true), randomGlyphData("O", "004F", 14, glyphWidth, glyphHeight, false, false, true), randomGlyphData("P", "0050", 15, glyphWidth, glyphHeight, false, false, true), randomGlyphData("Q", "0051", 16, glyphWidth, glyphHeight, false, false, true), randomGlyphData("R", "0052", 17, glyphWidth, glyphHeight, false, false, true), randomGlyphData("S", "0053", 18, glyphWidth, glyphHeight, false, false, true), randomGlyphData("T", "0054", 19, glyphWidth, glyphHeight, false, false, true), randomGlyphData("U", "0055", 20, glyphWidth, glyphHeight, false, false, true), randomGlyphData("V", "0056", 21, glyphWidth, glyphHeight, false, false, true), randomGlyphData("W", "0057", 22, glyphWidth, glyphHeight, false, false, true), randomGlyphData("X", "0058", 23, glyphWidth, glyphHeight, false, false, true), randomGlyphData("Y", "0059", 24, glyphWidth, glyphHeight, false, false, true), randomGlyphData("Z", "005A", 25, glyphWidth, glyphHeight, false, false, true), randomGlyphData("0", "0030", 26, glyphWidth, glyphHeight, false, false, true), randomGlyphData("1", "0031", 27, glyphWidth, glyphHeight, false, false, true), randomGlyphData("2", "0032", 28, glyphWidth, glyphHeight, false, false, true), randomGlyphData("3", "0033", 29, glyphWidth, glyphHeight, false, false, true), randomGlyphData("4", "0034", 30, glyphWidth, glyphHeight, false, false, true), randomGlyphData("5", "0035", 31, glyphWidth, glyphHeight, false, false, true), randomGlyphData("6", "0036", 32, glyphWidth, glyphHeight, false, false, true), randomGlyphData("7", "0037", 33, glyphWidth, glyphHeight, false, false, true), randomGlyphData("8", "0038", 34, glyphWidth, glyphHeight, false, false, true), randomGlyphData("9", "0039", 35, glyphWidth, glyphHeight, false, false, true), initGlyphData('space', '0020', 36, glyphWidth, glyphHeight, false, false, true, spaceCells), initGlyphData('grave', '0060', 37, glyphWidth, glyphHeight, false, true, false, accentGlyphDefaults('0060')), initGlyphData('dieresis', '00A8', 38, glyphWidth, glyphHeight, false, true, false, accentGlyphDefaults('00A8')), initGlyphData('macron', '00AF', 39, glyphWidth, glyphHeight, false, true, false, accentGlyphDefaults('00AF')), initGlyphData('acute', '00B4', 40, glyphWidth, glyphHeight, false, true, false, accentGlyphDefaults('00B4')), initGlyphData('cedilla', '00B8', 41, glyphWidth, glyphHeight, false, true, false, accentGlyphDefaults('00B8')), initGlyphData('circumflex', '02C6', 42, glyphWidth, glyphHeight, false, true, false, accentGlyphDefaults('02C6')), initGlyphData('caron', '02C7', 43, glyphWidth, glyphHeight, false, true, false, accentGlyphDefaults('02C7')), initGlyphData('breve', '02D8', 44, glyphWidth, glyphHeight, false, true, false, accentGlyphDefaults('02D8')), initGlyphData('dotaccent', '02D9', 45, glyphWidth, glyphHeight, false, true, false, accentGlyphDefaults('02D9')), initGlyphData('ring', '02DA', 46, glyphWidth, glyphHeight, false, true, false, accentGlyphDefaults('02DA')), initGlyphData('ogonek', '02DB', 47, glyphWidth, glyphHeight, false, true, false, accentGlyphDefaults('02DB')), initGlyphData('tilde', '02DC', 48, glyphWidth, glyphHeight, false, true, false, accentGlyphDefaults('02DC')), initGlyphData('hungarumlaut', '02DD', 49, glyphWidth, glyphHeight, false, true, false, accentGlyphDefaults('02DD')), initGlyphData('commaaccent', '0326', 50, glyphWidth, glyphHeight, false, true, false, accentGlyphDefaults('0326'))];
   return glyphs;
 }
 var createArray = function createArray(length) {
   return _toConsumableArray(Array(length));
 };
-var defaultGlyphData = function defaultGlyphData(name) {
+var randomGlyphData = function randomGlyphData(name) {
   var unicode = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : "0000";
   var glyphIndex = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 0;
   var glyphWidth = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : 5;
   var glyphHeight = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : 5;
+  var composite = arguments.length > 5 && arguments[5] !== undefined ? arguments[5] : false;
+  var accentSource = arguments.length > 6 && arguments[6] !== undefined ? arguments[6] : false;
+  var visible = arguments.length > 7 && arguments[7] !== undefined ? arguments[7] : true;
   var cellTotal = glyphWidth * glyphHeight;
   var cells = createArray(cellTotal).map(function (cell, i) {
     return {
@@ -28446,9 +28490,129 @@ var defaultGlyphData = function defaultGlyphData(name) {
     'unicode': unicode,
     'glyphIndex': glyphIndex,
     'glyphName': name,
+    'composite': composite,
+    'accentSource': accentSource,
+    'visible': visible,
     'cells': cells
   };
   return glyph;
+};
+var initGlyphData = function initGlyphData(name) {
+  var unicode = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : "0000";
+  var glyphIndex = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 0;
+  var glyphWidth = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : 5;
+  var glyphHeight = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : 5;
+  var composite = arguments.length > 5 && arguments[5] !== undefined ? arguments[5] : false;
+  var accentSource = arguments.length > 6 && arguments[6] !== undefined ? arguments[6] : false;
+  var visible = arguments.length > 7 && arguments[7] !== undefined ? arguments[7] : true;
+  var cells = arguments.length > 8 && arguments[8] !== undefined ? arguments[8] : [];
+  var cellTotal = glyphWidth * glyphHeight;
+  var glyph = {
+    'unicode': unicode,
+    'glyphIndex': glyphIndex,
+    'glyphName': name,
+    'composite': composite,
+    'accentSource': accentSource,
+    'visible': visible,
+    'cells': cells
+  };
+  return glyph;
+};
+var accentGlyphs = ['0060',
+// grave
+'00A8',
+// dieresis
+'00AF',
+// macron
+'00B4',
+// acute
+'00B8',
+// cedilla
+'02C6',
+// circumflex
+'02C7',
+// caron
+'02D8',
+// breve
+'02D9',
+// dotaccent
+'02DA',
+// ring
+'02DB',
+// ogonek
+'02DC',
+// tilde
+'02DD',
+// hungarumlaut
+'0326' // commaaccent
+];
+var accentGlyphDefaults = function accentGlyphDefaults() {
+  var unicode = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '0060';
+  var accentGlyphCells = [];
+  switch (unicode) {
+    case '0060':
+      accentGlyphCells = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 1, 0, 0];
+      break;
+    // grave
+    case '00A8':
+      accentGlyphCells = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 1, 0, 1, 0];
+      break;
+    // dieresis
+    case '00AF':
+      accentGlyphCells = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0];
+      break;
+    // macron
+    case '00B4':
+      accentGlyphCells = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 0, 0];
+      break;
+    // acute
+    case '00B8':
+      accentGlyphCells = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0];
+      break;
+    // cedilla
+    case '02C6':
+      accentGlyphCells = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 0];
+      break;
+    // circumflex
+    case '02C7':
+      accentGlyphCells = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 0, 0];
+      break;
+    // caron
+    case '02D8':
+      accentGlyphCells = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 1, 0, 0];
+      break;
+    // breve
+    case '02D9':
+      accentGlyphCells = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1, 0];
+      break;
+    // dotaccent
+    case '02DA':
+      accentGlyphCells = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0, 0, 0, 1, 0, 0];
+      break;
+    // ring
+    case '02DB':
+      accentGlyphCells = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1];
+      break;
+    // ogonek
+    case '02DC':
+      accentGlyphCells = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0];
+      break;
+    // tilde
+    case '02DD':
+      accentGlyphCells = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 1, 0];
+      break;
+    // hungarumlaut
+    case '0326':
+      accentGlyphCells = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0];
+      break;
+    // commaaccent
+  }
+  return accentGlyphCells.map(function (cell, i) {
+    return {
+      'id': i,
+      'status': cell
+    };
+  });
 };
 
 /***/ }),
@@ -28475,7 +28639,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! !../../node_modules/style-loader/dist/runtime/styleTagTransform.js */ "./node_modules/style-loader/dist/runtime/styleTagTransform.js");
 /* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _node_modules_css_loader_dist_cjs_js_node_modules_less_loader_dist_cjs_js_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_1_use_3_stylesy_less__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! !!../../node_modules/css-loader/dist/cjs.js!../../node_modules/less-loader/dist/cjs.js!../../node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./stylesy.less */ "./node_modules/css-loader/dist/cjs.js!./node_modules/less-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/less/stylesy.less");
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_node_modules_postcss_loader_dist_cjs_js_node_modules_less_loader_dist_cjs_js_stylesy_less__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! !!../../node_modules/css-loader/dist/cjs.js!../../node_modules/postcss-loader/dist/cjs.js!../../node_modules/less-loader/dist/cjs.js!./stylesy.less */ "./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./node_modules/less-loader/dist/cjs.js!./src/less/stylesy.less");
 
       
       
@@ -28495,12 +28659,12 @@ options.insert = _node_modules_style_loader_dist_runtime_insertBySelector_js__WE
 options.domAPI = (_node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1___default());
 options.insertStyleElement = (_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default());
 
-var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_node_modules_less_loader_dist_cjs_js_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_1_use_3_stylesy_less__WEBPACK_IMPORTED_MODULE_6__["default"], options);
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_node_modules_postcss_loader_dist_cjs_js_node_modules_less_loader_dist_cjs_js_stylesy_less__WEBPACK_IMPORTED_MODULE_6__["default"], options);
 
 
 
 
-       /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_node_modules_less_loader_dist_cjs_js_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_1_use_3_stylesy_less__WEBPACK_IMPORTED_MODULE_6__["default"] && _node_modules_css_loader_dist_cjs_js_node_modules_less_loader_dist_cjs_js_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_1_use_3_stylesy_less__WEBPACK_IMPORTED_MODULE_6__["default"].locals ? _node_modules_css_loader_dist_cjs_js_node_modules_less_loader_dist_cjs_js_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_1_use_3_stylesy_less__WEBPACK_IMPORTED_MODULE_6__["default"].locals : undefined);
+       /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_node_modules_postcss_loader_dist_cjs_js_node_modules_less_loader_dist_cjs_js_stylesy_less__WEBPACK_IMPORTED_MODULE_6__["default"] && _node_modules_css_loader_dist_cjs_js_node_modules_postcss_loader_dist_cjs_js_node_modules_less_loader_dist_cjs_js_stylesy_less__WEBPACK_IMPORTED_MODULE_6__["default"].locals ? _node_modules_css_loader_dist_cjs_js_node_modules_postcss_loader_dist_cjs_js_node_modules_less_loader_dist_cjs_js_stylesy_less__WEBPACK_IMPORTED_MODULE_6__["default"].locals : undefined);
 
 
 /***/ })
@@ -28710,18 +28874,22 @@ function App() {
     _useState4 = _slicedToArray(_useState3, 2),
     fontDimensions = _useState4[0],
     setFontDimensions = _useState4[1];
-  var _useState5 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(0),
+  var _useState5 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)('fonto'),
     _useState6 = _slicedToArray(_useState5, 2),
-    currentGlyph = _useState6[0],
-    setCurrentGlyph = _useState6[1];
+    fontName = _useState6[0],
+    setFontName = _useState6[1];
   var _useState7 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(0),
     _useState8 = _slicedToArray(_useState7, 2),
-    dragStatus = _useState8[0],
-    setDragStatus = _useState8[1];
-  var _useState9 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(1),
+    currentGlyph = _useState8[0],
+    setCurrentGlyph = _useState8[1];
+  var _useState9 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(0),
     _useState0 = _slicedToArray(_useState9, 2),
-    dragColour = _useState0[0],
-    setDragColour = _useState0[1];
+    dragStatus = _useState0[0],
+    setDragStatus = _useState0[1];
+  var _useState1 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(1),
+    _useState10 = _slicedToArray(_useState1, 2),
+    dragColour = _useState10[0],
+    setDragColour = _useState10[1];
   //const [previewString, setPreviewSting] = useState('JACKDAWS LOVE MY BIG SPHINX OF QUARTZ');
 
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("section", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", null, "mint pixel font editor"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_FontSettingsPanel__WEBPACK_IMPORTED_MODULE_2__["default"], {
@@ -28767,24 +28935,50 @@ function App() {
           glyph.cells = newGlyphCells;
           return glyph;
         });
-        //setGlyphs(defaultGlyphs(newValue, fontDimensions.height));
         setGlyphs(_newGlyphs);
         setFontDimensions({
           'width': newValue,
           'height': fontDimensions.height
         });
       } else {
-        var ydifference = 0;
-        if (fontDimensions.height < newValue) {
-          ydifference = newValue - fontDimensions.height;
-        }
-        setGlyphs((0,_default_glyphs_js__WEBPACK_IMPORTED_MODULE_9__["default"])(fontDimensions.width, newValue));
+        var _newGlyphs2 = createArray(newValue * fontDimensions.height);
+        _newGlyphs2 = glyphs.map(function (glyph, i) {
+          if (fontDimensions.height < newValue) {
+            // grow
+            for (var x = 0; x < fontDimensions.width; x++) {
+              glyph.cells.push({
+                'id': i,
+                'status': 0
+              });
+            }
+          } else {
+            // shrink
+            for (var _x2 = 0; _x2 < fontDimensions.width; _x2++) {
+              glyph.cells.pop();
+            }
+          }
+          var newGlyphCells = glyph.cells.map(function (cell, i) {
+            return {
+              'id': i,
+              'status': cell.status
+            };
+          });
+          glyph.cells = newGlyphCells;
+          return glyph;
+        });
+        setGlyphs(_newGlyphs2);
+        //setGlyphs(defaultGlyphs(fontDimensions.width, newValue));
         setFontDimensions({
           'width': fontDimensions.width,
           'height': newValue
         });
       }
       // update form input
+      return newValue;
+    },
+    fontName: fontName,
+    updateFontName: function updateFontName(newValue) {
+      setFontName(newValue);
       return newValue;
     }
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_EditorPanel__WEBPACK_IMPORTED_MODULE_3__["default"], {
@@ -28834,6 +29028,23 @@ function App() {
         newGlyphs[glyphIndex].cells = newCells;
         setGlyphs(newGlyphs);
       }
+    },
+    clearCells: function clearCells(glyphIndex) {
+      var emptyCells = glyphs[glyphIndex].cells.map(function (cell, i) {
+        return {
+          'id': i,
+          'status': 0
+        };
+      });
+      var newGlyphs = glyphs.map(function (newGlyph, i) {
+        return newGlyph.glyphIndex == glyphIndex ? {
+          'glyphName': newGlyph.glyphName,
+          'unicode': newGlyph.unicode,
+          'glyphIndex': newGlyph.glyphIndex,
+          'cells': emptyCells
+        } : newGlyph;
+      });
+      setGlyphs(newGlyphs);
     }
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_FontIndexPanel__WEBPACK_IMPORTED_MODULE_4__["default"], {
     glyphs: glyphs,
@@ -28851,27 +29062,11 @@ function App() {
       return console.log(txt);
     }
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_ExportPanel__WEBPACK_IMPORTED_MODULE_6__["default"], {
-    glyphs: glyphs
+    glyphs: glyphs,
+    fontName: fontName,
+    fontDimensions: fontDimensions
   }));
 }
-
-/*			<GlyphGrid
-				width={5}
-				height={5}
-				editable={1}
-				toggle={ id => {
-					const newCells = cells.map((cell, i) => {
-						if (cell.id == id) {
-							cell.status = 1 - cell.status; // invert cell
-						}
-						return cell;
-					});
-					setCells(newCells);
-					}
-				}
-				cellContents={cells}
-			/>;*/
-
 window.React = (react__WEBPACK_IMPORTED_MODULE_0___default());
 var domNode = document.getElementById('react-container');
 var root = (0,react_dom_client__WEBPACK_IMPORTED_MODULE_1__.createRoot)(domNode);

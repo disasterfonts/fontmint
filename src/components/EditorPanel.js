@@ -1,6 +1,10 @@
 import GlyphGrid from './GlyphGrid'
 
-export default function EditorPanel({ glyph = {'name': 'A', 'cells': []}, width=5, height=5, dragstatus = f => f, dragdraw = f => f, toggle = f => f }) {
+export default function EditorPanel({ glyph = {'name': 'A', 'cells': []}, width=5, height=5, dragstatus = f => f, dragdraw = f => f, toggle = f => f, clearCells = f => f }) {
+	
+	const clearCellsClick = (evt) => {
+		clearCells(glyph.glyphIndex)
+	}
 	
 	return (
 		<section className="editor-panel">
@@ -17,6 +21,7 @@ export default function EditorPanel({ glyph = {'name': 'A', 'cells': []}, width=
 				dragstatus={ dragstatus }
 				dragdraw={ dragdraw }
 			/>
+			<button	onClick={ clearCellsClick }>Clear</button>
 		</section>
 	)
 }

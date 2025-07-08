@@ -19,6 +19,7 @@ export default function App() {
 
 	const [glyphs, setGlyphs] = useState(defaultGlyphData);
 	const [fontDimensions, setFontDimensions] = useState({'width':5,'height':5});
+	const [fontName, setFontName] = useState('fonto');
 	const [currentGlyph, setCurrentGlyph] = useState(0);
 	const [dragStatus, setDragStatus] = useState(0);
 	const [dragColour, setDragColour] = useState(1);
@@ -63,20 +64,41 @@ export default function App() {
 								glyph.cells = newGlyphCells
 								return glyph
 							})
-							//setGlyphs(defaultGlyphs(newValue, fontDimensions.height));
 							setGlyphs(newGlyphs);
 							setFontDimensions({ 'width': newValue, 'height': fontDimensions.height })
 						} else {
-							let ydifference = 0;
-							if (fontDimensions.height < newValue) {
-								ydifference = newValue - fontDimensions.height;
-								
-							}
-							setGlyphs(defaultGlyphs(fontDimensions.width, newValue));
+							let newGlyphs = createArray(newValue * fontDimensions.height);
+							
+							newGlyphs = glyphs.map((glyph, i) => {
+								if (fontDimensions.height < newValue) {
+									// grow
+									for (let x=0; x<fontDimensions.width; x++) {
+										glyph.cells.push({'id': i, 'status': 0});
+									}
+
+								} else {
+									// shrink
+									for (let x=0; x<fontDimensions.width; x++) {
+										glyph.cells.pop();
+									}
+								}
+								var newGlyphCells = glyph.cells.map( (cell,i) => ({'id': i, 'status': cell.status}))
+								glyph.cells = newGlyphCells
+								return glyph
+							})
+							
+							setGlyphs(newGlyphs);
+							//setGlyphs(defaultGlyphs(fontDimensions.width, newValue));
 							setFontDimensions({ 'width': fontDimensions.width, 'height': newValue })
 						}
 						// update form input
 						return newValue;
+					}
+				}
+				fontName={ fontName }
+				updateFontName = { (newValue) => {
+					setFontName(newValue);
+					return newValue;
 					}
 				}
 			/>
@@ -131,6 +153,15 @@ export default function App() {
 					}
 					}
 				}
+				clearCells = { (glyphIndex) => {
+					let emptyCells = glyphs[glyphIndex].cells.map( (cell, i) => {
+						return {'id': i, 'status': 0 }
+					})
+
+					let newGlyphs = glyphs.map((newGlyph,i) => newGlyph.glyphIndex == glyphIndex? { 'glyphName': newGlyph.glyphName, 'unicode': newGlyph.unicode, 'glyphIndex': newGlyph.glyphIndex, 'cells': emptyCells } : newGlyph )
+					setGlyphs(newGlyphs)
+					}
+				}
 			/>
 			
 			<FontIndexPanel 
@@ -152,29 +183,12 @@ export default function App() {
 			/>
 			<ExportPanel
 				glyphs={ glyphs }
+				fontName={ fontName }
+				fontDimensions={ fontDimensions }
 			/>
 		</section>
 	)
 }
-
-
-/*			<GlyphGrid
-				width={5}
-				height={5}
-				editable={1}
-				toggle={ id => {
-					const newCells = cells.map((cell, i) => {
-						if (cell.id == id) {
-							cell.status = 1 - cell.status; // invert cell
-						}
-						return cell;
-					});
-					setCells(newCells);
-					}
-				}
-				cellContents={cells}
-			/>;*/
-
 
 
 window.React = React

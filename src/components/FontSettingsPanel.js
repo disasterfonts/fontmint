@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 
-export default function FontSettingsPanel({ fontname="fonto", width=5, height=5, updateFontName = f => f, updateDimensions = f => f }) {
+export default function FontSettingsPanel({ fontName="fonto", width=5, height=5, updateFontName = f => f, updateDimensions = f => f }) {
 		
 	return (
 		<section className="font-settings-panel">
@@ -11,8 +11,8 @@ export default function FontSettingsPanel({ fontname="fonto", width=5, height=5,
 				<input
 					htmlname="fontname"
 					type="text"
-					value={ fontname }
-					onChange={ event => updateFontName('fontname', event.target.value) }
+					value={ fontName }
+					onChange={ event => updateFontName(event.target.value) }
 				/>
 				<label htmlFor="width">width</label>
 				<input

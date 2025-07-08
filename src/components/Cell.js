@@ -10,9 +10,6 @@ export default function Cell({ id, glyphName = 'A', glyphIndex = 0, editable = 0
 	var mouseOver = (evt) => {}
 	var mouseOut = (evt) => {}
 	if (editable) {
-		// onClickToggle = () => {
-		// 	toggle(glyphIndex, id)
-		// }
 		mouseDown = (evt) => {
 			evt.preventDefault()
 			toggle(glyphIndex, id)
@@ -42,7 +39,6 @@ export default function Cell({ id, glyphName = 'A', glyphIndex = 0, editable = 0
 			id={ id_attr }
 			className={ classes }
 			style={ styles }
-			// onClick={ onClickToggle }
 			onMouseDown={ mouseDown }
 			onMouseUp={ mouseUp }
 			onMouseOver={ mouseOver }
