@@ -6,6 +6,7 @@ import FontSettingsPanel from './components/FontSettingsPanel'
 import EditorPanel from './components/EditorPanel'
 import FontIndexPanel from './components/FontIndexPanel'
 import PreviewPanel from './components/PreviewPanel'
+import PreviewPanelCanvas from './components/PreviewPanelCanvas'
 import ExportPanel from './components/ExportPanel'
 
 import './less/stylesy.less'
@@ -14,6 +15,7 @@ import defaultGlyphs from "./default_glyphs.js"
 
 
 let defaultGlyphData = defaultGlyphs(5,5); // width/height
+let defaultAccentData = defaultGlyphs(5,5); // width/height
 
 export default function App() {
 
@@ -23,7 +25,16 @@ export default function App() {
 	const [currentGlyph, setCurrentGlyph] = useState(0);
 	const [dragStatus, setDragStatus] = useState(0);
 	const [dragColour, setDragColour] = useState(1);
-	//const [previewString, setPreviewSting] = useState('JACKDAWS LOVE MY BIG SPHINX OF QUARTZ');
+	const [previewStringCanvas, setPreviewStringCanvas] = useState('ABCDEF');
+	const [previewGlyphsCanvas, setPreviewGlyphsCanvas] = useState([glyphs[0], glyphs[1]]);
+	
+	const find = (glyphs = [], glyphName = "A") => {
+		// locate glyph in array by child object property glyphName
+		for (const glyph of glyphs) {
+			const result = glyph.glyphName === glyphName ? glyph : find(glyph.children, glyphName);
+			if(result) return result;
+		}
+	}
 	
 	return (
 		<section>
@@ -170,16 +181,39 @@ export default function App() {
 				height = { fontDimensions.height }
 				currentGlyph = { currentGlyph }
 				select = { (glyphIndex) => {
-					setCurrentGlyph(glyphIndex);
+						setCurrentGlyph(glyphIndex);
 					}
 				}
 			/>
-			
+{/*			
 			<PreviewPanel 
 				glyphs={ glyphs }
 				width = { fontDimensions.width }
 				height = { fontDimensions.height }
 				changePreviewString={ (txt) => console.log(txt) }
+			/>*/}
+			
+			<PreviewPanelCanvas
+				width = { fontDimensions.width }
+				height = { fontDimensions.height }
+				previewStringCanvas = { previewStringCanvas }
+				previewGlyphsCanvas = { previewGlyphsCanvas }
+				changePreviewStringCanvas={ (inputTextValue) => {
+						let newPreviewString = inputTextValue.toUpperCase()
+						setPreviewStringCanvas(newPreviewString)
+						let newPreviewGlyphs = []
+						if (newPreviewString.length > 0) {
+							for (let n=0; n<newPreviewString.length; n++) {
+								if (newPreviewString[n] != " " && ((newPreviewString[n].charCodeAt(0) >= 65 && newPreviewString[n].charCodeAt(0) <= 90) || (newPreviewString[n].charCodeAt(0) >= 48 && newPreviewString[n].charCodeAt(0) <= 57)) ) {
+									newPreviewGlyphs[n] = find(glyphs, newPreviewString[n]);
+								} else {
+									newPreviewGlyphs[n] = find(glyphs, 'space');
+								}
+							}
+						}
+						setPreviewGlyphsCanvas(newPreviewGlyphs)
+					} 
+				}
 			/>
 			<ExportPanel
 				glyphs={ glyphs }

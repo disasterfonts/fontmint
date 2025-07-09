@@ -140,7 +140,8 @@ h2 {
 }
 
 
-.preview-panel {
+.preview-panel,
+.preview-panel-canvas {
 	padding: @gutter;
 	background-color: #bbb;
 	form {
@@ -149,6 +150,13 @@ h2 {
 			width: 30em;
 		}
 	}
+	
+	canvas {
+		// width: 1000px;
+		// height: 240px;
+	}
+	
+	
 	.preview-glyphs {
 		display: flex;
 		flex-wrap: wrap;
