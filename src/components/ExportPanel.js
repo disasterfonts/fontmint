@@ -1,4 +1,8 @@
-export default function ExportPanel({ glyphs, fontName, fontDimensions }) {
+import { useGlyphs } from './GlyphsHook'
+
+export default function ExportPanel({  }) {
+	
+	const { glyphs, fontName, fontDimensions } = useGlyphs()
 	
 	const exporter = async (evt) => {
 		const exportInfo = {
@@ -22,7 +26,7 @@ export default function ExportPanel({ glyphs, fontName, fontDimensions }) {
 	
 	return (
 		<section className="export-panel">
-			<h2>Export</h2>
+			<h2>export</h2>
 			<button onClick={ exporter }>maybe</button>
 		</section>
 	)

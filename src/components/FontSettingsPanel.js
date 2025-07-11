@@ -1,13 +1,15 @@
 import React, { useState } from "react";
+import { useGlyphs } from './GlyphsHook'
 
-
-export default function FontSettingsPanel({ fontName="fonto", width=5, height=5, updateFontName = f => f, updateDimensions = f => f }) {
-		
+export default function FontSettingsPanel({ }) {
+	
+	const { fontName, fontDimensions, updateFontName, updateFontDimensions } = useGlyphs()
+	
 	return (
 		<section className="font-settings-panel">
-			<h2>Font settings</h2>
+			<h2>font settings</h2>
 			<form>
-				<label htmlFor="fontname">Name</label>
+				<label htmlFor="fontname">name</label>
 				<input
 					htmlname="fontname"
 					type="text"
@@ -20,8 +22,8 @@ export default function FontSettingsPanel({ fontName="fonto", width=5, height=5,
 					type="number"
 					min="4"
 					max="10"
-					value={ width }
-					onChange={ event => updateDimensions('width', event.target.value) }
+					value={ fontDimensions.width }
+					onChange={ event => updateFontDimensions('width', event.target.value) }
 				/>
 				<label htmlFor="height">height</label>
 				<input
@@ -29,8 +31,8 @@ export default function FontSettingsPanel({ fontName="fonto", width=5, height=5,
 					type="number"
 					min="4"
 					max="10"
-					value={ height }
-					onChange={ event => updateDimensions('height', event.target.value) }
+					value={ fontDimensions.height }
+					onChange={ event => updateFontDimensions('height', event.target.value) }
 				/>
 			</form>
 		</section>

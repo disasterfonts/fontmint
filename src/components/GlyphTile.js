@@ -1,12 +1,18 @@
 // wrapper for glyph grid with actions
 
-import GlyphGrid from "./GlyphGrid";
+import GlyphGrid from "./GlyphGrid"
+import { useGlyphs } from './GlyphsHook'
 
-export default function GlyphTile({ glyph = {}, width=5, selectable = 0, editable = 0, highlighted = 0, select = f => f, toggle = f => f}) {
+export default function GlyphTile({ selectedGlyph = 0, width=5, selectable = 0, editable = 0, highlighted = 0 }) {
+	
+	const { glyphs, selectGlyph } = useGlyphs()
+	
+	const glyph = glyphs[selectedGlyph]
 	
 	glyph.glyphName == 'space' ? selectable = 0 : selectable = selectable
 	
-	let onClickSelect = selectable ? (() => { select(glyph.glyphIndex) }) : function() {}
+	
+	let onClickSelect = selectable ? (() => { selectGlyph(glyph.glyphIndex) }) : function() {}
 	
 	let classNames = "glyph-tile" + (highlighted ? ' highlighted' : '')
 	
@@ -17,8 +23,7 @@ export default function GlyphTile({ glyph = {}, width=5, selectable = 0, editabl
 				glyphIndex={ glyph.glyphIndex }
 				editable={0}
 				width={ width }
-				select={ select }
-				toggle={ toggle }
+				select={ selectGlyph }
 				cellContents={ glyph.cells }
 			/>
 			{ selectable ? <h3 className="glyph-name"> { glyph.glyphName } </h3> : '' }

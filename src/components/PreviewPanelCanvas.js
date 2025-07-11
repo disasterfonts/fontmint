@@ -1,18 +1,17 @@
+import { useGlyphs } from './GlyphsHook'
 import WonderCanvas from './WonderCanvas'
 
-
-export default function PreviewPanelCanvas ({ width = 5, previewGlyphsCanvas = [], previewStringCanvas = 'ABCDEF', changePreviewStringCanvas = f => f }) {
+export default function PreviewPanelCanvas () {
 	
-	
+	const { glyphs, fontDimensions, previewStringCanvas, previewGlyphsCanvas, changePreviewStringCanvas } = useGlyphs()
 	
 	return (
 		<section className="preview-panel-canvas">
-			<h2>Preview (canvas)</h2>
-			<p className="testoprev">{ previewStringCanvas }</p>
+			<h2>preview</h2>
 			
 			<div className="preview-glyphs-canvas">
 				<WonderCanvas 
-					glyphWidth = { width }
+					glyphWidth = { parseInt(fontDimensions.width) }
 					previewGlyphs = { previewGlyphsCanvas }
 				/>
 			</div>

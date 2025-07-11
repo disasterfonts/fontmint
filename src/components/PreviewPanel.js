@@ -34,7 +34,7 @@ export default function PreviewPanel ({ glyphs=[], width = 5, placeholderString 
 	
 	return (
 		<section className="preview-panel">
-			<h2>Preview</h2>
+			<h2>preview</h2>
 			<div className="preview-glyphs preview-1x">
 				{ previewGlyphs.map((glyph, i) => (
 					<GlyphGrid
