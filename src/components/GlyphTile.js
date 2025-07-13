@@ -26,7 +26,7 @@ export default function GlyphTile({ selectedGlyph = 0, width=5, selectable = 0, 
 				select={ selectGlyph }
 				cellContents={ glyph.cells }
 			/>
-			{ selectable ? <h3 className="glyph-name"> { glyph.glyphName } </h3> : '' }
+			{ selectable ? <h3 className="glyph-name"> { glyph.glyphNiceName } </h3> : '' }
 		</div>
 	)
 }

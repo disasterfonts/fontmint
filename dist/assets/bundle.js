@@ -47,6 +47,9 @@ h2 {
   padding: 15px;
   background-color: #eee;
 }
+.edit-and-index {
+  display: flex;
+}
 .glyph-grid {
   display: flex;
   flex-wrap: wrap;
@@ -96,6 +99,9 @@ h2 {
 }
 .editor-panel .glyph-cell:hover {
   border: 1px solid #000;
+}
+.editor-panel .operations {
+  margin-top: 1em;
 }
 .glyph-tile {
   background-color: #fdd;
@@ -317,7 +323,7 @@ h2 {
   padding: 15px;
   background-color: #aaa;
 }
-`, "",{"version":3,"sources":["webpack://./src/less/stylesy.less"],"names":[],"mappings":"AAKA;EACC,aAAA;EACA,cAAA;AAJD;AAQA;EACC,aAAA;AAND;AASA;EACC,aAAA;EACA,sBAAA;AAPD;AAUA;EACC,aAAA;EACA,eAAA;EACA,YAAA;AARD;AAKA;EAME,WAAA;EACA,YAAA;EACA,sBAAA;AARF;AASE;EACC,qBAAA;AAPH;AAHA;EAaG,cAAA;EACA,WAAA;EACA,YAAA;AAPH;AAUC;EAAkB,YAAA;AAPnB;AAQC;EAAkB,YAAA;AALnB;AAMC;EAAkB,YAAA;AAHnB;AAIC;EAAkB,YAAA;AADnB;AAEC;EAAkB,YAAA;AACnB;AAAC;EAAkB,YAAA;AAGnB;AAFC;EAAmB,YAAA;AAKpB;AAHA;EACC,aAAA;EACA,sBAAA;AAKD;AAPA;EAIE,eAAA;EACA,6BAAA;AAMF;AALE;EACC,sBAAA;AAOH;AAHA;EACC,sBAAA;EACA,aAAA;AAKD;AAQA;EACC,aAAA;EACA,sBAAA;AAND;AAIA;EAIE,aAAA;EACA,eAAA;AALF;AAAA;EAQE,YAAA;EACA,kBAAA;EAUA,eAAA;AAdF;AALA;EAWG,SAAA;AAHH;AAKE;EACC,yDAAA;AAHH;AAKE;EACC,sBAAA;AAHH;AAdA;EAsBE,WAAA;EACA,WAAA;EACA,SAAA;AALF;AAnBA;EA0BG,UAAA;EACA,WAAA;EACA,sBAAA;AAJH;AAKG;EACC,qBAAA;AAHJ;AAME;EAAkB,WAAA;AAHpB;AAIE;EAAkB,WAAA;AADpB;AAEE;EAAkB,WAAA;AACpB;AAAE;EAAkB,WAAA;AAGpB;AAFE;EAAkB,WAAA;AAKpB;AAJE;EAAkB,WAAA;AAOpB;AANE;EAAmB,WAAA;AASrB;AAsBA;;EAEC,aAAA;EACA,sBAAA;AApBD;AAiBA;;EAKE,eAAA;AAlBF;AAaA;;EAOG,WAAA;AAhBH;AASA;;EAYE,wBAAA;EACA,YAAA;EACA,uBAAA;AAjBF;AAGA;;EAmBE,aAAA;EACA,eAAA;EACA,YAAA;EACA,QAAA;EACA,sBAAA;AAlBF;AALA;;EA0BE,aAAA;EACA,eAAA;EACA,WAAA;EACA,SAAA;EACA,SAAA;AAjBF;AAbA;;EAgCG,cAAA;EACA,UAAA;EACA,WAAA;EACA,sBAAA;AAfH;AAgBG;;EACC,sBAAA;AAbJ;AAgBE;;EAAkB,UAAA;AAZpB;AAaE;;EAAkB,WAAA;AATpB;AAUE;;EAAkB,WAAA;AANpB;AAOE;;EAAkB,WAAA;AAHpB;AAIE;;EAAkB,WAAA;AAApB;AACE;;EAAkB,WAAA;AAGpB;AAFE;;EAAmB,WAAA;AAMrB;AApDA;;EAiDE,QAAA;AAOF;AAxDA;;EAmDG,WAAA;AASH;AA5DA;;EAqDI,UAAA;EACA,WAAA;AAWJ;AATG;;EAAmB,WAAA;AAatB;AAZG;;EAAmB,WAAA;AAgBtB;AAfG;;EAAmB,WAAA;AAmBtB;AAlBG;;EAAmB,WAAA;AAsBtB;AArBG;;EAAmB,WAAA;AAyBtB;AAxBG;;EAAmB,WAAA;AA4BtB;AA3BG;;EAAmB,WAAA;AA+BtB;AA7FA;;EAkEE,QAAA;AA+BF;AAjGA;;EAoEG,WAAA;AAiCH;AArGA;;EAsEI,UAAA;EACA,WAAA;AAmCJ;AAjCG;;EAAmB,WAAA;AAqCtB;AApCG;;EAAmB,WAAA;AAwCtB;AAvCG;;EAAmB,WAAA;AA2CtB;AA1CG;;EAAmB,WAAA;AA8CtB;AA7CG;;EAAmB,WAAA;AAiDtB;AAhDG;;EAAmB,WAAA;AAoDtB;AAnDG;;EAAmB,WAAA;AAuDtB;AAjDA;EACC,aAAA;EACA,sBAAA;AAmDD","sourcesContent":["@editorcell: 46px;\n@indexcell: 5px;\n@previewcell: 2px;\n@gutter: 15px;\n\n#react-container {\n\twidth: 1000px;\n\tmargin: 0 auto;\n}\n\n\nh2 {\n\tmargin-top: 0;\n}\n\n.font-settings-panel {\n\tpadding: @gutter;\n\tbackground-color: #eee;\n}\n\n.glyph-grid {\n\tdisplay: flex;\n\tflex-wrap: wrap;\n\twidth: (@editorcell + 2) * 5;\n\n\t.glyph-cell {\n\t\twidth: @editorcell;\n\t\theight: @editorcell;\n\t\tbackground-color: #fff;\n\t\t&.status-on {\n\t\t\tbackground-color: red;\n\t\t}\n\t\timg {\n\t\t\tdisplay: block;\n\t\t\twidth: 100%;\n\t\t\theight: 100%;\n\t\t}\n\t}\n\t&.cells-width-4 { width: (@editorcell + 2) * 4 }\n\t&.cells-width-5 { width: (@editorcell + 2) * 5; }\n\t&.cells-width-6 { width: (@editorcell + 2) * 6 }\n\t&.cells-width-7 { width: (@editorcell + 2) * 7 }\n\t&.cells-width-8 { width: (@editorcell + 2) * 8 }\n\t&.cells-width-9 { width: (@editorcell + 2) * 9 }\n\t&.cells-width-10 { width: (@editorcell + 2) * 10 }\n}\n.editor-panel {\n\tpadding: @gutter;\n\tbackground-color: #ddd;\n\t.glyph-cell {\n\t\tcursor: pointer;\n\t\tborder: 1px solid transparent;\n\t\t&:hover {\n\t\t\tborder: 1px solid #000;\n\t\t}\n\t}\n}\n.glyph-tile {\n\tbackground-color: #fdd;\n\tpadding: @editorcell;\n}\n\n\n\n\n\n\n\n\n\n\n\n.font-index {\n\tpadding: @gutter;\n\tbackground-color: #ccc;\n\t.glyph-tiles {\n\t\tdisplay: flex;\n\t\tflex-wrap: wrap;\n\t}\n\t.glyph-tile {\n\t\tpadding: @indexcell;\n\t\ttext-align: center;\n\t\th3 {\n\t\t\tmargin: 0;\n\t\t}\n\t\t&:hover {\n\t\t\tbackground-image: url('../../dist/assets/shade2x2.png');\n\t\t}\n\t\t&.highlighted {\n\t\t\tbackground-color: #faa;\n\t\t}\n\t\tcursor: pointer;\n\t}\n\t.glyph-grid {\n\t\tmargin: @indexcell;\n\t\twidth: @indexcell * 5;\n\t\tborder: 0;\n\t\t.glyph-cell {\n\t\t\twidth: @indexcell;\n\t\t\theight: @indexcell;\n\t\t\tbackground-color: #fff;\n\t\t\t&.status-on {\n\t\t\t\tbackground-color: red;\n\t\t\t}\n\t\t}\n\t\t&.cells-width-4 { width: @indexcell * 4 }\n\t\t&.cells-width-5 { width: @indexcell * 5 }\n\t\t&.cells-width-6 { width: @indexcell * 6 }\n\t\t&.cells-width-7 { width: @indexcell * 7 }\n\t\t&.cells-width-8 { width: @indexcell * 8 }\n\t\t&.cells-width-9 { width: @indexcell * 9 }\n\t\t&.cells-width-10 { width: @indexcell * 10 }\n\t}\n}\n\n\n\n\n\n\n\n\n\n.preview-glyph(@cellmultiplier) {\n\t.glyph-grid {\n\t\twidth: @previewcell * @cellmultiplier * 5;\n\t\theight: @previewcell * @cellmultiplier * 5;\n\t\t.glyph-cell {\n\t\t\twidth: @previewcell * @cellmultiplier;\n\t\t\theight: @previewcell * @cellmultiplier;\n\t\t}\n\t\t&.cells-width-4 { width: @previewcell * 4 }\n\t\t&.cells-width-5 { width: @previewcell * 5 }\n\t\t&.cells-width-6 { width: @previewcell * 6 }\n\t\t&.cells-width-7 { width: @previewcell * 7 }\n\t\t&.cells-width-8 { width: @previewcell * 8 }\n\t\t&.cells-width-9 { width: @previewcell * 9 }\n\t\t&.cells-width-10 { width: @previewcell * 10 }\n\t}\n}\n\n\n.preview-panel,\n.preview-panel-canvas {\n\tpadding: @gutter;\n\tbackground-color: #bbb;\n\tform {\n\t\tmargin-top: 1em;\n\t\tinput {\n\t\t\twidth: 30em;\n\t\t}\n\t}\n\t\n\tcanvas {\n\t\twidth: calc(100% - 20px);\n\t\theight: auto;\n\t\tborder: 10px solid #fff;\n\t}\n\t\n\t\n\t.preview-glyphs {\n\t\tdisplay: flex;\n\t\tflex-wrap: wrap;\n\t\tpadding: @previewcell;\n\t\tgap: @previewcell;\n\t\tbackground-color: #fff;\n\t}\n\t.glyph-grid {\n\t\tdisplay: flex;\n\t\tflex-wrap: wrap;\n\t\twidth: @previewcell * 5;\n\t\tmargin: 0;\n\t\tborder: 0;\n\t\t.glyph-cell {\n\t\t\tdisplay: block;\n\t\t\twidth: @previewcell;\n\t\t\theight: @previewcell;\n\t\t\tbackground-color: #fff;\n\t\t\t&.status-on {\n\t\t\t\tbackground-color: #000;\n\t\t\t}\n\t\t}\n\t\t&.cells-width-4 { width: @previewcell * 4 }\n\t\t&.cells-width-5 { width: @previewcell * 5 }\n\t\t&.cells-width-6 { width: @previewcell * 6 }\n\t\t&.cells-width-7 { width: @previewcell * 7 }\n\t\t&.cells-width-8 { width: @previewcell * 8 }\n\t\t&.cells-width-9 { width: @previewcell * 9 }\n\t\t&.cells-width-10 { width: @previewcell * 10 }\n\t}\n\t.preview-2x {\n\t\tgap: @previewcell * 2;\n\t\t.glyph-grid {\n\t\t\twidth: @previewcell * 2 * 5;\n\t\t\t.glyph-cell {\n\t\t\t\twidth: @previewcell * 2;\n\t\t\t\theight: @previewcell * 2;\n\t\t\t}\n\t\t\t&.cells-width-4  { width: @previewcell * 4  * 2}\n\t\t\t&.cells-width-5  { width: @previewcell * 5  * 2}\n\t\t\t&.cells-width-6  { width: @previewcell * 6  * 2}\n\t\t\t&.cells-width-7  { width: @previewcell * 7  * 2}\n\t\t\t&.cells-width-8  { width: @previewcell * 8  * 2}\n\t\t\t&.cells-width-9  { width: @previewcell * 9  * 2}\n\t\t\t&.cells-width-10 { width: @previewcell * 10 * 2}\n\t\t}\n\t}\n\t.preview-4x {\n\t\tgap: @previewcell * 4;\n\t\t.glyph-grid {\n\t\t\twidth: @previewcell * 4 * 5;\n\t\t\t.glyph-cell {\n\t\t\t\twidth: @previewcell * 4;\n\t\t\t\theight: @previewcell * 4;\n\t\t\t}\n\t\t\t&.cells-width-4  { width: @previewcell * 4  * 4}\n\t\t\t&.cells-width-5  { width: @previewcell * 5  * 4}\n\t\t\t&.cells-width-6  { width: @previewcell * 6  * 4}\n\t\t\t&.cells-width-7  { width: @previewcell * 7  * 4}\n\t\t\t&.cells-width-8  { width: @previewcell * 8  * 4}\n\t\t\t&.cells-width-9  { width: @previewcell * 9  * 4}\n\t\t\t&.cells-width-10 { width: @previewcell * 10 * 4}\n\t\t}\n\t}\n}\n\n\n.export-panel {\n\tpadding: @gutter;\n\tbackground-color: #aaa;\n}"],"sourceRoot":""}]);
+`, "",{"version":3,"sources":["webpack://./src/less/stylesy.less"],"names":[],"mappings":"AAKA;EACC,aAAA;EACA,cAAA;AAJD;AAQA;EACC,aAAA;AAND;AASA;EACC,aAAA;EACA,sBAAA;AAPD;AAUA;EACC,aAAA;AARD;AAWA;EACC,aAAA;EACA,eAAA;EACA,YAAA;AATD;AAMA;EAME,WAAA;EACA,YAAA;EACA,sBAAA;AATF;AAUE;EACC,qBAAA;AARH;AAFA;EAaG,cAAA;EACA,WAAA;EACA,YAAA;AARH;AAWC;EAAkB,YAAA;AARnB;AASC;EAAkB,YAAA;AANnB;AAOC;EAAkB,YAAA;AAJnB;AAKC;EAAkB,YAAA;AAFnB;AAGC;EAAkB,YAAA;AAAnB;AACC;EAAkB,YAAA;AAEnB;AADC;EAAmB,YAAA;AAIpB;AAFA;EACC,aAAA;EACA,sBAAA;AAID;AANA;EAIE,eAAA;EACA,6BAAA;AAKF;AAJE;EACC,sBAAA;AAMH;AAbA;EAWE,eAAA;AAKF;AAFA;EACC,sBAAA;EACA,aAAA;AAID;AASA;EACC,aAAA;EACA,sBAAA;AAPD;AAKA;EAIE,aAAA;EACA,eAAA;AANF;AACA;EAQE,YAAA;EACA,kBAAA;EAUA,eAAA;AAfF;AAJA;EAWG,SAAA;AAJH;AAME;EACC,yDAAA;AAJH;AAME;EACC,sBAAA;AAJH;AAbA;EAsBE,WAAA;EACA,WAAA;EACA,SAAA;AANF;AAlBA;EA0BG,UAAA;EACA,WAAA;EACA,sBAAA;AALH;AAMG;EACC,qBAAA;AAJJ;AAOE;EAAkB,WAAA;AAJpB;AAKE;EAAkB,WAAA;AAFpB;AAGE;EAAkB,WAAA;AAApB;AACE;EAAkB,WAAA;AAEpB;AADE;EAAkB,WAAA;AAIpB;AAHE;EAAkB,WAAA;AAMpB;AALE;EAAmB,WAAA;AAQrB;AAuBA;;EAEC,aAAA;EACA,sBAAA;AArBD;AAkBA;;EAKE,eAAA;AAnBF;AAcA;;EAOG,WAAA;AAjBH;AAUA;;EAYE,wBAAA;EACA,YAAA;EACA,uBAAA;AAlBF;AAIA;;EAmBE,aAAA;EACA,eAAA;EACA,YAAA;EACA,QAAA;EACA,sBAAA;AAnBF;AAJA;;EA0BE,aAAA;EACA,eAAA;EACA,WAAA;EACA,SAAA;EACA,SAAA;AAlBF;AAZA;;EAgCG,cAAA;EACA,UAAA;EACA,WAAA;EACA,sBAAA;AAhBH;AAiBG;;EACC,sBAAA;AAdJ;AAiBE;;EAAkB,UAAA;AAbpB;AAcE;;EAAkB,WAAA;AAVpB;AAWE;;EAAkB,WAAA;AAPpB;AAQE;;EAAkB,WAAA;AAJpB;AAKE;;EAAkB,WAAA;AADpB;AAEE;;EAAkB,WAAA;AAEpB;AADE;;EAAmB,WAAA;AAKrB;AAnDA;;EAiDE,QAAA;AAMF;AAvDA;;EAmDG,WAAA;AAQH;AA3DA;;EAqDI,UAAA;EACA,WAAA;AAUJ;AARG;;EAAmB,WAAA;AAYtB;AAXG;;EAAmB,WAAA;AAetB;AAdG;;EAAmB,WAAA;AAkBtB;AAjBG;;EAAmB,WAAA;AAqBtB;AApBG;;EAAmB,WAAA;AAwBtB;AAvBG;;EAAmB,WAAA;AA2BtB;AA1BG;;EAAmB,WAAA;AA8BtB;AA5FA;;EAkEE,QAAA;AA8BF;AAhGA;;EAoEG,WAAA;AAgCH;AApGA;;EAsEI,UAAA;EACA,WAAA;AAkCJ;AAhCG;;EAAmB,WAAA;AAoCtB;AAnCG;;EAAmB,WAAA;AAuCtB;AAtCG;;EAAmB,WAAA;AA0CtB;AAzCG;;EAAmB,WAAA;AA6CtB;AA5CG;;EAAmB,WAAA;AAgDtB;AA/CG;;EAAmB,WAAA;AAmDtB;AAlDG;;EAAmB,WAAA;AAsDtB;AAhDA;EACC,aAAA;EACA,sBAAA;AAkDD","sourcesContent":["@editorcell: 46px;\n@indexcell: 5px;\n@previewcell: 2px;\n@gutter: 15px;\n\n#react-container {\n\twidth: 1000px;\n\tmargin: 0 auto;\n}\n\n\nh2 {\n\tmargin-top: 0;\n}\n\n.font-settings-panel {\n\tpadding: @gutter;\n\tbackground-color: #eee;\n}\n\n.edit-and-index {\n\tdisplay: flex;\n}\n\n.glyph-grid {\n\tdisplay: flex;\n\tflex-wrap: wrap;\n\twidth: (@editorcell + 2) * 5;\n\n\t.glyph-cell {\n\t\twidth: @editorcell;\n\t\theight: @editorcell;\n\t\tbackground-color: #fff;\n\t\t&.status-on {\n\t\t\tbackground-color: red;\n\t\t}\n\t\timg {\n\t\t\tdisplay: block;\n\t\t\twidth: 100%;\n\t\t\theight: 100%;\n\t\t}\n\t}\n\t&.cells-width-4 { width: (@editorcell + 2) * 4 }\n\t&.cells-width-5 { width: (@editorcell + 2) * 5; }\n\t&.cells-width-6 { width: (@editorcell + 2) * 6 }\n\t&.cells-width-7 { width: (@editorcell + 2) * 7 }\n\t&.cells-width-8 { width: (@editorcell + 2) * 8 }\n\t&.cells-width-9 { width: (@editorcell + 2) * 9 }\n\t&.cells-width-10 { width: (@editorcell + 2) * 10 }\n}\n.editor-panel {\n\tpadding: @gutter;\n\tbackground-color: #ddd;\n\t.glyph-cell {\n\t\tcursor: pointer;\n\t\tborder: 1px solid transparent;\n\t\t&:hover {\n\t\t\tborder: 1px solid #000;\n\t\t}\n\t}\n\t.operations {\n\t\tmargin-top: 1em;\n\t}\n}\n.glyph-tile {\n\tbackground-color: #fdd;\n\tpadding: @editorcell;\n}\n\n\n\n\n\n\n\n\n\n\n\n.font-index {\n\tpadding: @gutter;\n\tbackground-color: #ccc;\n\t.glyph-tiles {\n\t\tdisplay: flex;\n\t\tflex-wrap: wrap;\n\t}\n\t.glyph-tile {\n\t\tpadding: @indexcell;\n\t\ttext-align: center;\n\t\th3 {\n\t\t\tmargin: 0;\n\t\t}\n\t\t&:hover {\n\t\t\tbackground-image: url('../../dist/assets/shade2x2.png');\n\t\t}\n\t\t&.highlighted {\n\t\t\tbackground-color: #faa;\n\t\t}\n\t\tcursor: pointer;\n\t}\n\t.glyph-grid {\n\t\tmargin: @indexcell;\n\t\twidth: @indexcell * 5;\n\t\tborder: 0;\n\t\t.glyph-cell {\n\t\t\twidth: @indexcell;\n\t\t\theight: @indexcell;\n\t\t\tbackground-color: #fff;\n\t\t\t&.status-on {\n\t\t\t\tbackground-color: red;\n\t\t\t}\n\t\t}\n\t\t&.cells-width-4 { width: @indexcell * 4 }\n\t\t&.cells-width-5 { width: @indexcell * 5 }\n\t\t&.cells-width-6 { width: @indexcell * 6 }\n\t\t&.cells-width-7 { width: @indexcell * 7 }\n\t\t&.cells-width-8 { width: @indexcell * 8 }\n\t\t&.cells-width-9 { width: @indexcell * 9 }\n\t\t&.cells-width-10 { width: @indexcell * 10 }\n\t}\n}\n\n\n\n\n\n\n\n\n\n.preview-glyph(@cellmultiplier) {\n\t.glyph-grid {\n\t\twidth: @previewcell * @cellmultiplier * 5;\n\t\theight: @previewcell * @cellmultiplier * 5;\n\t\t.glyph-cell {\n\t\t\twidth: @previewcell * @cellmultiplier;\n\t\t\theight: @previewcell * @cellmultiplier;\n\t\t}\n\t\t&.cells-width-4 { width: @previewcell * 4 }\n\t\t&.cells-width-5 { width: @previewcell * 5 }\n\t\t&.cells-width-6 { width: @previewcell * 6 }\n\t\t&.cells-width-7 { width: @previewcell * 7 }\n\t\t&.cells-width-8 { width: @previewcell * 8 }\n\t\t&.cells-width-9 { width: @previewcell * 9 }\n\t\t&.cells-width-10 { width: @previewcell * 10 }\n\t}\n}\n\n\n.preview-panel,\n.preview-panel-canvas {\n\tpadding: @gutter;\n\tbackground-color: #bbb;\n\tform {\n\t\tmargin-top: 1em;\n\t\tinput {\n\t\t\twidth: 30em;\n\t\t}\n\t}\n\t\n\tcanvas {\n\t\twidth: calc(100% - 20px);\n\t\theight: auto;\n\t\tborder: 10px solid #fff;\n\t}\n\t\n\t\n\t.preview-glyphs {\n\t\tdisplay: flex;\n\t\tflex-wrap: wrap;\n\t\tpadding: @previewcell;\n\t\tgap: @previewcell;\n\t\tbackground-color: #fff;\n\t}\n\t.glyph-grid {\n\t\tdisplay: flex;\n\t\tflex-wrap: wrap;\n\t\twidth: @previewcell * 5;\n\t\tmargin: 0;\n\t\tborder: 0;\n\t\t.glyph-cell {\n\t\t\tdisplay: block;\n\t\t\twidth: @previewcell;\n\t\t\theight: @previewcell;\n\t\t\tbackground-color: #fff;\n\t\t\t&.status-on {\n\t\t\t\tbackground-color: #000;\n\t\t\t}\n\t\t}\n\t\t&.cells-width-4 { width: @previewcell * 4 }\n\t\t&.cells-width-5 { width: @previewcell * 5 }\n\t\t&.cells-width-6 { width: @previewcell * 6 }\n\t\t&.cells-width-7 { width: @previewcell * 7 }\n\t\t&.cells-width-8 { width: @previewcell * 8 }\n\t\t&.cells-width-9 { width: @previewcell * 9 }\n\t\t&.cells-width-10 { width: @previewcell * 10 }\n\t}\n\t.preview-2x {\n\t\tgap: @previewcell * 2;\n\t\t.glyph-grid {\n\t\t\twidth: @previewcell * 2 * 5;\n\t\t\t.glyph-cell {\n\t\t\t\twidth: @previewcell * 2;\n\t\t\t\theight: @previewcell * 2;\n\t\t\t}\n\t\t\t&.cells-width-4  { width: @previewcell * 4  * 2}\n\t\t\t&.cells-width-5  { width: @previewcell * 5  * 2}\n\t\t\t&.cells-width-6  { width: @previewcell * 6  * 2}\n\t\t\t&.cells-width-7  { width: @previewcell * 7  * 2}\n\t\t\t&.cells-width-8  { width: @previewcell * 8  * 2}\n\t\t\t&.cells-width-9  { width: @previewcell * 9  * 2}\n\t\t\t&.cells-width-10 { width: @previewcell * 10 * 2}\n\t\t}\n\t}\n\t.preview-4x {\n\t\tgap: @previewcell * 4;\n\t\t.glyph-grid {\n\t\t\twidth: @previewcell * 4 * 5;\n\t\t\t.glyph-cell {\n\t\t\t\twidth: @previewcell * 4;\n\t\t\t\theight: @previewcell * 4;\n\t\t\t}\n\t\t\t&.cells-width-4  { width: @previewcell * 4  * 4}\n\t\t\t&.cells-width-5  { width: @previewcell * 5  * 4}\n\t\t\t&.cells-width-6  { width: @previewcell * 6  * 4}\n\t\t\t&.cells-width-7  { width: @previewcell * 7  * 4}\n\t\t\t&.cells-width-8  { width: @previewcell * 8  * 4}\n\t\t\t&.cells-width-9  { width: @previewcell * 9  * 4}\n\t\t\t&.cells-width-10 { width: @previewcell * 10 * 4}\n\t\t}\n\t}\n}\n\n\n.export-panel {\n\tpadding: @gutter;\n\tbackground-color: #aaa;\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -27941,7 +27947,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function App() {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("section", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", null, "mint pixel font editor"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_FontSettingsPanel__WEBPACK_IMPORTED_MODULE_1__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_EditorPanel__WEBPACK_IMPORTED_MODULE_2__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_FontIndexPanel__WEBPACK_IMPORTED_MODULE_3__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_PreviewPanelCanvas__WEBPACK_IMPORTED_MODULE_5__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_ExportPanel__WEBPACK_IMPORTED_MODULE_6__["default"], null));
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", null, "mint pixel font editor"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_FontSettingsPanel__WEBPACK_IMPORTED_MODULE_1__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "edit-and-index"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_EditorPanel__WEBPACK_IMPORTED_MODULE_2__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_FontIndexPanel__WEBPACK_IMPORTED_MODULE_3__["default"], null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_PreviewPanelCanvas__WEBPACK_IMPORTED_MODULE_5__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_ExportPanel__WEBPACK_IMPORTED_MODULE_6__["default"], null));
 }
 
 /***/ }),
@@ -28042,15 +28050,9 @@ function EditorPanel() {
     clearCells = _useGlyphs.clearCells,
     randomCells = _useGlyphs.randomCells;
   var glyph = glyphs[currentGlyph];
-  var clearCellsClick = function clearCellsClick(evt) {
-    clearCells(glyph.glyphIndex);
-  };
-  var randomCellsClick = function randomCellsClick(evt) {
-    randomCells(glyph.glyphIndex);
-  };
   return /*#__PURE__*/React.createElement("section", {
     className: "editor-panel"
-  }, /*#__PURE__*/React.createElement("h2", null, "editing: '", glyph.glyphName, "'"), /*#__PURE__*/React.createElement(_GlyphGrid__WEBPACK_IMPORTED_MODULE_0__["default"], {
+  }, /*#__PURE__*/React.createElement("h2", null, "editing: ", /*#__PURE__*/React.createElement("em", null, glyph.glyphName)), /*#__PURE__*/React.createElement(_GlyphGrid__WEBPACK_IMPORTED_MODULE_0__["default"], {
     width: fontDimensions.width,
     height: fontDimensions.height,
     editable: 1,
@@ -28058,11 +28060,17 @@ function EditorPanel() {
     glyphName: glyph.glyphName,
     glyphIndex: glyph.glyphIndex,
     cellContents: glyph.cells
-  }), /*#__PURE__*/React.createElement("button", {
-    onClick: clearCellsClick
+  }), /*#__PURE__*/React.createElement("div", {
+    className: "operations"
+  }, /*#__PURE__*/React.createElement("button", {
+    onClick: function onClick(evt) {
+      return clearCells(glyph.glyphIndex);
+    }
   }, "Clear"), /*#__PURE__*/React.createElement("button", {
-    onClick: randomCellsClick
-  }, "Random"));
+    onClick: function onClick(evt) {
+      return randomCells(glyph.glyphIndex);
+    }
+  }, "Random")));
 }
 
 /***/ }),
@@ -28331,7 +28339,7 @@ function GlyphTile(_ref) {
     cellContents: glyph.cells
   }), selectable ? /*#__PURE__*/React.createElement("h3", {
     className: "glyph-name"
-  }, " ", glyph.glyphName, " ") : '');
+  }, " ", glyph.glyphNiceName, " ") : '');
 }
 
 /***/ }),
@@ -28352,15 +28360,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _default_glyphs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../default_glyphs */ "./src/default_glyphs.js");
 function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
 function _createForOfIteratorHelper(r, e) { var t = "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"]; if (!t) { if (Array.isArray(r) || (t = _unsupportedIterableToArray(r)) || e && r && "number" == typeof r.length) { t && (r = t); var _n = 0, F = function F() {}; return { s: F, n: function n() { return _n >= r.length ? { done: !0 } : { done: !1, value: r[_n++] }; }, e: function e(r) { throw r; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var o, a = !0, u = !1; return { s: function s() { t = t.call(r); }, n: function n() { var r = t.next(); return a = r.done, r; }, e: function e(r) { u = !0, o = r; }, f: function f() { try { a || null == t["return"] || t["return"](); } finally { if (u) throw o; } } }; }
-function _toConsumableArray(r) { return _arrayWithoutHoles(r) || _iterableToArray(r) || _unsupportedIterableToArray(r) || _nonIterableSpread(); }
-function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-function _iterableToArray(r) { if ("undefined" != typeof Symbol && null != r[Symbol.iterator] || null != r["@@iterator"]) return Array.from(r); }
-function _arrayWithoutHoles(r) { if (Array.isArray(r)) return _arrayLikeToArray(r); }
 function ownKeys(e, r) { var t = Object.keys(e); if (Object.getOwnPropertySymbols) { var o = Object.getOwnPropertySymbols(e); r && (o = o.filter(function (r) { return Object.getOwnPropertyDescriptor(e, r).enumerable; })), t.push.apply(t, o); } return t; }
 function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t = null != arguments[r] ? arguments[r] : {}; r % 2 ? ownKeys(Object(t), !0).forEach(function (r) { _defineProperty(e, r, t[r]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t)) : ownKeys(Object(t)).forEach(function (r) { Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r)); }); } return e; }
 function _defineProperty(e, r, t) { return (r = _toPropertyKey(r)) in e ? Object.defineProperty(e, r, { value: t, enumerable: !0, configurable: !0, writable: !0 }) : e[r] = t, e; }
 function _toPropertyKey(t) { var i = _toPrimitive(t, "string"); return "symbol" == _typeof(i) ? i : i + ""; }
 function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != _typeof(i)) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); }
+function _toConsumableArray(r) { return _arrayWithoutHoles(r) || _iterableToArray(r) || _unsupportedIterableToArray(r) || _nonIterableSpread(); }
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _iterableToArray(r) { if ("undefined" != typeof Symbol && null != r[Symbol.iterator] || null != r["@@iterator"]) return Array.from(r); }
+function _arrayWithoutHoles(r) { if (Array.isArray(r)) return _arrayLikeToArray(r); }
 function _slicedToArray(r, e) { return _arrayWithHoles(r) || _iterableToArrayLimit(r, e) || _unsupportedIterableToArray(r, e) || _nonIterableRest(); }
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
 function _unsupportedIterableToArray(r, a) { if (r) { if ("string" == typeof r) return _arrayLikeToArray(r, a); var t = {}.toString.call(r).slice(8, -1); return "Object" === t && r.constructor && (t = r.constructor.name), "Map" === t || "Set" === t ? Array.from(r) : "Arguments" === t || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t) ? _arrayLikeToArray(r, a) : void 0; } }
@@ -28375,6 +28383,8 @@ var useGlyphs = function useGlyphs() {
 };
 function GlyphsProvider(_ref) {
   var children = _ref.children;
+  // states -----------------------------------------------------------------------------------------------------------------
+
   var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)((0,_default_glyphs__WEBPACK_IMPORTED_MODULE_1__["default"])()),
     _useState2 = _slicedToArray(_useState, 2),
     glyphs = _useState2[0],
@@ -28411,11 +28421,94 @@ function GlyphsProvider(_ref) {
     previewGlyphsCanvas = _useState14[0],
     setPreviewGlyphsCanvas = _useState14[1];
 
+  // font settings panel ----------------------------------------------------------------------------------------------------
+
+  var updateFontName = function updateFontName(newValue) {
+    setFontName(newValue);
+    return newValue;
+  };
+  var updateFontDimensions = function updateFontDimensions(dimension, newValue) {
+    var createArray = function createArray(length) {
+      return _toConsumableArray(Array(length));
+    };
+    if (dimension === 'width') {
+      var xdifference = 0;
+      var newGlyphs = createArray(newValue * fontDimensions.height);
+      newGlyphs = glyphs.map(function (glyph, i) {
+        if (fontDimensions.width < newValue) {
+          // grow
+          for (var y = 0; y < fontDimensions.height; y++) {
+            xdifference = newValue - fontDimensions.width;
+            for (var x = 0; x < xdifference; x++) {
+              // splice in x difference at end of each row
+              // column 'width' shifts with the xdiff every row
+              glyph.cells.splice(fontDimensions.width * (y + 1) + y * xdifference, 0, {
+                'id': i,
+                'status': 0
+              });
+            }
+          }
+        } else {
+          // shrink
+          for (var _y = 0; _y < fontDimensions.height; _y++) {
+            xdifference = fontDimensions.width - newValue;
+            for (var _x = 0; _x < xdifference; _x++) {
+              glyph.cells.splice(fontDimensions.width * (_y + 1) - 1 - _y * xdifference, 1);
+            }
+          }
+        }
+        var newGlyphCells = glyph.cells.map(function (cell, i) {
+          return {
+            'id': i,
+            'status': cell.status
+          };
+        });
+        glyph.cells = newGlyphCells;
+        return glyph;
+      });
+      setGlyphs(newGlyphs);
+      setFontDimensions({
+        'width': newValue,
+        'height': fontDimensions.height
+      });
+    } else {
+      var _newGlyphs = createArray(newValue * fontDimensions.height);
+      _newGlyphs = glyphs.map(function (glyph, i) {
+        if (fontDimensions.height < newValue) {
+          // grow
+          for (var x = 0; x < fontDimensions.width; x++) {
+            glyph.cells.push({
+              'id': i,
+              'status': 0
+            });
+          }
+        } else {
+          // shrink
+          for (var _x2 = 0; _x2 < fontDimensions.width; _x2++) {
+            glyph.cells.pop();
+          }
+        }
+        var newGlyphCells = glyph.cells.map(function (cell, i) {
+          return {
+            'id': i,
+            'status': cell.status
+          };
+        });
+        glyph.cells = newGlyphCells;
+        return glyph;
+      });
+      setGlyphs(_newGlyphs);
+      setFontDimensions({
+        'width': fontDimensions.width,
+        'height': newValue
+      });
+    }
+    // update form input
+    return newValue;
+  };
+
   // font index panel -------------------------------------------------------------------------------------------------------
 
-  var updateGlyphs = function updateGlyphs(newGlyphs) {
-    return setGlyphs(newGlyphs);
-  };
   var selectGlyph = function selectGlyph(glyphIndex) {
     return setCurrentGlyph(glyphIndex);
   };
@@ -28425,7 +28518,6 @@ function GlyphsProvider(_ref) {
   var toggleCell = function toggleCell(glyphIndex, id) {
     setDragStatus(0);
 
-    // glyphs may need to be an object for quick indexing?
     // get glyphs
     // get glyph's cells
     // toggle cell id, put back in glyph
@@ -28494,106 +28586,18 @@ function GlyphsProvider(_ref) {
     setGlyphs(newGlyphs);
   };
 
-  // font settings panel ----------------------------------------------------------------------------------------------------
-
-  var updateFontName = function updateFontName(newValue) {
-    setFontName(newValue);
-    return newValue;
-  };
-  var updateFontDimensions = function updateFontDimensions(dimension, newValue) {
-    var createArray = function createArray(length) {
-      return _toConsumableArray(Array(length));
-    };
-    var newGlyphs;
-    if (dimension === 'width') {
-      var xdifference = 0;
-      var _newGlyphs = createArray(newValue * fontDimensions.height);
-      _newGlyphs = glyphs.map(function (glyph, i) {
-        if (fontDimensions.width < newValue) {
-          // grow
-          for (var y = 0; y < fontDimensions.height; y++) {
-            xdifference = newValue - fontDimensions.width;
-            for (var x = 0; x < xdifference; x++) {
-              // splice in x difference at end of each row
-              // column 'width' shifts with the xdiff every row
-              glyph.cells.splice(fontDimensions.width * (y + 1) + y * xdifference, 0, {
-                'id': i,
-                'status': 0
-              });
-            }
-          }
-        } else {
-          // shrink
-          for (var _y = 0; _y < fontDimensions.height; _y++) {
-            xdifference = fontDimensions.width - newValue;
-            for (var _x = 0; _x < xdifference; _x++) {
-              glyph.cells.splice(fontDimensions.width * (_y + 1) - 1 - _y * xdifference, 1);
-            }
-          }
-        }
-        var newGlyphCells = glyph.cells.map(function (cell, i) {
-          return {
-            'id': i,
-            'status': cell.status
-          };
-        });
-        glyph.cells = newGlyphCells;
-        return glyph;
-      });
-      setGlyphs(_newGlyphs);
-      setFontDimensions({
-        'width': newValue,
-        'height': fontDimensions.height
-      });
-    } else {
-      var _newGlyphs2 = createArray(newValue * fontDimensions.height);
-      _newGlyphs2 = glyphs.map(function (glyph, i) {
-        if (fontDimensions.height < newValue) {
-          // grow
-          for (var x = 0; x < fontDimensions.width; x++) {
-            glyph.cells.push({
-              'id': i,
-              'status': 0
-            });
-          }
-        } else {
-          // shrink
-          for (var _x2 = 0; _x2 < fontDimensions.width; _x2++) {
-            glyph.cells.pop();
-          }
-        }
-        var newGlyphCells = glyph.cells.map(function (cell, i) {
-          return {
-            'id': i,
-            'status': cell.status
-          };
-        });
-        glyph.cells = newGlyphCells;
-        return glyph;
-      });
-      setGlyphs(_newGlyphs2);
-      //setGlyphs(defaultGlyphs(fontDimensions.width, newValue));
-      setFontDimensions({
-        'width': fontDimensions.width,
-        'height': newValue
-      });
-    }
-    // update form input
-    return newValue;
-  };
-
   // preview panel ----------------------------------------------------------------------------------------------------------
 
   var _glyphFind = function glyphFind() {
     var glyphs = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
     var glyphName = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : "A";
-    // locate glyph in array by child object property glyphName
+    // locate glyph in array by child object property 'glyphNiceName'
     var _iterator = _createForOfIteratorHelper(glyphs),
       _step;
     try {
       for (_iterator.s(); !(_step = _iterator.n()).done;) {
         var glyph = _step.value;
-        var result = glyph.glyphName === glyphName ? glyph : _glyphFind(glyph.children, glyphName);
+        var result = glyph.glyphNiceName === glyphName ? glyph : _glyphFind(glyph.children, glyphName);
         if (result) return result;
       }
     } catch (err) {
@@ -28602,16 +28606,39 @@ function GlyphsProvider(_ref) {
       _iterator.f();
     }
   };
+  var glyphFindUnicode = function glyphFindUnicode() {
+    var glyphs = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
+    var unicodeVal = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : "0041";
+    // locate glyph in array by child object property 'unicode'
+    var _iterator2 = _createForOfIteratorHelper(glyphs),
+      _step2;
+    try {
+      for (_iterator2.s(); !(_step2 = _iterator2.n()).done;) {
+        var glyph = _step2.value;
+        var result = glyph.unicode === unicodeVal ? glyph : _glyphFind(glyph.children, unicodeVal);
+        if (result) return result;
+      }
+    } catch (err) {
+      _iterator2.e(err);
+    } finally {
+      _iterator2.f();
+    }
+  };
   var changePreviewStringCanvas = function changePreviewStringCanvas(inputTextValue) {
     var newPreviewString = inputTextValue.toUpperCase();
     setPreviewStringCanvas(newPreviewString);
     var newPreviewGlyphs = [];
     if (newPreviewString.length > 0) {
       for (var n = 0; n < newPreviewString.length; n++) {
-        if (newPreviewString[n] != " " && (newPreviewString[n].charCodeAt(0) >= 65 && newPreviewString[n].charCodeAt(0) <= 90 || newPreviewString[n].charCodeAt(0) >= 48 && newPreviewString[n].charCodeAt(0) <= 57)) {
-          newPreviewGlyphs[n] = _glyphFind(glyphs, newPreviewString[n]);
+        var asciiVal = newPreviewString[n].charCodeAt(0);
+        var unicodeVal = newPreviewString.codePointAt(n).toString(16).padStart(4, '0').toLocaleUpperCase();
+        newPreviewGlyphs[n] = glyphFindUnicode(glyphs, unicodeVal);
+
+        // temporary character range restriction
+        if (newPreviewString[n] != " " && (asciiVal >= 65 && asciiVal <= 90 || asciiVal >= 48 && asciiVal <= 57)) {
+          newPreviewGlyphs[n] = glyphFindUnicode(glyphs, unicodeVal);
         } else {
-          newPreviewGlyphs[n] = _glyphFind(glyphs, 'space');
+          newPreviewGlyphs[n] = glyphFindUnicode(glyphs, '0020');
         }
       }
     }
@@ -28625,7 +28652,6 @@ function GlyphsProvider(_ref) {
       fontDimensions: fontDimensions,
       updateFontDimensions: updateFontDimensions,
       currentGlyph: currentGlyph,
-      updateGlyphs: updateGlyphs,
       selectGlyph: selectGlyph,
       toggleCell: toggleCell,
       updateDragStatus: updateDragStatus,
@@ -28784,6 +28810,7 @@ __webpack_require__.r(__webpack_exports__);
 function PreviewPanelCanvas() {
   var _useGlyphs = (0,_GlyphsHook__WEBPACK_IMPORTED_MODULE_0__.useGlyphs)(),
     glyphs = _useGlyphs.glyphs,
+    currentGlyph = _useGlyphs.currentGlyph,
     fontDimensions = _useGlyphs.fontDimensions,
     previewStringCanvas = _useGlyphs.previewStringCanvas,
     previewGlyphsCanvas = _useGlyphs.previewGlyphsCanvas,
@@ -28797,7 +28824,7 @@ function PreviewPanelCanvas() {
     previewGlyphs: previewGlyphsCanvas
   })), /*#__PURE__*/React.createElement("form", {
     name: "preview-edit"
-  }, /*#__PURE__*/React.createElement("label", null, "Edit:"), /*#__PURE__*/React.createElement("input", {
+  }, /*#__PURE__*/React.createElement("label", null, "Preview text:"), /*#__PURE__*/React.createElement("input", {
     value: previewStringCanvas,
     type: "text",
     onChange: function onChange(event) {
@@ -28857,7 +28884,7 @@ function WonderCanvas(_ref) {
   };
   var plotStrings = function plotStrings(ctx, glyphWidth, previewGlyphs) {
     ctx.fillStyle = '#fff';
-    ctx.fillRect(0, 0, 800, 200);
+    ctx.fillRect(0, 0, 800, 300);
     plotString(ctx, glyphWidth, 2, previewGlyphs);
     plotString(ctx, glyphWidth, 4, previewGlyphs);
     plotString(ctx, glyphWidth, 8, previewGlyphs);
@@ -28869,11 +28896,11 @@ function WonderCanvas(_ref) {
     var ctx = canvas.getContext('2d');
     plotStrings(ctx, glyphWidth, previewGlyphs);
   }, [plotStrings]);
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("canvas", {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("canvas", {
     width: "800",
-    height: "200",
+    height: "300",
     ref: canvasRef
-  });
+  }));
 }
 
 /***/ }),
@@ -28897,23 +28924,26 @@ function _arrayLikeToArray(r, a) { (null == a || a > r.length) && (a = r.length)
 function defaultGlyphs() {
   var glyphWidth = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 5;
   var glyphHeight = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 5;
-  var spaceCells = createArray(glyphWidth * glyphHeight).map(function (cell, i) {
-    return 0;
+  var emptyCells = createArray(glyphWidth * glyphHeight).map(function (cell, i) {
+    return {
+      'id': i,
+      'status': 0
+    };
   });
-  var glyphs = [randomGlyphData("A", "0041", 0, glyphWidth, glyphHeight, false, false, true), randomGlyphData("B", "0042", 1, glyphWidth, glyphHeight, false, false, true), randomGlyphData("C", "0043", 2, glyphWidth, glyphHeight, false, false, true), randomGlyphData("D", "0044", 3, glyphWidth, glyphHeight, false, false, true), randomGlyphData("E", "0045", 4, glyphWidth, glyphHeight, false, false, true), randomGlyphData("F", "0046", 5, glyphWidth, glyphHeight, false, false, true), randomGlyphData("G", "0047", 6, glyphWidth, glyphHeight, false, false, true), randomGlyphData("H", "0048", 7, glyphWidth, glyphHeight, false, false, true), randomGlyphData("I", "0049", 8, glyphWidth, glyphHeight, false, false, true), randomGlyphData("J", "004A", 9, glyphWidth, glyphHeight, false, false, true), randomGlyphData("K", "004B", 10, glyphWidth, glyphHeight, false, false, true), randomGlyphData("L", "004C", 11, glyphWidth, glyphHeight, false, false, true), randomGlyphData("M", "004D", 12, glyphWidth, glyphHeight, false, false, true), randomGlyphData("N", "004E", 13, glyphWidth, glyphHeight, false, false, true), randomGlyphData("O", "004F", 14, glyphWidth, glyphHeight, false, false, true), randomGlyphData("P", "0050", 15, glyphWidth, glyphHeight, false, false, true), randomGlyphData("Q", "0051", 16, glyphWidth, glyphHeight, false, false, true), randomGlyphData("R", "0052", 17, glyphWidth, glyphHeight, false, false, true), randomGlyphData("S", "0053", 18, glyphWidth, glyphHeight, false, false, true), randomGlyphData("T", "0054", 19, glyphWidth, glyphHeight, false, false, true), randomGlyphData("U", "0055", 20, glyphWidth, glyphHeight, false, false, true), randomGlyphData("V", "0056", 21, glyphWidth, glyphHeight, false, false, true), randomGlyphData("W", "0057", 22, glyphWidth, glyphHeight, false, false, true), randomGlyphData("X", "0058", 23, glyphWidth, glyphHeight, false, false, true), randomGlyphData("Y", "0059", 24, glyphWidth, glyphHeight, false, false, true), randomGlyphData("Z", "005A", 25, glyphWidth, glyphHeight, false, false, true), randomGlyphData("0", "0030", 26, glyphWidth, glyphHeight, false, false, true), randomGlyphData("1", "0031", 27, glyphWidth, glyphHeight, false, false, true), randomGlyphData("2", "0032", 28, glyphWidth, glyphHeight, false, false, true), randomGlyphData("3", "0033", 29, glyphWidth, glyphHeight, false, false, true), randomGlyphData("4", "0034", 30, glyphWidth, glyphHeight, false, false, true), randomGlyphData("5", "0035", 31, glyphWidth, glyphHeight, false, false, true), randomGlyphData("6", "0036", 32, glyphWidth, glyphHeight, false, false, true), randomGlyphData("7", "0037", 33, glyphWidth, glyphHeight, false, false, true), randomGlyphData("8", "0038", 34, glyphWidth, glyphHeight, false, false, true), randomGlyphData("9", "0039", 35, glyphWidth, glyphHeight, false, false, true), initGlyphData('space', '0020', 36, glyphWidth, glyphHeight, false, false, true, spaceCells), initGlyphData('grave', '0060', 37, glyphWidth, glyphHeight, false, true, false, accentGlyphDefaults('0060')), initGlyphData('dieresis', '00A8', 38, glyphWidth, glyphHeight, false, true, false, accentGlyphDefaults('00A8')), initGlyphData('macron', '00AF', 39, glyphWidth, glyphHeight, false, true, false, accentGlyphDefaults('00AF')), initGlyphData('acute', '00B4', 40, glyphWidth, glyphHeight, false, true, false, accentGlyphDefaults('00B4')), initGlyphData('cedilla', '00B8', 41, glyphWidth, glyphHeight, false, true, false, accentGlyphDefaults('00B8')), initGlyphData('circumflex', '02C6', 42, glyphWidth, glyphHeight, false, true, false, accentGlyphDefaults('02C6')), initGlyphData('caron', '02C7', 43, glyphWidth, glyphHeight, false, true, false, accentGlyphDefaults('02C7')), initGlyphData('breve', '02D8', 44, glyphWidth, glyphHeight, false, true, false, accentGlyphDefaults('02D8')), initGlyphData('dotaccent', '02D9', 45, glyphWidth, glyphHeight, false, true, false, accentGlyphDefaults('02D9')), initGlyphData('ring', '02DA', 46, glyphWidth, glyphHeight, false, true, false, accentGlyphDefaults('02DA')), initGlyphData('ogonek', '02DB', 47, glyphWidth, glyphHeight, false, true, false, accentGlyphDefaults('02DB')), initGlyphData('tilde', '02DC', 48, glyphWidth, glyphHeight, false, true, false, accentGlyphDefaults('02DC')), initGlyphData('hungarumlaut', '02DD', 49, glyphWidth, glyphHeight, false, true, false, accentGlyphDefaults('02DD')), initGlyphData('commaaccent', '0326', 50, glyphWidth, glyphHeight, false, true, false, accentGlyphDefaults('0326'))];
+  var glyphs = [randomGlyphData("A", "A", "0041", 0, glyphWidth, glyphHeight, false, false, true), randomGlyphData("B", "B", "0042", 1, glyphWidth, glyphHeight, false, false, true), randomGlyphData("C", "C", "0043", 2, glyphWidth, glyphHeight, false, false, true), randomGlyphData("D", "D", "0044", 3, glyphWidth, glyphHeight, false, false, true), randomGlyphData("E", "E", "0045", 4, glyphWidth, glyphHeight, false, false, true), randomGlyphData("F", "F", "0046", 5, glyphWidth, glyphHeight, false, false, true), randomGlyphData("G", "G", "0047", 6, glyphWidth, glyphHeight, false, false, true), randomGlyphData("H", "H", "0048", 7, glyphWidth, glyphHeight, false, false, true), randomGlyphData("I", "I", "0049", 8, glyphWidth, glyphHeight, false, false, true), randomGlyphData("J", "J", "004A", 9, glyphWidth, glyphHeight, false, false, true), randomGlyphData("K", "K", "004B", 10, glyphWidth, glyphHeight, false, false, true), randomGlyphData("L", "L", "004C", 11, glyphWidth, glyphHeight, false, false, true), randomGlyphData("M", "M", "004D", 12, glyphWidth, glyphHeight, false, false, true), randomGlyphData("N", "N", "004E", 13, glyphWidth, glyphHeight, false, false, true), randomGlyphData("O", "O", "004F", 14, glyphWidth, glyphHeight, false, false, true), randomGlyphData("P", "P", "0050", 15, glyphWidth, glyphHeight, false, false, true), randomGlyphData("Q", "Q", "0051", 16, glyphWidth, glyphHeight, false, false, true), randomGlyphData("R", "R", "0052", 17, glyphWidth, glyphHeight, false, false, true), randomGlyphData("S", "S", "0053", 18, glyphWidth, glyphHeight, false, false, true), randomGlyphData("T", "T", "0054", 19, glyphWidth, glyphHeight, false, false, true), randomGlyphData("U", "U", "0055", 20, glyphWidth, glyphHeight, false, false, true), randomGlyphData("V", "V", "0056", 21, glyphWidth, glyphHeight, false, false, true), randomGlyphData("W", "W", "0057", 22, glyphWidth, glyphHeight, false, false, true), randomGlyphData("X", "X", "0058", 23, glyphWidth, glyphHeight, false, false, true), randomGlyphData("Y", "Y", "0059", 24, glyphWidth, glyphHeight, false, false, true), randomGlyphData("Z", "Z", "005A", 25, glyphWidth, glyphHeight, false, false, true), randomGlyphData("0", "zero", "0030", 26, glyphWidth, glyphHeight, false, false, true), randomGlyphData("1", "one", "0031", 27, glyphWidth, glyphHeight, false, false, true), randomGlyphData("2", "two", "0032", 28, glyphWidth, glyphHeight, false, false, true), randomGlyphData("3", "three", "0033", 29, glyphWidth, glyphHeight, false, false, true), randomGlyphData("4", "four", "0034", 30, glyphWidth, glyphHeight, false, false, true), randomGlyphData("5", "five", "0035", 31, glyphWidth, glyphHeight, false, false, true), randomGlyphData("6", "six", "0036", 32, glyphWidth, glyphHeight, false, false, true), randomGlyphData("7", "seven", "0037", 33, glyphWidth, glyphHeight, false, false, true), randomGlyphData("8", "eight", "0038", 34, glyphWidth, glyphHeight, false, false, true), randomGlyphData("9", "nine", "0039", 35, glyphWidth, glyphHeight, false, false, true), initGlyphData(' ', 'space', '0020', 36, glyphWidth, glyphHeight, false, false, true), initGlyphData('', 'grave', '0060', 37, glyphWidth, glyphHeight, false, true, false, accentGlyphDefaults('0060')), initGlyphData('', 'dieresis', '00A8', 38, glyphWidth, glyphHeight, false, true, false, accentGlyphDefaults('00A8')), initGlyphData('', 'macron', '00AF', 39, glyphWidth, glyphHeight, false, true, false, accentGlyphDefaults('00AF')), initGlyphData('', 'acute', '00B4', 40, glyphWidth, glyphHeight, false, true, false, accentGlyphDefaults('00B4')), initGlyphData('', 'cedilla', '00B8', 41, glyphWidth, glyphHeight, false, true, false, accentGlyphDefaults('00B8')), initGlyphData('', 'circumflex', '02C6', 42, glyphWidth, glyphHeight, false, true, false, accentGlyphDefaults('02C6')), initGlyphData('', 'caron', '02C7', 43, glyphWidth, glyphHeight, false, true, false, accentGlyphDefaults('02C7')), initGlyphData('', 'breve', '02D8', 44, glyphWidth, glyphHeight, false, true, false, accentGlyphDefaults('02D8')), initGlyphData('', 'dotaccent', '02D9', 45, glyphWidth, glyphHeight, false, true, false, accentGlyphDefaults('02D9')), initGlyphData('', 'ring', '02DA', 46, glyphWidth, glyphHeight, false, true, false, accentGlyphDefaults('02DA')), initGlyphData('', 'ogonek', '02DB', 47, glyphWidth, glyphHeight, false, true, false, accentGlyphDefaults('02DB')), initGlyphData('', 'tilde', '02DC', 48, glyphWidth, glyphHeight, false, true, false, accentGlyphDefaults('02DC')), initGlyphData('', 'hungarumlaut', '02DD', 49, glyphWidth, glyphHeight, false, true, false, accentGlyphDefaults('02DD')), initGlyphData('', 'commaaccent', '0326', 50, glyphWidth, glyphHeight, false, true, false, accentGlyphDefaults('0326')), initGlyphData(".", "period", "002E", 51, glyphWidth, glyphHeight, false, false, true), initGlyphData(",", "comma", "002C", 52, glyphWidth, glyphHeight, false, false, true), initGlyphData("/", "slash", "002F", 53, glyphWidth, glyphHeight, false, false, true), initGlyphData("!", "exclam", "0021", 54, glyphWidth, glyphHeight, false, false, true), initGlyphData("\"", "quotedbl", "0022", 55, glyphWidth, glyphHeight, false, false, true), initGlyphData("'", "quotesingle", "0027", 56, glyphWidth, glyphHeight, false, false, true), initGlyphData(":", "colon", "003A", 57, glyphWidth, glyphHeight, false, false, true), initGlyphData("@", "at", "0040", 58, glyphWidth, glyphHeight, false, false, true), initGlyphData("#", "numbersign", "0023", 59, glyphWidth, glyphHeight, false, false, true), initGlyphData("%", "percent", "0025", 60, glyphWidth, glyphHeight, false, false, true), initGlyphData("^", "asciicircum", "005E", 61, glyphWidth, glyphHeight, false, false, true), randomGlyphData("&", "ampersand", "0026", 62, glyphWidth, glyphHeight, false, false, true), initGlyphData("*", "asterisk", "002A", 63, glyphWidth, glyphHeight, false, false, true), initGlyphData("(", "parenleft", "0028", 64, glyphWidth, glyphHeight, false, false, true), initGlyphData(")", "parenright", "0029", 65, glyphWidth, glyphHeight, false, false, true), initGlyphData("-", "hyphen", "002D", 66, glyphWidth, glyphHeight, false, false, true), initGlyphData("=", "equal", "003D", 67, glyphWidth, glyphHeight, false, false, true), initGlyphData("_", "underscore", "005F", 68, glyphWidth, glyphHeight, false, false, true), initGlyphData("+", "plus", "002B", 69, glyphWidth, glyphHeight, false, false, true), randomGlyphData("?", "question", "003F", 70, glyphWidth, glyphHeight, false, false, true), initGlyphData("£", "sterling", "00A3", 71, glyphWidth, glyphHeight, false, false, true), initGlyphData("€", "euro", "20AC", 72, glyphWidth, glyphHeight, false, false, true), initGlyphData("$", "dollar", "0024", 73, glyphWidth, glyphHeight, false, false, true)];
   return glyphs;
 }
 var createArray = function createArray(length) {
   return _toConsumableArray(Array(length));
 };
-var randomGlyphData = function randomGlyphData(name) {
-  var unicode = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : "0000";
-  var glyphIndex = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 0;
-  var glyphWidth = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : 5;
-  var glyphHeight = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : 5;
-  var composite = arguments.length > 5 && arguments[5] !== undefined ? arguments[5] : false;
-  var accentSource = arguments.length > 6 && arguments[6] !== undefined ? arguments[6] : false;
-  var visible = arguments.length > 7 && arguments[7] !== undefined ? arguments[7] : true;
+var randomGlyphData = function randomGlyphData(nicename, name) {
+  var unicode = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : "0000";
+  var glyphIndex = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : 0;
+  var glyphWidth = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : 5;
+  var glyphHeight = arguments.length > 5 && arguments[5] !== undefined ? arguments[5] : 5;
+  var composite = arguments.length > 6 && arguments[6] !== undefined ? arguments[6] : false;
+  var accentSource = arguments.length > 7 && arguments[7] !== undefined ? arguments[7] : false;
+  var visible = arguments.length > 8 && arguments[8] !== undefined ? arguments[8] : true;
   var cellTotal = glyphWidth * glyphHeight;
   var cells = createArray(cellTotal).map(function (cell, i) {
     return {
@@ -28925,6 +28955,7 @@ var randomGlyphData = function randomGlyphData(name) {
     'unicode': unicode,
     'glyphIndex': glyphIndex,
     'glyphName': name,
+    'glyphNiceName': nicename,
     'composite': composite,
     'accentSource': accentSource,
     'visible': visible,
@@ -28932,24 +28963,31 @@ var randomGlyphData = function randomGlyphData(name) {
   };
   return glyph;
 };
-var initGlyphData = function initGlyphData(name) {
-  var unicode = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : "0000";
-  var glyphIndex = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 0;
-  var glyphWidth = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : 5;
-  var glyphHeight = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : 5;
-  var composite = arguments.length > 5 && arguments[5] !== undefined ? arguments[5] : false;
-  var accentSource = arguments.length > 6 && arguments[6] !== undefined ? arguments[6] : false;
-  var visible = arguments.length > 7 && arguments[7] !== undefined ? arguments[7] : true;
-  var cells = arguments.length > 8 && arguments[8] !== undefined ? arguments[8] : [];
+var initGlyphData = function initGlyphData(nicename, name) {
+  var unicode = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : "0000";
+  var glyphIndex = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : 0;
+  var glyphWidth = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : 5;
+  var glyphHeight = arguments.length > 5 && arguments[5] !== undefined ? arguments[5] : 5;
+  var composite = arguments.length > 6 && arguments[6] !== undefined ? arguments[6] : false;
+  var accentSource = arguments.length > 7 && arguments[7] !== undefined ? arguments[7] : false;
+  var visible = arguments.length > 8 && arguments[8] !== undefined ? arguments[8] : true;
+  var cells = arguments.length > 9 && arguments[9] !== undefined ? arguments[9] : false;
   var cellTotal = glyphWidth * glyphHeight;
+  var emptyCells = createArray(glyphWidth * glyphHeight).map(function (cell, i) {
+    return {
+      'id': i,
+      'status': 0
+    };
+  });
   var glyph = {
     'unicode': unicode,
     'glyphIndex': glyphIndex,
     'glyphName': name,
+    'glyphNiceName': nicename,
     'composite': composite,
     'accentSource': accentSource,
     'visible': visible,
-    'cells': cells
+    'cells': cells ? cells : emptyCells
   };
   return glyph;
 };

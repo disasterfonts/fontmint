@@ -7,16 +7,9 @@ export default function EditorPanel() {
 	
 	const glyph = glyphs[currentGlyph]
 	
-	const clearCellsClick = (evt) => {
-		clearCells(glyph.glyphIndex)
-	}
-	const randomCellsClick = (evt) => {
-		randomCells(glyph.glyphIndex)
-	}
-	
 	return (
 		<section className="editor-panel">
-			<h2>editing: '{ glyph.glyphName }'</h2>
+			<h2>editing: <em>{ glyph.glyphName }</em></h2>
 			<GlyphGrid
 				width={ fontDimensions.width }
 				height={ fontDimensions.height }
@@ -26,8 +19,10 @@ export default function EditorPanel() {
 				glyphIndex={glyph.glyphIndex}
 				cellContents={glyph.cells}
 			/>
-			<button	onClick={ clearCellsClick }>Clear</button>
-			<button	onClick={ randomCellsClick }>Random</button>
+			<div className="operations">
+				<button	onClick={ (evt) => clearCells(glyph.glyphIndex) }>Clear</button>
+				<button	onClick={ (evt) => randomCells(glyph.glyphIndex) }>Random</button>
+			</div>
 		</section>
 	)
 }

@@ -11,18 +11,20 @@ import './less/stylesy.less'
 export default function App() {
 	
 	return (
-		<section>
+		<>
 			<h1>mint pixel font editor</h1>
 			
 			<FontSettingsPanel />
 			
-			<EditorPanel />
-			
-			<FontIndexPanel />
+			<div className="edit-and-index">
+				<EditorPanel />
+				
+				<FontIndexPanel />
+			</div>
 			
 			<PreviewPanelCanvas />
 			
 			<ExportPanel />
-		</section>
+		</>
 	)
 }

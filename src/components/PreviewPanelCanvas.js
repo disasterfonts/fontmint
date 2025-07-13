@@ -3,13 +3,14 @@ import WonderCanvas from './WonderCanvas'
 
 export default function PreviewPanelCanvas () {
 	
-	const { glyphs, fontDimensions, previewStringCanvas, previewGlyphsCanvas, changePreviewStringCanvas } = useGlyphs()
+	const { glyphs, currentGlyph, fontDimensions, previewStringCanvas, previewGlyphsCanvas, changePreviewStringCanvas } = useGlyphs()
 	
 	return (
 		<section className="preview-panel-canvas">
 			<h2>preview</h2>
 			
 			<div className="preview-glyphs-canvas">
+				{/*<p>A debug: { previewGlyphsCanvas[0].cells.map((cell, i) => cell.status) }</p>*/}
 				<WonderCanvas 
 					glyphWidth = { parseInt(fontDimensions.width) }
 					previewGlyphs = { previewGlyphsCanvas }
@@ -17,7 +18,7 @@ export default function PreviewPanelCanvas () {
 			</div>
 			
 			<form name="preview-edit">
-				<label>Edit:</label>
+				<label>Preview text:</label>
 				<input
 					value={ previewStringCanvas }
 					type="text"

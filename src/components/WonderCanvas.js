@@ -29,12 +29,13 @@ export default function WonderCanvas ({ glyphWidth = 5, previewGlyphs = [] }) {
 
 	const plotStrings = (ctx, glyphWidth, previewGlyphs) => {
 		ctx.fillStyle = '#fff'
-		ctx.fillRect(0,0,800,200)
+		ctx.fillRect(0,0,800,300)
 		plotString(ctx, glyphWidth, 2, previewGlyphs)
 		plotString(ctx, glyphWidth, 4, previewGlyphs)
 		plotString(ctx, glyphWidth, 8, previewGlyphs)
 		plotString(ctx, glyphWidth, 16, previewGlyphs)
 	}
+	
 	const canvasRef = useRef(null)
 	
 	useEffect(() => {
@@ -44,6 +45,8 @@ export default function WonderCanvas ({ glyphWidth = 5, previewGlyphs = [] }) {
 	}, [plotStrings])
 	
 	return (
-		<canvas width="800" height="200" ref={ canvasRef }></canvas>
+		<>
+			<canvas width="800" height="300" ref={ canvasRef }></canvas>
+		</>
 	)
 }
