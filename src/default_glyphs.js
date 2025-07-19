@@ -56,6 +56,7 @@ export default function defaultGlyphs(glyphWidth = 5, glyphHeight = 5) {
 		initGlyphData('', 'hungarumlaut', '02DD', 49, glyphWidth, glyphHeight, false, true, false, accentGlyphDefaults('02DD')),
 		initGlyphData('', 'commaaccent',  '0326', 50, glyphWidth, glyphHeight, false, true, false, accentGlyphDefaults('0326')),
 		
+		
 		initGlyphData(".", "period",      "002E", 51, glyphWidth, glyphHeight, false, false, true),
 		initGlyphData(",", "comma",       "002C", 52, glyphWidth, glyphHeight, false, false, true),
 		initGlyphData("/", "slash",       "002F", 53, glyphWidth, glyphHeight, false, false, true),
@@ -144,20 +145,20 @@ const accentGlyphs = [
 const accentGlyphDefaults = (unicode = '0060') => {
 	var accentGlyphCells = []
 	switch(unicode) {
-		case '0060': accentGlyphCells = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 0,1,1,0,0, 0,0,1,0,0]; break; // grave
-		case '00A8': accentGlyphCells = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 0,1,0,1,0, 0,1,0,1,0]; break; // dieresis
-		case '00AF': accentGlyphCells = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 0,0,0,0,0, 0,1,1,1,0]; break; // macron
-		case '00B4': accentGlyphCells = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 0,0,1,1,0, 0,0,1,0,0]; break; // acute
-		case '00B8': accentGlyphCells = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 0,0,1,0,0, 0,1,1,0,0]; break; // cedilla
-		case '02C6': accentGlyphCells = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 0,0,1,0,0, 0,1,1,1,0]; break; // circumflex
-		case '02C7': accentGlyphCells = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 0,1,1,1,0, 0,0,1,0,0]; break; // caron
-		case '02D8': accentGlyphCells = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 0,1,0,1,0, 0,0,1,0,0]; break; // breve
-		case '02D9': accentGlyphCells = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 0,0,1,1,0, 0,0,1,1,0]; break; // dotaccent
-		case '02DA': accentGlyphCells = [0,0,0,0,0,0,0,0,0,0,0,0,1,0,0, 0,1,0,1,0, 0,0,1,0,0]; break; // ring
-		case '02DB': accentGlyphCells = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 0,0,0,0,1, 0,0,0,1,1]; break; // ogonek
-		case '02DC': accentGlyphCells = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 0,0,1,1,0, 0,1,1,0,0]; break; // tilde
-		case '02DD': accentGlyphCells = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 0,0,1,0,1, 0,1,0,1,0]; break; // hungarumlaut
-		case '0326': accentGlyphCells = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 0,0,0,1,0, 0,0,1,0,0]; break; // commaaccent
+		case '0060': accentGlyphCells = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 1,1,0,0,0, 0,1,0,0,0]; break; // grave
+		case '00A8': accentGlyphCells = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 1,0,1,0,0, 1,0,1,0,0]; break; // dieresis
+		case '00AF': accentGlyphCells = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 0,0,0,0,0, 1,1,1,1,1]; break; // macron
+		case '00B4': accentGlyphCells = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 0,1,1,0,0, 0,1,0,0,0]; break; // acute
+		case '00B8': accentGlyphCells = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 0,1,0,0,0, 1,1,0,0,0]; break; // cedilla
+		case '02C6': accentGlyphCells = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 0,1,0,0,0, 1,1,1,0,0]; break; // circumflex
+		case '02C7': accentGlyphCells = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 1,1,1,0,0, 0,1,0,0,0]; break; // caron
+		case '02D8': accentGlyphCells = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 1,0,1,0,0, 0,1,0,0,0]; break; // breve
+		case '02D9': accentGlyphCells = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 0,1,1,0,0, 0,1,1,0,0]; break; // dotaccent
+		case '02DA': accentGlyphCells = [0,0,0,0,0,0,0,0,0,0,0,1,0,0,0, 1,0,1,0,0, 0,1,0,0,0]; break; // ring
+		case '02DB': accentGlyphCells = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 0,0,1,0,0, 0,0,1,1,0]; break; // ogonek
+		case '02DC': accentGlyphCells = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 0,1,1,0,0, 1,1,0,0,0]; break; // tilde
+		case '02DD': accentGlyphCells = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 0,1,0,1,0, 1,0,1,0,0]; break; // hungarumlaut
+		case '0326': accentGlyphCells = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 0,0,1,0,0, 0,1,0,0,0]; break; // commaaccent
 		}
 	
 	return accentGlyphCells.map( (cell, i) => ({'id': i, 'status': cell }) );

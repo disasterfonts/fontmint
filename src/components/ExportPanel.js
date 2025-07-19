@@ -11,7 +11,7 @@ export default function ExportPanel({  }) {
 			glyphs
 		}
 		const exportInfoString = JSON.stringify(exportInfo);
-		console.log(exportInfoString);
+		console.log(glyphs);
 		fetch("http://weblite.vag/ufowriter/index.php", {
 			method: "POST",
 			headers: {
@@ -19,7 +19,7 @@ export default function ExportPanel({  }) {
 			},
 			body: exportInfoString,
 		}).then(function(responsetext){
-			console.log(responsetext.text());
+			console.log('submitted to exporter');
 		})
 	}
 	

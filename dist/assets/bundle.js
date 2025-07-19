@@ -2,16 +2,6 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./dist/assets/shade2x2.png":
-/*!**********************************!*\
-  !*** ./dist/assets/shade2x2.png ***!
-  \**********************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-module.exports = __webpack_require__.p + "c65be32ef50a5066e01a.png";
-
-/***/ }),
-
 /***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./node_modules/less-loader/dist/cjs.js!./src/less/stylesy.less":
 /*!******************************************************************************************************************************************************!*\
   !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./node_modules/less-loader/dist/cjs.js!./src/less/stylesy.less ***!
@@ -26,15 +16,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/getUrl.js */ "./node_modules/css-loader/dist/runtime/getUrl.js");
-/* harmony import */ var _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2__);
 // Imports
 
 
-
-var ___CSS_LOADER_URL_IMPORT_0___ = new URL(/* asset import */ __webpack_require__(/*! ../../dist/assets/shade2x2.png */ "./dist/assets/shade2x2.png"), __webpack_require__.b);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
-var ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_0___);
 // Module
 ___CSS_LOADER_EXPORT___.push([module.id, `#react-container {
   width: 1000px;
@@ -118,13 +103,14 @@ h2 {
 .font-index .glyph-tile {
   padding: 5px;
   text-align: center;
+  border: 1px solid transparent;
   cursor: pointer;
 }
 .font-index .glyph-tile h3 {
   margin: 0;
 }
 .font-index .glyph-tile:hover {
-  background-image: url(${___CSS_LOADER_URL_REPLACEMENT_0___});
+  border: 1px solid #000;
 }
 .font-index .glyph-tile.highlighted {
   background-color: #faa;
@@ -323,7 +309,7 @@ h2 {
   padding: 15px;
   background-color: #aaa;
 }
-`, "",{"version":3,"sources":["webpack://./src/less/stylesy.less"],"names":[],"mappings":"AAKA;EACC,aAAA;EACA,cAAA;AAJD;AAQA;EACC,aAAA;AAND;AASA;EACC,aAAA;EACA,sBAAA;AAPD;AAUA;EACC,aAAA;AARD;AAWA;EACC,aAAA;EACA,eAAA;EACA,YAAA;AATD;AAMA;EAME,WAAA;EACA,YAAA;EACA,sBAAA;AATF;AAUE;EACC,qBAAA;AARH;AAFA;EAaG,cAAA;EACA,WAAA;EACA,YAAA;AARH;AAWC;EAAkB,YAAA;AARnB;AASC;EAAkB,YAAA;AANnB;AAOC;EAAkB,YAAA;AAJnB;AAKC;EAAkB,YAAA;AAFnB;AAGC;EAAkB,YAAA;AAAnB;AACC;EAAkB,YAAA;AAEnB;AADC;EAAmB,YAAA;AAIpB;AAFA;EACC,aAAA;EACA,sBAAA;AAID;AANA;EAIE,eAAA;EACA,6BAAA;AAKF;AAJE;EACC,sBAAA;AAMH;AAbA;EAWE,eAAA;AAKF;AAFA;EACC,sBAAA;EACA,aAAA;AAID;AASA;EACC,aAAA;EACA,sBAAA;AAPD;AAKA;EAIE,aAAA;EACA,eAAA;AANF;AACA;EAQE,YAAA;EACA,kBAAA;EAUA,eAAA;AAfF;AAJA;EAWG,SAAA;AAJH;AAME;EACC,yDAAA;AAJH;AAME;EACC,sBAAA;AAJH;AAbA;EAsBE,WAAA;EACA,WAAA;EACA,SAAA;AANF;AAlBA;EA0BG,UAAA;EACA,WAAA;EACA,sBAAA;AALH;AAMG;EACC,qBAAA;AAJJ;AAOE;EAAkB,WAAA;AAJpB;AAKE;EAAkB,WAAA;AAFpB;AAGE;EAAkB,WAAA;AAApB;AACE;EAAkB,WAAA;AAEpB;AADE;EAAkB,WAAA;AAIpB;AAHE;EAAkB,WAAA;AAMpB;AALE;EAAmB,WAAA;AAQrB;AAuBA;;EAEC,aAAA;EACA,sBAAA;AArBD;AAkBA;;EAKE,eAAA;AAnBF;AAcA;;EAOG,WAAA;AAjBH;AAUA;;EAYE,wBAAA;EACA,YAAA;EACA,uBAAA;AAlBF;AAIA;;EAmBE,aAAA;EACA,eAAA;EACA,YAAA;EACA,QAAA;EACA,sBAAA;AAnBF;AAJA;;EA0BE,aAAA;EACA,eAAA;EACA,WAAA;EACA,SAAA;EACA,SAAA;AAlBF;AAZA;;EAgCG,cAAA;EACA,UAAA;EACA,WAAA;EACA,sBAAA;AAhBH;AAiBG;;EACC,sBAAA;AAdJ;AAiBE;;EAAkB,UAAA;AAbpB;AAcE;;EAAkB,WAAA;AAVpB;AAWE;;EAAkB,WAAA;AAPpB;AAQE;;EAAkB,WAAA;AAJpB;AAKE;;EAAkB,WAAA;AADpB;AAEE;;EAAkB,WAAA;AAEpB;AADE;;EAAmB,WAAA;AAKrB;AAnDA;;EAiDE,QAAA;AAMF;AAvDA;;EAmDG,WAAA;AAQH;AA3DA;;EAqDI,UAAA;EACA,WAAA;AAUJ;AARG;;EAAmB,WAAA;AAYtB;AAXG;;EAAmB,WAAA;AAetB;AAdG;;EAAmB,WAAA;AAkBtB;AAjBG;;EAAmB,WAAA;AAqBtB;AApBG;;EAAmB,WAAA;AAwBtB;AAvBG;;EAAmB,WAAA;AA2BtB;AA1BG;;EAAmB,WAAA;AA8BtB;AA5FA;;EAkEE,QAAA;AA8BF;AAhGA;;EAoEG,WAAA;AAgCH;AApGA;;EAsEI,UAAA;EACA,WAAA;AAkCJ;AAhCG;;EAAmB,WAAA;AAoCtB;AAnCG;;EAAmB,WAAA;AAuCtB;AAtCG;;EAAmB,WAAA;AA0CtB;AAzCG;;EAAmB,WAAA;AA6CtB;AA5CG;;EAAmB,WAAA;AAgDtB;AA/CG;;EAAmB,WAAA;AAmDtB;AAlDG;;EAAmB,WAAA;AAsDtB;AAhDA;EACC,aAAA;EACA,sBAAA;AAkDD","sourcesContent":["@editorcell: 46px;\n@indexcell: 5px;\n@previewcell: 2px;\n@gutter: 15px;\n\n#react-container {\n\twidth: 1000px;\n\tmargin: 0 auto;\n}\n\n\nh2 {\n\tmargin-top: 0;\n}\n\n.font-settings-panel {\n\tpadding: @gutter;\n\tbackground-color: #eee;\n}\n\n.edit-and-index {\n\tdisplay: flex;\n}\n\n.glyph-grid {\n\tdisplay: flex;\n\tflex-wrap: wrap;\n\twidth: (@editorcell + 2) * 5;\n\n\t.glyph-cell {\n\t\twidth: @editorcell;\n\t\theight: @editorcell;\n\t\tbackground-color: #fff;\n\t\t&.status-on {\n\t\t\tbackground-color: red;\n\t\t}\n\t\timg {\n\t\t\tdisplay: block;\n\t\t\twidth: 100%;\n\t\t\theight: 100%;\n\t\t}\n\t}\n\t&.cells-width-4 { width: (@editorcell + 2) * 4 }\n\t&.cells-width-5 { width: (@editorcell + 2) * 5; }\n\t&.cells-width-6 { width: (@editorcell + 2) * 6 }\n\t&.cells-width-7 { width: (@editorcell + 2) * 7 }\n\t&.cells-width-8 { width: (@editorcell + 2) * 8 }\n\t&.cells-width-9 { width: (@editorcell + 2) * 9 }\n\t&.cells-width-10 { width: (@editorcell + 2) * 10 }\n}\n.editor-panel {\n\tpadding: @gutter;\n\tbackground-color: #ddd;\n\t.glyph-cell {\n\t\tcursor: pointer;\n\t\tborder: 1px solid transparent;\n\t\t&:hover {\n\t\t\tborder: 1px solid #000;\n\t\t}\n\t}\n\t.operations {\n\t\tmargin-top: 1em;\n\t}\n}\n.glyph-tile {\n\tbackground-color: #fdd;\n\tpadding: @editorcell;\n}\n\n\n\n\n\n\n\n\n\n\n\n.font-index {\n\tpadding: @gutter;\n\tbackground-color: #ccc;\n\t.glyph-tiles {\n\t\tdisplay: flex;\n\t\tflex-wrap: wrap;\n\t}\n\t.glyph-tile {\n\t\tpadding: @indexcell;\n\t\ttext-align: center;\n\t\th3 {\n\t\t\tmargin: 0;\n\t\t}\n\t\t&:hover {\n\t\t\tbackground-image: url('../../dist/assets/shade2x2.png');\n\t\t}\n\t\t&.highlighted {\n\t\t\tbackground-color: #faa;\n\t\t}\n\t\tcursor: pointer;\n\t}\n\t.glyph-grid {\n\t\tmargin: @indexcell;\n\t\twidth: @indexcell * 5;\n\t\tborder: 0;\n\t\t.glyph-cell {\n\t\t\twidth: @indexcell;\n\t\t\theight: @indexcell;\n\t\t\tbackground-color: #fff;\n\t\t\t&.status-on {\n\t\t\t\tbackground-color: red;\n\t\t\t}\n\t\t}\n\t\t&.cells-width-4 { width: @indexcell * 4 }\n\t\t&.cells-width-5 { width: @indexcell * 5 }\n\t\t&.cells-width-6 { width: @indexcell * 6 }\n\t\t&.cells-width-7 { width: @indexcell * 7 }\n\t\t&.cells-width-8 { width: @indexcell * 8 }\n\t\t&.cells-width-9 { width: @indexcell * 9 }\n\t\t&.cells-width-10 { width: @indexcell * 10 }\n\t}\n}\n\n\n\n\n\n\n\n\n\n.preview-glyph(@cellmultiplier) {\n\t.glyph-grid {\n\t\twidth: @previewcell * @cellmultiplier * 5;\n\t\theight: @previewcell * @cellmultiplier * 5;\n\t\t.glyph-cell {\n\t\t\twidth: @previewcell * @cellmultiplier;\n\t\t\theight: @previewcell * @cellmultiplier;\n\t\t}\n\t\t&.cells-width-4 { width: @previewcell * 4 }\n\t\t&.cells-width-5 { width: @previewcell * 5 }\n\t\t&.cells-width-6 { width: @previewcell * 6 }\n\t\t&.cells-width-7 { width: @previewcell * 7 }\n\t\t&.cells-width-8 { width: @previewcell * 8 }\n\t\t&.cells-width-9 { width: @previewcell * 9 }\n\t\t&.cells-width-10 { width: @previewcell * 10 }\n\t}\n}\n\n\n.preview-panel,\n.preview-panel-canvas {\n\tpadding: @gutter;\n\tbackground-color: #bbb;\n\tform {\n\t\tmargin-top: 1em;\n\t\tinput {\n\t\t\twidth: 30em;\n\t\t}\n\t}\n\t\n\tcanvas {\n\t\twidth: calc(100% - 20px);\n\t\theight: auto;\n\t\tborder: 10px solid #fff;\n\t}\n\t\n\t\n\t.preview-glyphs {\n\t\tdisplay: flex;\n\t\tflex-wrap: wrap;\n\t\tpadding: @previewcell;\n\t\tgap: @previewcell;\n\t\tbackground-color: #fff;\n\t}\n\t.glyph-grid {\n\t\tdisplay: flex;\n\t\tflex-wrap: wrap;\n\t\twidth: @previewcell * 5;\n\t\tmargin: 0;\n\t\tborder: 0;\n\t\t.glyph-cell {\n\t\t\tdisplay: block;\n\t\t\twidth: @previewcell;\n\t\t\theight: @previewcell;\n\t\t\tbackground-color: #fff;\n\t\t\t&.status-on {\n\t\t\t\tbackground-color: #000;\n\t\t\t}\n\t\t}\n\t\t&.cells-width-4 { width: @previewcell * 4 }\n\t\t&.cells-width-5 { width: @previewcell * 5 }\n\t\t&.cells-width-6 { width: @previewcell * 6 }\n\t\t&.cells-width-7 { width: @previewcell * 7 }\n\t\t&.cells-width-8 { width: @previewcell * 8 }\n\t\t&.cells-width-9 { width: @previewcell * 9 }\n\t\t&.cells-width-10 { width: @previewcell * 10 }\n\t}\n\t.preview-2x {\n\t\tgap: @previewcell * 2;\n\t\t.glyph-grid {\n\t\t\twidth: @previewcell * 2 * 5;\n\t\t\t.glyph-cell {\n\t\t\t\twidth: @previewcell * 2;\n\t\t\t\theight: @previewcell * 2;\n\t\t\t}\n\t\t\t&.cells-width-4  { width: @previewcell * 4  * 2}\n\t\t\t&.cells-width-5  { width: @previewcell * 5  * 2}\n\t\t\t&.cells-width-6  { width: @previewcell * 6  * 2}\n\t\t\t&.cells-width-7  { width: @previewcell * 7  * 2}\n\t\t\t&.cells-width-8  { width: @previewcell * 8  * 2}\n\t\t\t&.cells-width-9  { width: @previewcell * 9  * 2}\n\t\t\t&.cells-width-10 { width: @previewcell * 10 * 2}\n\t\t}\n\t}\n\t.preview-4x {\n\t\tgap: @previewcell * 4;\n\t\t.glyph-grid {\n\t\t\twidth: @previewcell * 4 * 5;\n\t\t\t.glyph-cell {\n\t\t\t\twidth: @previewcell * 4;\n\t\t\t\theight: @previewcell * 4;\n\t\t\t}\n\t\t\t&.cells-width-4  { width: @previewcell * 4  * 4}\n\t\t\t&.cells-width-5  { width: @previewcell * 5  * 4}\n\t\t\t&.cells-width-6  { width: @previewcell * 6  * 4}\n\t\t\t&.cells-width-7  { width: @previewcell * 7  * 4}\n\t\t\t&.cells-width-8  { width: @previewcell * 8  * 4}\n\t\t\t&.cells-width-9  { width: @previewcell * 9  * 4}\n\t\t\t&.cells-width-10 { width: @previewcell * 10 * 4}\n\t\t}\n\t}\n}\n\n\n.export-panel {\n\tpadding: @gutter;\n\tbackground-color: #aaa;\n}"],"sourceRoot":""}]);
+`, "",{"version":3,"sources":["webpack://./src/less/stylesy.less"],"names":[],"mappings":"AAKA;EACC,aAAA;EACA,cAAA;AAJD;AAQA;EACC,aAAA;AAND;AASA;EACC,aAAA;EACA,sBAAA;AAPD;AAUA;EACC,aAAA;AARD;AAWA;EACC,aAAA;EACA,eAAA;EACA,YAAA;AATD;AAMA;EAME,WAAA;EACA,YAAA;EACA,sBAAA;AATF;AAUE;EACC,qBAAA;AARH;AAFA;EAaG,cAAA;EACA,WAAA;EACA,YAAA;AARH;AAWC;EAAkB,YAAA;AARnB;AASC;EAAkB,YAAA;AANnB;AAOC;EAAkB,YAAA;AAJnB;AAKC;EAAkB,YAAA;AAFnB;AAGC;EAAkB,YAAA;AAAnB;AACC;EAAkB,YAAA;AAEnB;AADC;EAAmB,YAAA;AAIpB;AAFA;EACC,aAAA;EACA,sBAAA;AAID;AANA;EAIE,eAAA;EACA,6BAAA;AAKF;AAJE;EACC,sBAAA;AAMH;AAbA;EAWE,eAAA;AAKF;AAFA;EACC,sBAAA;EACA,aAAA;AAID;AASA;EACC,aAAA;EACA,sBAAA;AAPD;AAKA;EAIE,aAAA;EACA,eAAA;AANF;AACA;EAQE,YAAA;EACA,kBAAA;EACA,6BAAA;EAUA,eAAA;AAfF;AALA;EAYG,SAAA;AAJH;AAME;EACC,sBAAA;AAJH;AAME;EACC,sBAAA;AAJH;AAdA;EAuBE,WAAA;EACA,WAAA;EACA,SAAA;AANF;AAnBA;EA2BG,UAAA;EACA,WAAA;EACA,sBAAA;AALH;AAMG;EACC,qBAAA;AAJJ;AAOE;EAAkB,WAAA;AAJpB;AAKE;EAAkB,WAAA;AAFpB;AAGE;EAAkB,WAAA;AAApB;AACE;EAAkB,WAAA;AAEpB;AADE;EAAkB,WAAA;AAIpB;AAHE;EAAkB,WAAA;AAMpB;AALE;EAAmB,WAAA;AAQrB;AAuBA;;EAEC,aAAA;EACA,sBAAA;AArBD;AAkBA;;EAKE,eAAA;AAnBF;AAcA;;EAOG,WAAA;AAjBH;AAUA;;EAYE,wBAAA;EACA,YAAA;EACA,uBAAA;AAlBF;AAIA;;EAmBE,aAAA;EACA,eAAA;EACA,YAAA;EACA,QAAA;EACA,sBAAA;AAnBF;AAJA;;EA0BE,aAAA;EACA,eAAA;EACA,WAAA;EACA,SAAA;EACA,SAAA;AAlBF;AAZA;;EAgCG,cAAA;EACA,UAAA;EACA,WAAA;EACA,sBAAA;AAhBH;AAiBG;;EACC,sBAAA;AAdJ;AAiBE;;EAAkB,UAAA;AAbpB;AAcE;;EAAkB,WAAA;AAVpB;AAWE;;EAAkB,WAAA;AAPpB;AAQE;;EAAkB,WAAA;AAJpB;AAKE;;EAAkB,WAAA;AADpB;AAEE;;EAAkB,WAAA;AAEpB;AADE;;EAAmB,WAAA;AAKrB;AAnDA;;EAiDE,QAAA;AAMF;AAvDA;;EAmDG,WAAA;AAQH;AA3DA;;EAqDI,UAAA;EACA,WAAA;AAUJ;AARG;;EAAmB,WAAA;AAYtB;AAXG;;EAAmB,WAAA;AAetB;AAdG;;EAAmB,WAAA;AAkBtB;AAjBG;;EAAmB,WAAA;AAqBtB;AApBG;;EAAmB,WAAA;AAwBtB;AAvBG;;EAAmB,WAAA;AA2BtB;AA1BG;;EAAmB,WAAA;AA8BtB;AA5FA;;EAkEE,QAAA;AA8BF;AAhGA;;EAoEG,WAAA;AAgCH;AApGA;;EAsEI,UAAA;EACA,WAAA;AAkCJ;AAhCG;;EAAmB,WAAA;AAoCtB;AAnCG;;EAAmB,WAAA;AAuCtB;AAtCG;;EAAmB,WAAA;AA0CtB;AAzCG;;EAAmB,WAAA;AA6CtB;AA5CG;;EAAmB,WAAA;AAgDtB;AA/CG;;EAAmB,WAAA;AAmDtB;AAlDG;;EAAmB,WAAA;AAsDtB;AAhDA;EACC,aAAA;EACA,sBAAA;AAkDD","sourcesContent":["@editorcell: 46px;\n@indexcell: 5px;\n@previewcell: 2px;\n@gutter: 15px;\n\n#react-container {\n\twidth: 1000px;\n\tmargin: 0 auto;\n}\n\n\nh2 {\n\tmargin-top: 0;\n}\n\n.font-settings-panel {\n\tpadding: @gutter;\n\tbackground-color: #eee;\n}\n\n.edit-and-index {\n\tdisplay: flex;\n}\n\n.glyph-grid {\n\tdisplay: flex;\n\tflex-wrap: wrap;\n\twidth: (@editorcell + 2) * 5;\n\n\t.glyph-cell {\n\t\twidth: @editorcell;\n\t\theight: @editorcell;\n\t\tbackground-color: #fff;\n\t\t&.status-on {\n\t\t\tbackground-color: red;\n\t\t}\n\t\timg {\n\t\t\tdisplay: block;\n\t\t\twidth: 100%;\n\t\t\theight: 100%;\n\t\t}\n\t}\n\t&.cells-width-4 { width: (@editorcell + 2) * 4 }\n\t&.cells-width-5 { width: (@editorcell + 2) * 5; }\n\t&.cells-width-6 { width: (@editorcell + 2) * 6 }\n\t&.cells-width-7 { width: (@editorcell + 2) * 7 }\n\t&.cells-width-8 { width: (@editorcell + 2) * 8 }\n\t&.cells-width-9 { width: (@editorcell + 2) * 9 }\n\t&.cells-width-10 { width: (@editorcell + 2) * 10 }\n}\n.editor-panel {\n\tpadding: @gutter;\n\tbackground-color: #ddd;\n\t.glyph-cell {\n\t\tcursor: pointer;\n\t\tborder: 1px solid transparent;\n\t\t&:hover {\n\t\t\tborder: 1px solid #000;\n\t\t}\n\t}\n\t.operations {\n\t\tmargin-top: 1em;\n\t}\n}\n.glyph-tile {\n\tbackground-color: #fdd;\n\tpadding: @editorcell;\n}\n\n\n\n\n\n\n\n\n\n\n\n.font-index {\n\tpadding: @gutter;\n\tbackground-color: #ccc;\n\t.glyph-tiles {\n\t\tdisplay: flex;\n\t\tflex-wrap: wrap;\n\t}\n\t.glyph-tile {\n\t\tpadding: @indexcell;\n\t\ttext-align: center;\n\t\tborder: 1px solid transparent;\n\t\th3 {\n\t\t\tmargin: 0;\n\t\t}\n\t\t&:hover {\n\t\t\tborder: 1px solid #000;\n\t\t}\n\t\t&.highlighted {\n\t\t\tbackground-color: #faa;\n\t\t}\n\t\tcursor: pointer;\n\t}\n\t.glyph-grid {\n\t\tmargin: @indexcell;\n\t\twidth: @indexcell * 5;\n\t\tborder: 0;\n\t\t.glyph-cell {\n\t\t\twidth: @indexcell;\n\t\t\theight: @indexcell;\n\t\t\tbackground-color: #fff;\n\t\t\t&.status-on {\n\t\t\t\tbackground-color: red;\n\t\t\t}\n\t\t}\n\t\t&.cells-width-4 { width: @indexcell * 4 }\n\t\t&.cells-width-5 { width: @indexcell * 5 }\n\t\t&.cells-width-6 { width: @indexcell * 6 }\n\t\t&.cells-width-7 { width: @indexcell * 7 }\n\t\t&.cells-width-8 { width: @indexcell * 8 }\n\t\t&.cells-width-9 { width: @indexcell * 9 }\n\t\t&.cells-width-10 { width: @indexcell * 10 }\n\t}\n}\n\n\n\n\n\n\n\n\n\n.preview-glyph(@cellmultiplier) {\n\t.glyph-grid {\n\t\twidth: @previewcell * @cellmultiplier * 5;\n\t\theight: @previewcell * @cellmultiplier * 5;\n\t\t.glyph-cell {\n\t\t\twidth: @previewcell * @cellmultiplier;\n\t\t\theight: @previewcell * @cellmultiplier;\n\t\t}\n\t\t&.cells-width-4 { width: @previewcell * 4 }\n\t\t&.cells-width-5 { width: @previewcell * 5 }\n\t\t&.cells-width-6 { width: @previewcell * 6 }\n\t\t&.cells-width-7 { width: @previewcell * 7 }\n\t\t&.cells-width-8 { width: @previewcell * 8 }\n\t\t&.cells-width-9 { width: @previewcell * 9 }\n\t\t&.cells-width-10 { width: @previewcell * 10 }\n\t}\n}\n\n\n.preview-panel,\n.preview-panel-canvas {\n\tpadding: @gutter;\n\tbackground-color: #bbb;\n\tform {\n\t\tmargin-top: 1em;\n\t\tinput {\n\t\t\twidth: 30em;\n\t\t}\n\t}\n\t\n\tcanvas {\n\t\twidth: calc(100% - 20px);\n\t\theight: auto;\n\t\tborder: 10px solid #fff;\n\t}\n\t\n\t\n\t.preview-glyphs {\n\t\tdisplay: flex;\n\t\tflex-wrap: wrap;\n\t\tpadding: @previewcell;\n\t\tgap: @previewcell;\n\t\tbackground-color: #fff;\n\t}\n\t.glyph-grid {\n\t\tdisplay: flex;\n\t\tflex-wrap: wrap;\n\t\twidth: @previewcell * 5;\n\t\tmargin: 0;\n\t\tborder: 0;\n\t\t.glyph-cell {\n\t\t\tdisplay: block;\n\t\t\twidth: @previewcell;\n\t\t\theight: @previewcell;\n\t\t\tbackground-color: #fff;\n\t\t\t&.status-on {\n\t\t\t\tbackground-color: #000;\n\t\t\t}\n\t\t}\n\t\t&.cells-width-4 { width: @previewcell * 4 }\n\t\t&.cells-width-5 { width: @previewcell * 5 }\n\t\t&.cells-width-6 { width: @previewcell * 6 }\n\t\t&.cells-width-7 { width: @previewcell * 7 }\n\t\t&.cells-width-8 { width: @previewcell * 8 }\n\t\t&.cells-width-9 { width: @previewcell * 9 }\n\t\t&.cells-width-10 { width: @previewcell * 10 }\n\t}\n\t.preview-2x {\n\t\tgap: @previewcell * 2;\n\t\t.glyph-grid {\n\t\t\twidth: @previewcell * 2 * 5;\n\t\t\t.glyph-cell {\n\t\t\t\twidth: @previewcell * 2;\n\t\t\t\theight: @previewcell * 2;\n\t\t\t}\n\t\t\t&.cells-width-4  { width: @previewcell * 4  * 2}\n\t\t\t&.cells-width-5  { width: @previewcell * 5  * 2}\n\t\t\t&.cells-width-6  { width: @previewcell * 6  * 2}\n\t\t\t&.cells-width-7  { width: @previewcell * 7  * 2}\n\t\t\t&.cells-width-8  { width: @previewcell * 8  * 2}\n\t\t\t&.cells-width-9  { width: @previewcell * 9  * 2}\n\t\t\t&.cells-width-10 { width: @previewcell * 10 * 2}\n\t\t}\n\t}\n\t.preview-4x {\n\t\tgap: @previewcell * 4;\n\t\t.glyph-grid {\n\t\t\twidth: @previewcell * 4 * 5;\n\t\t\t.glyph-cell {\n\t\t\t\twidth: @previewcell * 4;\n\t\t\t\theight: @previewcell * 4;\n\t\t\t}\n\t\t\t&.cells-width-4  { width: @previewcell * 4  * 4}\n\t\t\t&.cells-width-5  { width: @previewcell * 5  * 4}\n\t\t\t&.cells-width-6  { width: @previewcell * 6  * 4}\n\t\t\t&.cells-width-7  { width: @previewcell * 7  * 4}\n\t\t\t&.cells-width-8  { width: @previewcell * 8  * 4}\n\t\t\t&.cells-width-9  { width: @previewcell * 9  * 4}\n\t\t\t&.cells-width-10 { width: @previewcell * 10 * 4}\n\t\t}\n\t}\n}\n\n\n.export-panel {\n\tpadding: @gutter;\n\tbackground-color: #aaa;\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -420,41 +406,6 @@ module.exports = function (cssWithMappingToString) {
     }
   };
   return list;
-};
-
-/***/ }),
-
-/***/ "./node_modules/css-loader/dist/runtime/getUrl.js":
-/*!********************************************************!*\
-  !*** ./node_modules/css-loader/dist/runtime/getUrl.js ***!
-  \********************************************************/
-/***/ ((module) => {
-
-
-
-module.exports = function (url, options) {
-  if (!options) {
-    options = {};
-  }
-  if (!url) {
-    return url;
-  }
-  url = String(url.__esModule ? url.default : url);
-
-  // If url is already wrapped in quotes, remove them
-  if (/^['"].*['"]$/.test(url)) {
-    url = url.slice(1, -1);
-  }
-  if (options.hash) {
-    url += options.hash;
-  }
-
-  // Should url be wrapped?
-  // See https://drafts.csswg.org/css-values-3/#urls
-  if (/["'() \t\n]|(%20)/.test(url) || options.needQuotes) {
-    return "\"".concat(url.replace(/"/g, '\\"').replace(/\n/g, "\\n"), "\"");
-  }
-  return url;
 };
 
 /***/ }),
@@ -28110,7 +28061,7 @@ function ExportPanel(_ref) {
               glyphs: glyphs
             };
             exportInfoString = JSON.stringify(exportInfo);
-            console.log(exportInfoString);
+            console.log(glyphs);
             fetch("http://weblite.vag/ufowriter/index.php", {
               method: "POST",
               headers: {
@@ -28118,7 +28069,7 @@ function ExportPanel(_ref) {
               },
               body: exportInfoString
             }).then(function (responsetext) {
-              console.log(responsetext.text());
+              console.log('submitted to exporter');
             });
           case 1:
             return _context.a(2);
@@ -29024,59 +28975,59 @@ var accentGlyphDefaults = function accentGlyphDefaults() {
   var accentGlyphCells = [];
   switch (unicode) {
     case '0060':
-      accentGlyphCells = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 1, 0, 0];
+      accentGlyphCells = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 1, 0, 0, 0];
       break;
     // grave
     case '00A8':
-      accentGlyphCells = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 1, 0, 1, 0];
+      accentGlyphCells = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 1, 0, 1, 0, 0];
       break;
     // dieresis
     case '00AF':
-      accentGlyphCells = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0];
+      accentGlyphCells = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1];
       break;
     // macron
     case '00B4':
-      accentGlyphCells = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 0, 0];
+      accentGlyphCells = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 0, 0, 0];
       break;
     // acute
     case '00B8':
-      accentGlyphCells = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0];
+      accentGlyphCells = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0, 0];
       break;
     // cedilla
     case '02C6':
-      accentGlyphCells = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 0];
+      accentGlyphCells = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 0, 0];
       break;
     // circumflex
     case '02C7':
-      accentGlyphCells = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 0, 0];
+      accentGlyphCells = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 0, 0, 0];
       break;
     // caron
     case '02D8':
-      accentGlyphCells = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 1, 0, 0];
+      accentGlyphCells = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 1, 0, 0, 0];
       break;
     // breve
     case '02D9':
-      accentGlyphCells = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1, 0];
+      accentGlyphCells = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1, 0, 0];
       break;
     // dotaccent
     case '02DA':
-      accentGlyphCells = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0, 0, 0, 1, 0, 0];
+      accentGlyphCells = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0, 0, 0, 1, 0, 0, 0];
       break;
     // ring
     case '02DB':
-      accentGlyphCells = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1];
+      accentGlyphCells = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 1, 0];
       break;
     // ogonek
     case '02DC':
-      accentGlyphCells = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0];
+      accentGlyphCells = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 0];
       break;
     // tilde
     case '02DD':
-      accentGlyphCells = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 1, 0];
+      accentGlyphCells = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 1, 0, 0];
       break;
     // hungarumlaut
     case '0326':
-      accentGlyphCells = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0];
+      accentGlyphCells = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0];
       break;
     // commaaccent
   }
@@ -29171,9 +29122,6 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 /******/ 		return module.exports;
 /******/ 	}
 /******/ 	
-/******/ 	// expose the modules object (__webpack_modules__)
-/******/ 	__webpack_require__.m = __webpack_modules__;
-/******/ 	
 /************************************************************************/
 /******/ 	/* webpack/runtime/compat get default export */
 /******/ 	(() => {
@@ -29199,18 +29147,6 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 /******/ 		};
 /******/ 	})();
 /******/ 	
-/******/ 	/* webpack/runtime/global */
-/******/ 	(() => {
-/******/ 		__webpack_require__.g = (function() {
-/******/ 			if (typeof globalThis === 'object') return globalThis;
-/******/ 			try {
-/******/ 				return this || new Function('return this')();
-/******/ 			} catch (e) {
-/******/ 				if (typeof window === 'object') return window;
-/******/ 			}
-/******/ 		})();
-/******/ 	})();
-/******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
 /******/ 	(() => {
 /******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
@@ -29234,55 +29170,6 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 /******/ 			if (!module.children) module.children = [];
 /******/ 			return module;
 /******/ 		};
-/******/ 	})();
-/******/ 	
-/******/ 	/* webpack/runtime/publicPath */
-/******/ 	(() => {
-/******/ 		var scriptUrl;
-/******/ 		if (__webpack_require__.g.importScripts) scriptUrl = __webpack_require__.g.location + "";
-/******/ 		var document = __webpack_require__.g.document;
-/******/ 		if (!scriptUrl && document) {
-/******/ 			if (document.currentScript && document.currentScript.tagName.toUpperCase() === 'SCRIPT')
-/******/ 				scriptUrl = document.currentScript.src;
-/******/ 			if (!scriptUrl) {
-/******/ 				var scripts = document.getElementsByTagName("script");
-/******/ 				if(scripts.length) {
-/******/ 					var i = scripts.length - 1;
-/******/ 					while (i > -1 && (!scriptUrl || !/^http(s?):/.test(scriptUrl))) scriptUrl = scripts[i--].src;
-/******/ 				}
-/******/ 			}
-/******/ 		}
-/******/ 		// When supporting browsers where an automatic publicPath is not supported you must specify an output.publicPath manually via configuration
-/******/ 		// or pass an empty string ("") and set the __webpack_public_path__ variable from your code to use your own logic.
-/******/ 		if (!scriptUrl) throw new Error("Automatic publicPath is not supported in this browser");
-/******/ 		scriptUrl = scriptUrl.replace(/^blob:/, "").replace(/#.*$/, "").replace(/\?.*$/, "").replace(/\/[^\/]+$/, "/");
-/******/ 		__webpack_require__.p = scriptUrl;
-/******/ 	})();
-/******/ 	
-/******/ 	/* webpack/runtime/jsonp chunk loading */
-/******/ 	(() => {
-/******/ 		__webpack_require__.b = document.baseURI || self.location.href;
-/******/ 		
-/******/ 		// object to store loaded and loading chunks
-/******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
-/******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
-/******/ 		var installedChunks = {
-/******/ 			"main": 0
-/******/ 		};
-/******/ 		
-/******/ 		// no chunk on demand loading
-/******/ 		
-/******/ 		// no prefetching
-/******/ 		
-/******/ 		// no preloaded
-/******/ 		
-/******/ 		// no HMR
-/******/ 		
-/******/ 		// no HMR manifest
-/******/ 		
-/******/ 		// no on chunks loaded
-/******/ 		
-/******/ 		// no jsonp function
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/nonce */
